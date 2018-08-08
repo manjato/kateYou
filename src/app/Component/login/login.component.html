@@ -1,0 +1,207 @@
+<hr>
+<div class="container">
+    <div class="header">
+        <p routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Accueil > <span>Créer un compte</span></p>
+    </div>
+    <div class="main-header">
+        <h1>S'identifier</h1>
+        <div class="sign">
+            <img src="assets/images/logo/facebook.png" alt="" (click)="signInWithFB()" style="    width: 5%;">
+
+            <button class="google" (click)="signInWithGoogle()"> <img src="assets/images/logo/google.png" alt=""></button>
+            <h2>Ou</h2>
+        </div>
+        <div class="row">
+            <div class="customer col-md-6">
+                <h1>Déjà client</h1>
+                <h4> * Champ obligatoire</h4>
+                <form class="login">
+                    <div class="field">
+                        <input type="text" name="email" id="email" placeholder="  ">
+                        <label for="email">Adresse email*</label>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="password" placeholder="   ">
+                        <label for="password">Mot de passe*</label>
+                    </div>
+                    <div class="right">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/resetPassword">Mot de passe oublié?</a>
+                        <button>Se connecter</button>
+                    </div>
+                </form>
+            </div>
+            <div class="seller col-md-6">
+                <h1>Créer un compte</h1>
+
+                <form class="creat">
+                    <h4> * Champ obligatoire</h4>
+                    <div class="checkYou">
+                        <div>
+                            <button class="{{homme}}" (click)="civilite()">Homme</button>
+                            <button class="{{femme}}" (click)="civilite()" style="margin-left: -3%;">Femme</button>
+                        </div>
+                    </div>
+                    <div class="avatar">
+                        <img src="assets/images/logo/profile.svg" alt="">
+                        <label for="file" class="label-file">Ajouter votre photo</label>
+                        <input id="file" class="input-file" type="file">
+                    </div>
+                    <div class="field" style="    margin-bottom: 0;    margin-top: -9%;
+                    ">
+                        <select class="selectpicker">
+                            <option class="pays">Pays*</option>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="nom" id="nom" placeholder=" ">
+                        <label for="nom">Nom*</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="mail" id="mail" placeholder="   ">
+                        <label for="mail">Adresse email*</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="pseudo" id="pseudo" placeholder="   ">
+                        <label for="pseudo">Pseudo*</label>
+                    </div>
+                    <p>Sera afficher sur votre profil</p>
+                    <div class="sign-right">
+                        <div class="field">
+                            <input type="text" name="prenom" id="prenom" placeholder="   ">
+                            <label for="prenom">Prenom*</label>
+                        </div>
+                        <div class="field">
+                            <input type="password" name="mdp" id="mdp" placeholder="   ">
+                            <label for="mdp">Mot de passe*</label>
+                        </div>
+                        <div class="field ">
+                            <div>
+                                <label for="datenaissance" class="daty">Date de naissance*</label>
+                                <br>
+                                <select class="selectpicker date">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>
+                                    </select>
+                                <select class="selectpicker date">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                <select class="selectpicker datenaissance">
+                                        <option>1970</option>
+                                        <option>1971</option>
+                                        <option>1972</option>
+                                        <option>1973</option>
+                                        <option>1974</option>
+                                        <option>1975</option>
+                                        <option>1976</option>
+                                        <option>1977</option>
+                                        <option>1978</option>
+                                        <option>1979</option>
+                                        <option>1980</option>
+                                        <option>1981</option>
+                                        <option>1982</option>
+                                        <option>1983</option>
+                                        <option>1984</option>
+                                        <option>1985</option>
+                                        <option>1986</option>
+                                        <option>1987</option>
+                                        <option>1988</option>
+                                        <option>1989</option>
+                                        <option>1990</option>
+                                        <option>1991</option>
+                                        <option>1992</option>
+                                        <option>1993</option>
+                                        <option>1994</option>
+                                        <option>1995</option>
+                                        <option>1996</option>
+                                        <option>1997</option>
+                                        <option>1998</option>
+                                        <option>1999</option>
+                                        <option>2000</option>
+                                        <option>2001</option>
+                                        <option>2002</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                        <option>2008</option>
+                                        <option>2009</option>
+                                        <option>2010</option>
+                                        <option>2011</option>
+                                        <option>2012</option>
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="beSeller">Devenir Vendeur</button>
+                    <button class="yourAccount">Creer un Compte</button>
+                </form>
+                <h4 class="last">En cliquant sur Créer un compte, vous acceptez notre <span>politique de confidentialité</span></h4>
+                <div class="foot">
+                    <label class="check">
+                        Pour ne pas recevoir d'e-mails de la part de <br> <img src="assets/images/logo/Logo_KateAndYou_White_bg_rvb.png" class="logoClasse" alt=""> ,veuillez décrocher cette case
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <app-download></app-download>
+    <hr>
+    <app-aboutus></app-aboutus>
+</footer>

@@ -1,0 +1,385 @@
+.container {
+    margin-bottom: 7%;
+}
+
+.header p {
+    font-family: "Lato-Light";
+    font-size: 16px;
+    padding-left: 13%;
+    cursor: pointer;
+}
+
+.col-md-6 {
+    max-width: 50%;
+}
+
+.right {
+    float: right;
+    padding-right: 30%;
+}
+
+.right>button {
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    color: #131313;
+    border: 1px solid #131313;
+    text-transform: uppercase;
+    height: 40px;
+    background-color: #ffff;
+    width: 160%;
+    margin: 50% 0px 0 -60%;
+    cursor: pointer;
+    margin-top: 30%;
+}
+
+.seller>h1 {
+    padding-left: 5%;
+}
+
+.customer {
+    padding-left: 10%;
+}
+
+.customer>h1 {
+    padding-left: 15%;
+}
+
+.customer>h4 {
+    padding-top: 4%;
+    margin-bottom: -3%;
+}
+
+.creat>.avatar>label {
+    position: absolute;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 21%;
+    margin-left: -22%;
+}
+
+.label-file {
+    cursor: pointer;
+}
+
+.input-file {
+    display: none;
+}
+
+.creat {
+    margin-left: 3%;
+}
+
+.sign-right {
+    float: right;
+    margin-top: -45%;
+    margin-right: 5%;
+}
+
+.sign>h2 {
+    font-size: 17px;
+}
+
+.ligne>img {
+    width: 24%;
+    margin: 2% 22%;
+}
+
+.ligne_fb {
+    float: left;
+}
+
+.seller {
+    border-left: 1px solid rgb(180, 180, 180);
+}
+
+.creat>.avatar>img {
+    width: 150px;
+    margin-left: 55%;
+}
+
+h1 {
+    font-family: "AbrilFatface";
+    font-size: 40px;
+}
+
+h4,
+a {
+    font-family: "Lato-Light";
+    font-size: 12px;
+}
+
+label {
+    font-family: "Lato-Light";
+    font-size: 14px;
+}
+
+.checkYou {
+    button {
+        font-family: "Lato-Regular";
+        font-size: 13px;
+        text-transform: uppercase;
+        width: 158px;
+        height: 40px;
+    }
+    .noActive {
+        background-color: white;
+        border: 1px solid black;
+    }
+    .activ {
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+    }
+}
+
+.selectpicker {
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    display: block;
+}
+
+.main-header>h1 {
+    text-align: center;
+}
+
+.google {
+    border: 2px solid black;
+}
+
+.sign>button {
+    font-family: "Lato-Regular";
+    font-size: 16px;
+    text-transform: none;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 2%;
+}
+
+.sign {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.sign>button>img {
+    width: 50px;
+    margin-left: 0;
+}
+
+.sign>h2 {
+    margin-top: 1%;
+}
+
+.creat>button {
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    color: #ffff;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    margin: 0 3%;
+}
+
+.beSeller {
+    border: 1px solid #21253d;
+    background-color: #21253d;
+}
+
+.yourAccount {
+    background-color: #131313;
+    border: 1px solid #131313;
+    float: right;
+}
+
+.last {
+    margin-left: 21%;
+}
+
+.last>span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.testss {
+    float: left;
+}
+
+form {
+    margin: 2em 0;
+}
+
+.foot {
+    label {
+        text-align: right;
+        font-family: "Lato-Light";
+        font-size: 12px;
+    }
+    .check>input {
+        border: none;
+        border-bottom: none;
+        -webkit-appearance: checkbox;
+        cursor: pointer;
+        width: auto;
+    }
+}
+
+.logoClasse {
+    width: 75px;
+    margin-left: 0%;
+    margin-top: -3px;
+}
+
+.check {
+    float: right;
+    margin-right: 15px;
+}
+
+.mat-radio-group {
+    margin: 5%;
+}
+
+label.mat-radio-label {
+    margin: 0 23px;
+}
+
+.example-section.mat-radio-button.mat-accent.mat-radio-inner-circle {
+    background-color: black;
+}
+
+.example-section.mat-radio-button.mat-accent.mat-radio-checked.mat-radio-outer-circle {
+    border-color: black;
+}
+
+.login {
+    .field>input {
+        width: 70%;
+    }
+}
+
+
+/* FLOATING LABEL */
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+    width: 215px;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+p {
+    font-size: 13px;
+    color: #b9b9b9;
+    margin-top: -12px;
+    margin-bottom: 1rem;
+}
+
+input:placeholder-shown+label {
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.2);
+    color: #b9b9b9;
+    font-size: 14px;
+    font-family: "Lato-Light";
+}
+
+
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+
+/**
+* Show the placeholder when the input is focused.
+*/
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+
+/* END of FLOATING LABEL */
+
+
+/* SELECT OPTION */
+
+select {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    border-radius: 0;
+    padding: 0;
+    height: 34px;
+    width: 215px;
+    color: black;
+    cursor: pointer;
+    margin-top: 9px;
+}
+
+
+/* END OF SELECT OPTION */
+
+.date {
+    width: 44px;
+}
+
+.datenaissance {
+    width: 60px;
+}
+
+.selectpicker {
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+.daty {
+    font-family: "Lato-Regular";
+    font-size: 14px;
+    margin-bottom: 0px;
+}

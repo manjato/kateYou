@@ -1,0 +1,219 @@
+.download_app {
+    position: absolute;
+    top: 32%;
+    left: 55%;
+}
+
+.col-md-12 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.download_app>h4 {
+    font-family: "Lato-Light";
+    font-size: 18px;
+}
+
+.download_app>h1 {
+    color: #fff;
+    width: 61%;
+    text-align: left;
+}
+
+.download_app>h4 {
+    width: 85%;
+    text-align: justify;
+    padding-left: 7%;
+}
+
+.download_app>img {
+    width: 26%;
+    margin-top: 7%;
+    margin-left: 7%;
+}
+
+.newsletter>.container>.row {
+    margin-left: -8%;
+}
+
+#myemail>::placeholder {
+    color: #fff;
+}
+
+.myemail {
+    width: 300px;
+}
+
+.aboutUs {
+    margin: 5% 0 15% 0;
+}
+
+.col-md-3 {
+    float: left;
+}
+
+.col-md-3 img {
+    width: 100px;
+    height: 100px;
+    margin: 5px 18%;
+}
+
+.col-md-3 h4 {
+    font-family: "Lato-Light";
+    font-size: 14px;
+    text-align: center;
+    width: 75%;
+}
+
+mat-form-field.mat-form-field-underline {
+    width: 160% !important;
+    background-color: #ffff !important;
+}
+
+
+/* footer */
+
+.news_Product>img {
+    width: 144px;
+    height: 150px;
+}
+
+.list_Product>.col-md-2 {
+    float: left;
+}
+
+.list_Product {
+    padding-left: 6%;
+}
+
+.container>.col-md-12 {
+    margin: 8% 0 17% 0%;
+}
+
+.follow>img {
+    width: 20px;
+}
+
+.youtube {
+    width: 35px;
+}
+
+.container>.col-md-12>.col-md-3,
+.container>.col-md-12>.col-md-2,
+.container>.col-md-12>.col-md-5 {
+    float: left;
+}
+
+.paid>img {
+    width: 45px;
+    margin: 7%;
+    height: 35px;
+}
+
+.follow {
+    margin-left: -4%;
+}
+
+.follow>img {
+    margin: 10px;
+}
+
+.logo {
+    margin-top: -17%;
+}
+
+.logo>img {
+    width: 169px;
+    height: 51px;
+    display: block;
+    margin: 25px 0px;
+}
+
+.footer1>h1,
+.footer1>h4,
+.footer2>h1,
+.footer2>h4,
+.follow>h1,
+.paid>h1 {
+    color: rgb(132, 132, 132);
+    text-transform: uppercase;
+    font-family: "Lato-Regular";
+    font-size: 12px;
+    height: 30px;
+    text-align: initial;
+}
+
+.footer1>h4,
+.footer2>h4 {
+    color: black;
+}
+
+.paid>img.PayPal {
+    width: 100px;
+    margin-left: -1px;
+    margin: 0;
+}
+
+.download_app>h1 {
+    padding-left: 7%;
+}
+
+.download_app>h1 {
+    color: #fff;
+    width: 59%;
+    text-align: left;
+}
+
+.download_app>h4 {
+    font-family: "Lato-Light";
+    font-size: 18px;
+    color: #ffff;
+    overflow: hidden;
+    width: 83%;
+}
+
+.newsletter>.container>h1 {
+    font-family: "AbrilFatface";
+    font-size: 40px;
+    color: #fff;
+    padding-left: 7%;
+}
+
+.newsletter>.container>h1 {
+    padding-left: 0%;
+}
+
+.newsletter>.container>h4 {
+    font-family: "Lato-Light";
+    font-size: 14px;
+    color: #fff;
+}
+
+.newsletter {
+    width: 100%;
+    background-color: #21253d;
+    color: #ffff;
+    padding: 6% 31%;
+}
+
+.newsletter>.container>.row>a {
+    margin-left: 8%;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    color: #131313;
+    border: 1px solid #ffff;
+    text-transform: uppercase;
+    width: 180px;
+    text-align: center;
+    height: 40px;
+    text-align: center;
+    background-color: #ffff;
+}

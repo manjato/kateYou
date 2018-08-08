@@ -1,0 +1,51 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-3">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                <div class="list-group">
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/myProfil" style="width: 94%"> <img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profilVendeur"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mypaiement" style="width: 80%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</li>
+                    <li class="fromLeft active"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes documents</h1>
+
+                </div>
+                <form class="myInfos">
+                    <div>
+                        <h4>Ajouter un justificatif d'identité</h4>
+                        <img class="identity" src="assets\images\logo\Group 2.2.png" alt="">
+                    </div>
+                    <div>
+                        <h4>Ajouter un justificatif de domicile</h4>
+                        <img src="assets\images\logo\Group.png" alt="">
+                        <img src="assets\images\logo\vendre.png" alt="">
+                    </div>
+                    <button class="valid ">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MOBIL RESPONSIVE -->
+
+<!-- END OF RESPONSIVE  -->
+<footer>
+    <app-download></app-download>
+    <hr class="menu">
+    <app-aboutus></app-aboutus>
+</footer>

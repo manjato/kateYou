@@ -1,0 +1,434 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-3">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                <div class="list-group">
+                    <li class="fromLeft active"> <img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profilVendeur"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mypaiement" style="width: 80%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mydocument" style="width: 86%"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes informations</h1>
+                    <h3>Dans un texte de vente chaque mot à son importance et doit être choisi soigneusement. D’ailleurs de nombreux professionnels dans ce domaine affirment avec des tests à l’appui que quelques mots peuvent parfois multiplier le nombre par
+                        2 voir beaucoup plus. Un bon texte de vente peut donc se comparer à un bon vendeur qui sait trouver un mot juste pour être convaincant. Il sait également qu’il faut s’adresser au bonnes personnes et répondre à leur besoin.</h3>
+                </div>
+                <form class="myInfos">
+                    <h4>Champ obligatoire*</h4>
+                    <div class="checkYou">
+                        <div>
+                            <button class="{{homme}}" (click)="civilite()">Homme</button>
+                            <button class="{{femme}}" (click)="civilite()" style="margin-left: -3%;">Femme</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 right">
+                        <div class="field">
+                            <input type="text" name="nom" id="nom" placeholder=" ">
+                            <label for="nom">Nom*</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="mail" id="mail" placeholder="   ">
+                            <label for="mail">Adresse email*</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="pseudo" id="pseudo" placeholder="   ">
+                            <label for="pseudo">Pseudo*</label>
+                        </div>
+                        <div class="field">
+                            <select class="selectpicker">
+                                        <option class="pays">Votre pays</option>
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                        </div>
+                        <div class="field">
+                            <input type="text " name="adresse " id="adresse " placeholder=" ">
+                            <label for="adresse ">Adresse</label>
+                        </div>
+                        <div class="field ">
+                            <input type="text " name="codePostal " id="codePostal " placeholder=" ">
+                            <label for="codePostal ">Code postal*</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 left ">
+                        <div class="field ">
+                            &nbsp;
+                        </div>
+                        <div class="field ">
+                            <input type="text " name="prenom " id="prenom " placeholder=" ">
+                            <label for="prenom ">Prenom*</label>
+                        </div>
+                        <div class="field" style="margin-bottom: 2px;">
+                            <span class="fa {{fa}}" (click)="showPass()"></span>
+                            <input type="{{sign}}" name="password " id="password " placeholder=" ">
+                            <label for="password ">Mot de passe*</label>
+                        </div>
+                        <div class="field dateNaiss ">
+                            <div>
+                                <label for="datenaissance" class="daty">Date de naissance*</label>
+                                <br>
+                                <select class="selectpicker date">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>31</option>
+                                        </select>
+                                <select class="selectpicker date">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                <select class="selectpicker datenaissance">
+                                            <option>1970</option>
+                                            <option>1971</option>
+                                            <option>1972</option>
+                                            <option>1973</option>
+                                            <option>1974</option>
+                                            <option>1975</option>
+                                            <option>1976</option>
+                                            <option>1977</option>
+                                            <option>1978</option>
+                                            <option>1979</option>
+                                            <option>1980</option>
+                                            <option>1981</option>
+                                            <option>1982</option>
+                                            <option>1983</option>
+                                            <option>1984</option>
+                                            <option>1985</option>
+                                            <option>1986</option>
+                                            <option>1987</option>
+                                            <option>1988</option>
+                                            <option>1989</option>
+                                            <option>1990</option>
+                                            <option>1991</option>
+                                            <option>1992</option>
+                                            <option>1993</option>
+                                            <option>1994</option>
+                                            <option>1995</option>
+                                            <option>1996</option>
+                                            <option>1997</option>
+                                            <option>1998</option>
+                                            <option>1999</option>
+                                            <option>2000</option>
+                                            <option>2001</option>
+                                            <option>2002</option>
+                                            <option>2003</option>
+                                            <option>2004</option>
+                                            <option>2005</option>
+                                            <option>2006</option>
+                                            <option>2007</option>
+                                            <option>2008</option>
+                                            <option>2009</option>
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                            <option>2012</option>
+                                            <option>2013</option>
+                                            <option>2014</option>
+                                            <option>2015</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                        </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <select class="selectpicker">
+                                        <option class="ville">Ville*</option>
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                        </div>
+                        <div class="field taille">
+                            <input type="text " name="adresse2 " id="adresse2 " placeholder=" ">
+                            <label for="adresse2 ">Complément d'adresse</label>
+                        </div>
+                        <div class="field taille ">
+                            <input type="text " name="tel " id="tel " placeholder=" ">
+                            <label for="tel ">Numero de téléphone*</label>
+                        </div>
+                    </div>
+                    <button class="valid">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MOBIL RESPONSIVE -->
+<div class="responsive">
+    <accordion>
+        <accordion-group heading="MES INFORMATIONS">
+            <div class="form">
+                <div class="main-header">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                            <h3>Donato Bello</h3>
+                            <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                        </div>
+                        <div class="col-sm-8">
+                            <h1>Mes informations</h1>
+                            <h3>Dans un texte de vente chaque mot à son importance et doit être choisi soigneusement. D’ailleurs de nombreux professionnels dans ce domaine affirment avec des tests à l’appui que quelques mots peuvent parfois multiplier le
+                                nombre par 2 voir beaucoup plus. Un bon texte de vente peut donc se comparer à un bon vendeur qui sait trouver un mot juste pour être convaincant. Il sait également qu’il faut s’adresser au bonnes personnes et répondre
+                                à leur besoin.</h3>
+                        </div>
+                    </div>
+                </div>
+                <form class="myInfos">
+                    <h4>Champ obligatoire*</h4>
+                    <div class="checkYou">
+                        <div>
+                            <button class="{{homme}}" (click)="civilite()">Homme</button>
+                            <button class="{{femme}}" (click)="civilite()" style="margin-left: -3%;">Femme</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="field">
+                            <input type="text" name="nom" id="nomMobil" placeholder=" ">
+                            <label for="nom">Nom*</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="mail" id="mailMobil" placeholder="   ">
+                            <label for="mail">Adresse email*</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="pseudo" id="pseudoMobil" placeholder="   ">
+                            <label for="pseudo">Pseudo*</label>
+                        </div>
+                        <div class="field">
+                            <select class="selectpicker">
+                                <option class="pays">Votre pays</option>
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <input type="text " name="adresse " id="adresseMobil" placeholder=" ">
+                            <label for="adresse ">Adresse</label>
+                        </div>
+                        <div class="field ">
+                            <input type="text " name="codePostal " id="codePostalMobil" placeholder=" ">
+                            <label for="codePostal ">Code postal*</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="field ">
+                            &nbsp;
+                        </div>
+                        <div class="field ">
+                            <input type="text " name="prenom " id="prenomMobil" placeholder=" ">
+                            <label for="prenom ">Prenom*</label>
+                        </div>
+                        <div class="field" style="margin-bottom: 2px;">
+                            <span class="fa {{fa}}" (click)="showPass()"></span>
+                            <input type="{{sign}}" name="password " id="passwordMobil" placeholder=" ">
+                            <label for="password ">Mot de passe*</label>
+                        </div>
+                        <div class="field dateNaiss ">
+                            <div>
+                                <label for="datenaissance" class="daty">Date de naissance*</label>
+                                <br>
+                                <select class="selectpicker date">
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                                <option>25</option>
+                                                                <option>26</option>
+                                                                <option>27</option>
+                                                                <option>28</option>
+                                                                <option>29</option>
+                                                                <option>30</option>
+                                                                <option>31</option>
+                                                            </select>
+                                <select class="selectpicker date">
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                            </select>
+                                <select class="selectpicker datenaissance">
+                                                                <option>1970</option>
+                                                                <option>1971</option>
+                                                                <option>1972</option>
+                                                                <option>1973</option>
+                                                                <option>1974</option>
+                                                                <option>1975</option>
+                                                                <option>1976</option>
+                                                                <option>1977</option>
+                                                                <option>1978</option>
+                                                                <option>1979</option>
+                                                                <option>1980</option>
+                                                                <option>1981</option>
+                                                                <option>1982</option>
+                                                                <option>1983</option>
+                                                                <option>1984</option>
+                                                                <option>1985</option>
+                                                                <option>1986</option>
+                                                                <option>1987</option>
+                                                                <option>1988</option>
+                                                                <option>1989</option>
+                                                                <option>1990</option>
+                                                                <option>1991</option>
+                                                                <option>1992</option>
+                                                                <option>1993</option>
+                                                                <option>1994</option>
+                                                                <option>1995</option>
+                                                                <option>1996</option>
+                                                                <option>1997</option>
+                                                                <option>1998</option>
+                                                                <option>1999</option>
+                                                                <option>2000</option>
+                                                                <option>2001</option>
+                                                                <option>2002</option>
+                                                                <option>2003</option>
+                                                                <option>2004</option>
+                                                                <option>2005</option>
+                                                                <option>2006</option>
+                                                                <option>2007</option>
+                                                                <option>2008</option>
+                                                                <option>2009</option>
+                                                                <option>2010</option>
+                                                                <option>2011</option>
+                                                                <option>2012</option>
+                                                                <option>2013</option>
+                                                                <option>2014</option>
+                                                                <option>2015</option>
+                                                                <option>2016</option>
+                                                                <option>2017</option>
+                                                                <option>2018</option>
+                                                            </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <select class="selectpicker">
+                                                            <option class="ville">Ville*</option>
+                                                            <option>Mustard</option>
+                                                            <option>Ketchup</option>
+                                                            <option>Relish</option>
+                                                        </select>
+                        </div>
+                        <div class="field taille">
+                            <input type="text " name="adresse2 " id="adresse2Mobil" placeholder=" ">
+                            <label for="adresse2 ">Complément d'adresse</label>
+                        </div>
+                        <div class="field taille ">
+                            <input type="text " name="tel " id="telMobil" placeholder=" ">
+                            <label for="tel ">Numero de téléphone*</label>
+                        </div>
+                    </div>
+                    <button class="valid ">Valider</button>
+                </form>
+            </div>
+        </accordion-group>
+        <accordion-group heading="MON PROFIL VENDEUR">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="MES PAIEMENTS">
+            <p>Content 2</p>
+        </accordion-group>
+        <accordion-group heading="MES DOCUMENTS">
+            This content is straight in the template.
+        </accordion-group>
+        <accordion-group heading=" AJOUTER UN ARTICLE">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="MES PRODUITS">
+            <p>Content 2</p>
+        </accordion-group>
+        <accordion-group heading="MES COMMANDES">
+            This content is straight in the template.
+        </accordion-group>
+        <accordion-group heading="MES MESSAGES">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="MES PARAMETRES">
+            <p>Content 2</p>
+        </accordion-group>
+    </accordion>
+</div>
+<!-- END OF RESPONSIVE  -->
+<footer>
+    <app-download></app-download>
+    <hr class="menu">
+    <app-aboutus></app-aboutus>
+</footer>

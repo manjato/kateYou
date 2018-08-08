@@ -1,0 +1,85 @@
+.top-header {
+    background-color: rgb(238, 238, 238);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 4%;
+}
+
+.header {
+    font-family: "Lato-light";
+    font-size: 18px;
+    p {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        cursor: pointer;
+    }
+    span {
+        margin-left: 7px;
+        margin-right: 7px;
+        text-decoration: underline;
+    }
+    .produitFils {
+        text-decoration: none;
+    }
+}
+
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    h3 {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        width: 94%;
+    }
+}
+
+h2,
+h4 {
+    font-family: "Lato-Regular";
+    font-size: 16px;
+    border-bottom: 1px solid black;
+    font-weight: 900;
+    padding-bottom: 6px;
+}
+
+.color {
+    margin-left: 7%;
+    margin-top: 10%;
+    margin-bottom: 40%;
+    h6 {
+        color: #848484;
+    }
+    p {
+        font-family: "Lato-Regular";
+        font-size: 14px;
+    }
+    p>img {
+        float: right;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.col-md-3 {
+    h4 {
+        border-bottom: 1px solid #848484;
+    }
+    h2 {
+        margin-top: 40%;
+        border-bottom: 1px solid #848484;
+    }
+    h4>img {
+        width: 15px;
+        height: 15px;
+        float: right;
+    }
+}
+
+.couleur>div>input {
+    width: 20px;
+    height: 20px;
+}

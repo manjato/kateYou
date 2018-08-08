@@ -1,0 +1,619 @@
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    .col-md-6 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4 {
+        color: black;
+        font-size: 14px
+    }
+    
+    h2 {
+        font-family: "EyeCatchingPro";
+        font-size: 90px;
+        color: #131313;
+    }
+    
+    .label h4 {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        width: 74%;
+        text-align: left;
+    }
+    
+    h4>a {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    h4>a :focus {
+        text-decoration: underline;
+    }
+    
+    div.label {
+        float: right;
+        width: 72%;
+    }
+    
+    div.menu_font {
+        text-align: center;
+    }
+    
+    div.menu_font>h2 {
+        margin-bottom: -12px;
+    }
+    
+    .menu_font_slider>h2 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        color: #ffff;
+    }
+    
+    .menu_font_slider {
+        background-color: #21253d;
+        color: #ffff;
+        padding: 12%;
+    }
+    
+    .font_label>h4,
+    .download_app>h4 {
+        font-family: "Lato-Light";
+        font-size: 18px;
+        color: #ffff;
+        overflow: hidden;
+        width: 91%;
+    }
+    
+    .font_label>h4 {
+        width: 87%;
+        margin-bottom: 19px;
+    }
+    
+    .font_label>a {
+        padding: 10px;
+        font-family: "Lato-Regular";
+        font-size: 13px;
+        color: #131313;
+        border: 1px solid #ffff;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: white;
+    }
+    
+    .font_label>a:hover {
+        cursor: pointer;
+    }
+    
+    .news_area.col-md-12,
+    .user_area {
+        background-color: #fff3f5;
+        padding: 0;
+    }
+    
+    .container h1 {
+        margin: 4% 0;
+    }
+    
+    .news_Product>h2,
+    .best_Product>h2 {
+        font-family: "Lato-Light";
+        font-size: 16px;
+    }
+    
+    .best_Product>h6,
+    .news_Product>h6 {
+        font-family: "Lato-Black";
+        font-size: 12px;
+        color: #000000;
+    }
+    
+    .news_Product>h3 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: #848484;
+    }
+    
+    .news_Product>h4,
+    .the_Seller h2,
+    .Ours_Seller h2,
+    .best_Product>h4 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: rgb(132, 132, 132);
+    }
+    
+    .Ours_Seller h2 {
+        margin-top: 9%;
+    }
+    
+    .seller>.container>.col-md-2 {
+        float: left;
+    }
+    
+    .Ours_Seller>img {
+        width: 144px;
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+    }
+    
+    .seller .container h4 {
+        margin-bottom: 5%;
+    }
+    
+    .the_Seller>img {
+        float: left;
+        width: 45px;
+        height: 45px;
+        position: relative;
+        overflow: hidden;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .best_Product>img {
+        width: 225px;
+        height: 270px;
+    }
+    
+    .the_Seller {
+        margin-top: 20%;
+    }
+    
+    .the_Seller h2 {
+        color: black;
+    }
+    
+    .the_Seller h4,
+    .Ours_Seller h4 {
+        font-family: "Lato-Light";
+        font-size: 12px;
+    }
+    
+    .Ours_Seller h4 {
+        color: black;
+    }
+    
+    .Ours_Seller h2 {
+        font-size: 16px;
+        color: black;
+    }
+    
+    .container>h1,
+    .download_app>h1,
+    .text,
+    .newsletter>.container>h1 {
+        font-family: "AbrilFatface";
+        font-size: 40px;
+        color: #131313;
+        padding-left: 7%;
+    }
+    
+    .newsletter>.container>h1 {
+        padding-left: 0%;
+    }
+    
+    .btn>button,
+    .container>button,
+    .btn_propos {
+        font-family: "Lato-Regular";
+        font-size: 13px;
+        color: #ffff;
+        border: 1px solid #131313;
+        text-transform: uppercase;
+        width: 180px;
+        height: 40px;
+        background-color: #131313;
+        margin: 3% 42%;
+    }
+    
+    img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .menu_shop,
+    .newsletter {
+        width: 100%;
+        background-color: #21253d;
+        color: #ffff;
+    }
+    
+    .label_shop {
+        padding: 7% 18%;
+    }
+    
+    .label_containt {
+        position: absolute;
+        top: 19%;
+        left: 24%;
+    }
+    
+    .label_shop>div>h2 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        color: #ffff;
+        width: 65%;
+    }
+    
+    .label_shop>div>h4 {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        width: 74%;
+        text-align: left;
+        margin: 0px 0 7% 0;
+        color: #ffff;
+    }
+    
+    .label_shop>div>h4>span {
+        color: #b9b9b9;
+    }
+    
+    .label_shop>div>a,
+    .newsletter>.container>.row>a {
+        color: #000000;
+        padding: 8px 21px;
+        background-color: #ffff;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+    
+    .label_shop>div>a:hover {
+        cursor: pointer;
+    }
+    
+    .seller>.container>h4,
+    .user_area>.container>h4 {
+        font-family: "Lato-Regular";
+        font-size: 18px;
+        color: #b9b9b9;
+    }
+    
+    .seller>.container>h4>a {
+        text-decoration: underline;
+        color: #131313;
+    }
+    
+    .user_area {
+        text-align: center;
+    }
+    
+    .user_area .container .row {
+        margin-top: 4%;
+    }
+    
+    .user_area .container .row>.col-md-3 {
+        text-align: center;
+        margin: 0 3%;
+    }
+    
+    .etiquette {
+        float: right;
+        margin-top: -6%;
+        margin-right: 1%;
+        width: 176px;
+        -webkit-transform: rotate(46deg);
+        transform: rotate(46deg);
+    }
+    
+    .Product {
+        width: 320px;
+        height: 200px;
+        background-color: #fff;
+        padding: 40px 0 11px 30px;
+        box-shadow: -19px 20px rgb(233, 221, 223);
+    }
+    
+    .sendProduct {
+        box-shadow: -11px 72px rgb(233, 221, 223);
+    }
+    
+    .notif {
+        box-shadow: 30px -22px rgb(233, 221, 223);
+    }
+    
+    .Iam.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .Iam>.user_area>.container>h1 {
+        padding: 7% 0 0 0;
+        margin-left: 15%;
+    }
+    
+    .Iam>.user_area>.container>h4 {
+        padding-bottom: 3%;
+        margin-left: 15%;
+    }
+    
+    .Iam>.user_area>.container>.step {
+        margin-left: -4%;
+    }
+    
+    .user_area .container .step>.col-md-3 {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    
+    .user_area .container .step>.col-md-3>h1 {
+        font-family: "AbrilFatface";
+        font-size: 70px;
+        margin-bottom: -12%;
+        margin-left: 30%;
+    }
+    
+    .user_area .container .step>.Notification {
+        margin-top: 8px;
+    }
+    
+    .user_area .container .step>.col-md-3>img {
+        width: 150px;
+        height: 150px;
+        margin-top: -10%;
+        margin-left: 36%;
+    }
+    
+    .user_area .container .step>.col-md-3>.Product>h2 {
+        font-family: "Lato-Regular";
+        font-size: 20px;
+    }
+    
+    .user_area .container .step>.col-md-3>.Product>h4 {
+        font-family: "Lato-Light";
+        font-size: 15px;
+        color: #b9b9b9;
+        text-align: left;
+        width: 98%;
+    }
+    
+    .btn {
+        margin-left: 15%;
+    }
+    
+    .btn_propos {
+        cursor: pointer;
+        margin: 5% 40% 8%;
+        width: 180px;
+        height: 40px;
+    }
+    
+    .user_area>.container>.btn>button {
+        background-color: #f0cad0;
+        text-align: center;
+        border: 1px solid #f3f3ff;
+        color: #131313;
+        margin: 0;
+    }
+    
+    .user_area>.container>.btn>button:hover {
+        background-color: #ffff;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+    
+    .user_area>.container>button:focus {
+        background-color: #ffff;
+        border: 1px solid #fff;
+    }
+    
+    .user_area {
+        position: relative;
+    }
+    
+    .download_app {
+        position: absolute;
+        top: 32%;
+        left: 55%;
+    }
+    
+    .download_app>h1 {
+        color: #fff;
+        width: 61%;
+        text-align: left;
+    }
+    
+    .download_app>h4 {
+        font-family: "Lato-Light";
+        font-size: 18px;
+        width: 85%;
+        text-align: justify;
+        padding-left: 7%;
+    }
+    
+    .download_app>img {
+        width: 26%;
+        margin-top: 7%;
+        margin-right: 16%;
+    }
+    
+    .newsletter {
+        padding: 6% 31%;
+    }
+    
+    .newsletter>.container>h1 {
+        color: #fff;
+    }
+    
+    .newsletter>.container>h4 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: #fff;
+    }
+    
+    .newsletter>.container>.row {
+        margin-left: -8%;
+    }
+    
+    #myemail>::placeholder {
+        color: #fff;
+    }
+    
+    .myemail {
+        width: 300px;
+    }
+    
+    .newsletter>.container>.row>a {
+        margin-left: 8%;
+        margin-bottom: 14px;
+    }
+    
+    .col-md-3 {
+        float: left;
+    }
+    
+    .col-md-3 img {
+        width: 100px;
+        height: 100px;
+        margin: 5px 18%;
+    }
+    
+    .col-md-3 h4 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        text-align: center;
+        width: 75%;
+    }
+    
+    mat-form-field.mat-form-field-underline {
+        width: 160% !important;
+        background-color: #ffff !important;
+    }
+    /* footer */
+    
+    .smartphone.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .aboutUs {
+        margin: 5% 0;
+    }
+    
+    .news_Product>img {
+        width: 150px;
+        height: 180px;
+        margin-bottom: 10%;
+    }
+    
+    .list_Product>.col-md-2 {
+        float: left;
+    }
+    
+    .list_Product {
+        padding-left: 6%;
+    }
+    
+    footer>.container>.col-md-12 {
+        margin: 8% 0 17% 0%;
+    }
+    
+    .follow>img {
+        width: 20px;
+    }
+    
+    .youtube {
+        width: 35px;
+    }
+    
+    footer>.container>.col-md-12>.col-md-3,
+    footer>.container>.col-md-12>.col-md-2,
+    footer>.container>.col-md-12>.col-md-5 {
+        float: left;
+    }
+    
+    .paid>img {
+        width: 45px;
+        margin: 7%;
+        height: 35px;
+    }
+    
+    .follow {
+        margin-left: -4%;
+    }
+    
+    .follow>img {
+        margin: 10px;
+    }
+    
+    .logo {
+        margin-top: -17%;
+    }
+    
+    .logo>img {
+        width: 169px;
+        height: 51px;
+        display: block;
+        margin: 25px 0px;
+    }
+    
+    .footer1>h1,
+    .footer1>h4,
+    .footer2>h1,
+    .footer2>h4,
+    .follow>h1,
+    .paid>h1 {
+        color: rgb(132, 132, 132);
+        text-transform: uppercase;
+        font-family: "Lato-Regular";
+        font-size: 12px;
+        height: 30px;
+        text-align: initial;
+    }
+    
+    .footer1>h4,
+    .footer2>h4 {
+        color: black;
+    }
+    
+    .paid>img.PayPal {
+        width: 100px;
+        margin-left: -1px;
+        margin: 0;
+    }
+    /* footer */
+    /*    RESPONSIVE */
+    
+    @media screen and (max-width: 767px) {
+        .list_Product>.col-md-2,
+        .seller>.container>.col-md-2,
+        .list_Product>.col-md-2 {
+            width: 50%;
+            margin-bottom: 7%;
+        }
+        img.etiquette {
+            display: none;
+        }
+        .menu_shop,
+        .newsletter {
+            padding-bottom: 8%;
+        }
+        .user_area .container .step>.col-md-3>h1 {
+            margin-bottom: -7%;
+            margin-left: -30%;
+        }
+        .Iam>.user_area>.container>.step {
+            margin-left: 13%;
+        }
+        .btn_propos {
+            margin: 8% 0 8%;
+        }
+        .container>button {
+            margin: 3% 30%;
+        }
+    }

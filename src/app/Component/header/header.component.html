@@ -1,0 +1,107 @@
+<app-topbar></app-topbar>
+<div class="main_header_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="search_area">
+                    <form action="#">
+                        <div class="field">
+                            <img class="img-fluid" src="assets/images/logo/loupe.svg" alt="">
+                            <input type="text" name="rechercher" id="rechercher" placeholder="   ">
+                            <label for="rechercher">Rechercher</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-10">
+                <div class="logo_area" style="text-align:center">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/"><img src="assets/images/logo/KY.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="logo_headers">
+                    <a><img src="assets/images/logo/cœur.svg" alt="">
+                        <span class="badge badge-danger"></span></a>
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/login"><img src="assets/images/logo/profile.svg" alt="">
+                        <span class="badge badge-danger"></span></a>
+                    <a><img src="assets/images/logo/panier.svg" alt="">
+                        <span class="badge badge-danger"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainmenu_area">
+    <div class="container">
+        <nav id="navigation1" class="navigation">
+            <div id="navbar" class="navbar-collapse">
+                <div class="nav-menus">
+                    <ul class="nav-menu">
+                        <li class="fromLeft">
+                            <a>Femmes</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>Hommes</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>Enfant</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>Marques</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>Soldes</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>Nos vendeurs</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>Magazine</a>
+                        </li>
+                        <li class="fromLeft">
+                            <a>A propos</a>
+                        </li>
+                        <li class="fromRight">
+                            <a class="plus" (click)="rotation()"><img [@rotatedState]='state' src="assets/images/logo/plus.png" alt=""> Ajouter un article</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- MOBILE ET TABLETTE -->
+<nav role="navigation" class="navigation75">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+            <a>
+                <li>Femmes</li>
+            </a>
+            <a>
+                <li>Hommes</li>
+            </a>
+            <a>
+                <li>Enfant</li>
+            </a>
+            <a>
+                <li>Marque</li>
+            </a>
+            <a>
+                <li>Nos vendeurs</li>
+            </a>
+            <a>
+                <li>Magazine</li>
+            </a>
+            <a>
+                <li>A propos</li>
+            </a>
+        </ul>
+    </div>
+</nav>

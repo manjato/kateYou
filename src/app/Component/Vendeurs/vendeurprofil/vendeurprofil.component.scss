@@ -1,0 +1,253 @@
+.container {
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+
+hr {
+    border-top: 1px solid #000;
+}
+
+.row {
+    padding-left: 13%;
+}
+
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        text-align: center;
+        margin-top: -2%;
+    }
+    h3 {
+        margin-right: 15%;
+        font-family: "Lato-Light";
+        font-size: 14px;
+        padding-top: 6%;
+    }
+}
+
+.infos {
+    .avatar {
+        border-radius: 50%;
+        border: 2px solid #909396;
+    }
+    h3 {
+        margin-right: 15%;
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: #131313;
+        padding: 6%;
+    }
+    h4,
+    p {
+        font-family: "Lato-Light";
+        font-size: 17px;
+    }
+    p>img {
+        padding-bottom: 9px;
+        padding-left: 5px;
+    }
+}
+
+.list-group {
+    margin-left: -15%;
+    list-style: none;
+    li {
+        font-family: "Lato-Regular";
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 13px 0px;
+        color: #131313;
+        cursor: pointer;
+    }
+    li>img {
+        padding-right: 5%;
+    }
+}
+
+
+/* FLOATING LABEL */
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+}
+
+input:placeholder-shown+label {
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.2);
+    font-family: "Lato-Light";
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+.langue>.field>input:placeholder-shown+label {
+    color: #b9b9b9;
+}
+
+
+/* END of FLOATING LABEL */
+
+#langue,
+.choixLangue {
+    width: 365px;
+}
+
+#description,
+#descri {
+    width: 370px;
+}
+
+.addlangue {
+    h3 {
+        -webkit-transition: max-height 1s;
+        -moz-transition: max-height 1s;
+        -ms-transition: max-height 1s;
+        -o-transition: max-height 1s;
+        transition: max-height 1s;
+        font-family: "Lato-Light";
+        font-size: 17.5px;
+        color: #131313;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.addlangue {
+    padding-top: 5%;
+}
+
+.valid {
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    color: #ffff;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #21253d;
+    background-color: #21253d;
+    float: right;
+    margin-right: -2%;
+}
+
+.myInfos {
+    padding-top: 19%;
+}
+
+.choixLangue {
+    padding-top: 5%;
+}
+
+
+/* Animation Border-Bottom */
+
+li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #000000;
+    transform: scaleX(0);
+    transition: transform 2000ms ease-in-out;
+}
+
+li:hover:after {
+    transform: scaleX(0.75);
+}
+
+.fromLeft:after {
+    transform-origin: 15% 0%;
+}
+
+.fromLeft.active:after {
+    -webkit-transform-origin: none;
+    transform-origin: none;
+    content: none;
+    transform: none;
+    transition: none;
+}
+
+.fromLeft.active {
+    width: 82%;
+    border-bottom: 1px solid black;
+}
+
+
+/* Animation Border-Bottom */
+
+@media screen and (max-width: 767px) {
+    .containt {
+        display: none;
+    }
+    .row {
+        padding-left: 0;
+    }
+    .myInfos {
+        padding-top: 0%;
+    }
+    label {
+        width: 83%;
+    }
+    .valid {
+        float: left;
+        margin-right: 0;
+        margin-bottom: 3%;
+    }
+    #description,
+    #descri {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .responsive {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .row {
+        padding-left: 0;
+    }
+    .col-md-3 {
+        max-width: 29%;
+    }
+    .responsive {
+        display: none;
+    }
+    #description,
+    #descri {
+        width: 100%;
+    }
+    .list-group li {
+        width: 203px;
+    }
+    form {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,25 @@
+<hr>
+<div class="reset container">
+    <div class="header">
+        <p><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a> <img src="assets/images/others/gretterthan.png" alt=""> <span>Mot de passe oublié</span></p>
+        <h1>Mot de passe oublié?</h1>
+        <h4>Veuillez entrer votre adresse e-mail ci dessous. Vous allez recevoir un lien pour reinitialiser votre mot de passe.</h4>
+        <form class="reset">
+            <div class="field">
+                <input type="text" name="mail" id="mail" placeholder="   ">
+                <label for="mail">Adresse email*</label>
+            </div>
+            <h5> * Champ obligatoire</h5>
+            <button>Soumettre</button>
+        </form>
+    </div>
+    <div class="retour">
+        <h2 routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/login"><img src="assets/images/others/lessthan.png" alt=""> Retour</h2>
+    </div>
+</div>
+
+<footer>
+    <app-download></app-download>
+    <hr>
+    <app-aboutus></app-aboutus>
+</footer>

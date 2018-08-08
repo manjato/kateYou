@@ -1,0 +1,140 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-3">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                <div class="list-group">
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/myProfil" style="width: 96%"> <img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</li>
+                    <li class="fromLeft active"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mypaiement" style="width: 80%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mydocument" style="width: 86%"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mon profil vendeur</h1>
+                    <h3>Parler nous de vous et aidez nos futurs client en nous comminuquant vos langues parlés</h3>
+                </div>
+                <form class="myInfos">
+                    <div class="field">
+                        <input type="text" name="langue" id="langue" placeholder="   ">
+                        <label for="langue">Langue*</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="description" id="description" placeholder="   ">
+                        <label for="description">Description</label>
+                    </div>
+                    <div class="langue" *ngIf="langue">
+                        <!--                     <div class="field">
+                            <input type="text" name="langu" id="langu" placeholder="   ">
+                            <label for="langu">Langue*</label>
+                        </div> -->
+                        <mat-form-field class="choixLangue">
+                            <mat-select placeholder="Langue*">
+                                <mat-option *ngFor="let langue of langues" [value]="langue.Value">
+                                    {{langue.Value}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="field">
+                            <input type="text" name="descri" id="descri" placeholder="   ">
+                            <label for="descri">Description*</label>
+                        </div>
+                    </div>
+                    <div class="addlangue" (click)="addLangue()">
+                        <h3>Ajouter une langue</h3>
+                    </div>
+                    <button class="valid">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MOBIL RESPONSIVE -->
+<div class="responsive">
+    <accordion>
+        <accordion-group heading="MES INFORMATIONS">
+            <div class="form">
+                <div class="main-header">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                            <h3>Donato Bello</h3>
+                            <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                        </div>
+                        <div class="col-sm-8">
+                            <h1>Mon profil vendeur</h1>
+                            <h3>Parler nous de vous et aidez nos futurs client en nous comminuquant vos langues parlés</h3>
+
+                        </div>
+                    </div>
+                </div>
+                <form class="myInfos">
+                    <div class="field">
+                        <input type="text" name="langue" id="langue" placeholder="   ">
+                        <label for="langue">Langue*</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="description" id="description" placeholder="   ">
+                        <label for="description">Description</label>
+                    </div>
+                    <div class="langue" *ngIf="langue">
+                        <mat-form-field class="choixLangue">
+                            <mat-select placeholder="Langue*">
+                                <mat-option *ngFor="let langue of langues" [value]="langue.Value">
+                                    {{langue.Value}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="field">
+                            <input type="text" name="descri" id="descri" placeholder="   ">
+                            <label for="descri">Description*</label>
+                        </div>
+                    </div>
+                    <div class="addlangue" (click)="addLangue()">
+                        <h3>Ajouter une langue</h3>
+                    </div>
+                    <button class="valid">Valider</button>
+                </form>
+            </div>
+        </accordion-group>
+        <accordion-group heading="MON PROFIL VENDEUR">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="MES PAIEMENTS">
+            <p>Content 2</p>
+        </accordion-group>
+        <accordion-group heading="MES DOCUMENTS">
+            This content is straight in the template.
+        </accordion-group>
+        <accordion-group heading=" AJOUTER UN ARTICLE">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="MES PRODUITS">
+            <p>Content 2</p>
+        </accordion-group>
+        <accordion-group heading="MES COMMANDES">
+            This content is straight in the template.
+        </accordion-group>
+        <accordion-group heading="MES MESSAGES">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="MES PARAMETRES">
+            <p>Content 2</p>
+        </accordion-group>
+    </accordion>
+</div>
+<footer>
+    <app-download></app-download>
+    <app-aboutus></app-aboutus>
+</footer>

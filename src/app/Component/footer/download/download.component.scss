@@ -1,0 +1,231 @@
+.download_app {
+    position: absolute;
+    top: 32%;
+    left: 55%;
+}
+
+.col-md-12 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.download_app>h4 {
+    font-family: "Lato-Light";
+    font-size: 18px;
+}
+
+.download_app>h1 {
+    color: #fff;
+    width: 61%;
+    text-align: left;
+}
+
+.download_app>h4 {
+    width: 85%;
+    text-align: justify;
+    padding-left: 7%;
+}
+
+.download_app>img {
+    width: 26%;
+    margin-top: 7%;
+    margin-left: 7%;
+}
+
+.newsletter>.container>.row {
+    margin-left: -8%;
+}
+
+#myemail>::placeholder {
+    color: #fff;
+}
+
+.myemail {
+    width: 300px;
+}
+
+.aboutUs {
+    margin: 5% 0 15% 0;
+}
+
+.col-md-3 {
+    float: left;
+}
+
+.col-md-3 img {
+    width: 100px;
+    height: 100px;
+    margin: 5px 18%;
+}
+
+.col-md-3 h4 {
+    font-family: "Lato-Light";
+    font-size: 14px;
+    text-align: center;
+    width: 75%;
+}
+
+mat-form-field.mat-form-field-underline {
+    width: 160% !important;
+    background-color: #ffff !important;
+}
+
+
+/* footer */
+
+.news_Product>img {
+    width: 144px;
+    height: 150px;
+}
+
+.list_Product>.col-md-2 {
+    float: left;
+}
+
+.list_Product {
+    padding-left: 6%;
+}
+
+.container>.col-md-12 {
+    margin: 8% 0 17% 0%;
+}
+
+.follow>img {
+    width: 20px;
+}
+
+.youtube {
+    width: 35px;
+}
+
+.container>.col-md-12>.col-md-3,
+.container>.col-md-12>.col-md-2,
+.container>.col-md-12>.col-md-5 {
+    float: left;
+}
+
+.follow {
+    margin-left: -4%;
+}
+
+.follow>img {
+    margin: 10px;
+}
+
+.logo {
+    margin-top: -17%;
+}
+
+.logo>img {
+    width: 169px;
+    height: 51px;
+    display: block;
+    margin: 25px 0px;
+}
+
+.download_app>h1 {
+    padding-left: 7%;
+}
+
+.download_app>h1 {
+    color: #fff;
+    width: 59%;
+    text-align: left;
+}
+
+.download_app>h4 {
+    font-family: "Lato-Light";
+    font-size: 18px;
+    color: #ffff;
+    overflow: hidden;
+    width: 83%;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .download_app {
+        top: 16%;
+    }
+    .col-md-3 {
+        img {
+            margin: -9px 15%;
+        }
+        h4 {
+            width: 77%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .download_app {
+        top: 9%;
+        left: 45%;
+        h1 {
+            width: 100%;
+        }
+    }
+    .col-md-3 {
+        h4 {
+            width: 100%;
+        }
+        img {
+            margin: -15% 16%;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .download_app {
+        position: absolute;
+        top: 6%;
+        left: 4%;
+        h1 {
+            width: 100%;
+        }
+    }
+    .download_app>img {
+        width: 19%;
+        margin-top: 2%;
+        margin-left: 7%;
+    }
+    .col-md-3 {
+        float: left;
+        width: 25%;
+        img {
+            margin: -56% 0 -15% 0;
+        }
+        h4 {
+            width: 102%;
+        }
+    }
+    .aboutUs {
+        margin: 10% 0 18% 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .smartphone {
+        width: 114%;
+    }
+    .download_app {
+        top: 7%;
+        left: 0;
+        h1 {
+            width: 100%;
+        }
+    }
+    .col-md-3 {
+        width: 50%;
+        img {
+            margin: 0px 20%;
+        }
+        h4 {
+            width: 84%;
+        }
+    }
+}

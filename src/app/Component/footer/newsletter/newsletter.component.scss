@@ -1,0 +1,127 @@
+.newsletter>form>.row {
+    margin-left: -8%;
+}
+
+
+/* footer */
+
+.newsletter>form>h1 {
+    font-family: "AbrilFatface";
+    font-size: 40px;
+    color: #fff;
+    padding-left: 0%;
+}
+
+.newsletter>form>h4 {
+    font-family: "Lato-Light";
+    font-size: 14px;
+    color: #fff;
+}
+
+.newsletter {
+    width: 100%;
+    background-color: #21253d;
+    color: #ffff;
+    margin-bottom: 5%;
+}
+
+.newsletter>form>.row>a {
+    margin-left: 6%;
+    margin-top: 2%;
+    padding-top: 10px;
+    font-family: "Lato-Regular";
+    font-size: 14px;
+    color: #131313;
+    border: 1px solid #ffff;
+    text-transform: uppercase;
+    width: 180px;
+    text-align: center;
+    height: 40px;
+    text-align: center;
+    background-color: #ffff;
+}
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+    color: white;
+    font-family: "Lato-Light";
+}
+
+input {
+    border: 0;
+    background-color: #21253d;
+    border-bottom: 1px solid white;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    width: 300px;
+    cursor: text;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+input:placeholder-shown+label {
+    cursor: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+    font-family: "Lato-Light";
+}
+
+ ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+label {
+    font-family: "Lato-Light";
+    margin-bottom: 0.9rem;
+    width: 67%;
+    font-size: 12px;
+}
+
+a {
+    cursor: pointer;
+}
+
+form {
+    margin-left: 30%;
+    padding: 6% 0;
+}
+
+
+/*    RESPONSIVE */
+
+@media screen and (max-width: 767px) {
+    form {
+        margin-left: 17%;
+    }
+    .newsletter>form>.row>a {
+        margin-left: 4%;
+        margin-top: 3%;
+    }
+}

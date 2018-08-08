@@ -1,0 +1,161 @@
+.col-md-12 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.col-md-3 {
+    float: left;
+}
+
+.col-md-3 img {
+    width: 100px;
+    height: 100px;
+    margin: 5px 18%;
+}
+
+.col-md-3 h4 {
+    font-family: "Lato-Light";
+    font-size: 14px;
+    text-align: center;
+    width: 75%;
+}
+
+
+/* footer */
+
+.container>.col-md-12 {
+    margin: 8% 0 17% 0%;
+}
+
+.follow>img {
+    width: 20px;
+}
+
+.youtube {
+    width: 35px;
+}
+
+.container>.col-md-12>.col-md-3,
+.container>.col-md-12>.col-md-2,
+.container>.col-md-12>.col-md-5 {
+    float: left;
+}
+
+.paid>img {
+    width: 45px;
+    margin: 7%;
+    height: 35px;
+}
+
+.follow {
+    margin-left: -4%;
+}
+
+.follow>img {
+    margin: 10px;
+}
+
+.logo {
+    margin-top: -17%;
+}
+
+.logo>img {
+    width: 169px;
+    height: 51px;
+    display: block;
+    margin: 25px 0px;
+}
+
+.footer1>h1,
+.footer1>h4,
+.footer2>h1,
+.footer2>h4,
+.follow>h1,
+.paid>h1 {
+    color: rgb(132, 132, 132);
+    text-transform: uppercase;
+    font-family: "Lato-Regular";
+    font-size: 12px;
+    height: 30px;
+    text-align: initial;
+}
+
+.footer1>h4,
+.footer2>h4 {
+    color: black;
+}
+
+.paid>img.PayPal {
+    width: 100px;
+    margin-left: -1px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .footer1 {
+        h4 {
+            width: 100%
+        }
+    }
+    .paid>img.PayPal {
+        width: 73px;
+    }
+    .logo>img {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .container>.col-md-12 {
+        margin: 0;
+    }
+    .footer1 {
+        width: 37%;
+    }
+    .footer2 {
+        width: 22%;
+    }
+    .follow {
+        width: 32%;
+        margin-left: -5%;
+    }
+    .mode {
+        width: 30%;
+        margin-left: -21px;
+    }
+    .logo {
+        margin-top: 0;
+        margin-right: 0;
+        img {
+            width: 72%;
+            height: auto;
+            display: block;
+        }
+    }
+    .paid>img {
+        margin: 0;
+    }
+    .paid>img.PayPal {
+        width: 70px;
+    }
+    .logo img {
+        width: auto;
+        float: left;
+        margin-right: 12%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /*     .col-md-12,
+    .col-md-2,
+    .col-md-3 {
+        width: 26%;
+    } */
+}
