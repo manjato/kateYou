@@ -226,11 +226,12 @@ li:after {
 }
 
 li:hover:after {
-    transform: scaleX(0.75);
+    transform: scaleX(0.8);
 }
 
 .fromLeft:after {
-    transform-origin: 15% 0%;
+    margin-top: 4%;
+    transform-origin: 0% 0%;
 }
 
 .fromLeft.active:after {

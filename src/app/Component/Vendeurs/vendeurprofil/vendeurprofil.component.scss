@@ -122,7 +122,7 @@ input:focus {
 
 #description,
 #descri {
-    width: 370px;
+    width: 585px;
 }
 
 .addlangue {
@@ -149,12 +149,12 @@ input:focus {
     font-size: 13px;
     color: #ffff;
     text-transform: uppercase;
-    width: 180px;
+    width: 158px;
     height: 40px;
     border: 1px solid #21253d;
     background-color: #21253d;
     float: right;
-    margin-right: -2%;
+    margin-right: 7%;
 }
 
 .myInfos {
@@ -177,11 +177,12 @@ li:after {
 }
 
 li:hover:after {
-    transform: scaleX(0.75);
+    transform: scaleX(0.8);
 }
 
 .fromLeft:after {
-    transform-origin: 15% 0%;
+    margin-top: 4%;
+    transform-origin: 0% 0%;
 }
 
 .fromLeft.active:after {

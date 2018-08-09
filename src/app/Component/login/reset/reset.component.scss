@@ -1,75 +1,94 @@
-.header p{
+.header p {
     font-family: "Lato-Light";
     font-size: 16px;
     padding-left: 13%;
+}
 
-  }
-  .header p>a{
+.header p>a {
     cursor: pointer;
     color: black;
-  }
-  .header p>img{
+}
+
+.header p>img {
     width: 20px;
-  }  
-  h1{
-    font-family:"AbrilFatface";
+}
+
+h1 {
+    font-family: "AbrilFatface";
     font-size: 35px;
-  }
-  h4, h5, h2 {
+}
+
+h4,
+h5,
+h2 {
     font-family: "Lato-Light";
     font-size: 18px;
-  }
-  h5{
+}
+
+h5 {
     font-size: 14px;
-  }
-h2{
+}
+
+h2 {
     font-size: 16px;
     cursor: pointer;
 }
-.retour> h2>img{
-    padding: 11px;
-    width: 50px;
-    background-color: rgb(245, 245, 245)
+
+.retour>h2>img {
+    width: 100px;
 }
-.reset, h1, h4{
+
+.reset,
+h1,
+h4 {
     padding-left: 13%;
 }
-.header h1{
-  margin-top: 6%;
-}
-.header h5{
-  margin-top: 4%;
-  margin-bottom: -1%;
 
+.header h1 {
+    margin-top: 6%;
 }
-.retour{
+
+.header h5 {
+    margin-top: 4%;
+    margin-bottom: -1%;
+}
+
+.retour {
     padding-left: 16%;
 }
-.reset{
-  margin: 0;
+
+.reset {
+    margin-bottom: 7%;
+    margin: 0;
 }
-button{
-    font-family:"Lato-Regular";
+
+button {
+    font-family: "Lato-Regular";
     font-size: 16px;
     color: #ffff;
-    border: 1px solid #131313;    
+    border: 1px solid #131313;
     text-transform: uppercase;
     padding: 10px 6%;
     background-color: #131313;
     margin: 4% 0%;
 }
-  /* FLOATING LABEL */
+
+
+/* FLOATING LABEL */
+
 .field {
     display: flex;
     flex-flow: column-reverse;
     margin-bottom: 1em;
-  
-  }
-  label, input {
+}
+
+label,
+input {
     transition: all 0.2s;
     touch-action: manipulation;
-  }
-  input {
+}
+
+input {
     border: 0;
     border-bottom: 1px solid black;
     font-family: inherit;
@@ -78,154 +97,54 @@ button{
     padding: 0;
     cursor: text;
     width: 25%;
-  }
-  .date{
+}
+
+.date {
     border-bottom: none;
-  }
-  input:focus {
+}
+
+input:focus {
     outline: 0;
     border-bottom: 1px solid #666;
-  }
-  
-  input:placeholder-shown + label {
+}
+
+input:placeholder-shown+label {
     cursor: text;
     overflow: hidden;
     text-overflow: ellipsis;
     transform-origin: left bottom;
     transform: translate(0, 2.125rem) scale(1.2);
-  }
-  /**
+}
+
+
+/**
   * By default, the placeholder should be transparent. Also, it should 
   * inherit the transition.
   */
-  ::-webkit-input-placeholder {
+
+ ::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
-  }
-  /**
+}
+
+
+/**
   * Show the placeholder when the input is focused.
   */
-  input:focus::-webkit-input-placeholder {
+
+input:focus::-webkit-input-placeholder {
     opacity: 1;
-  }
-  /**
+}
+
+
+/**
   * When the element is focused, remove the label transform.
   * Also, do this when the placeholder is _not_ shown, i.e. when 
   * there's something in the input at all.
   */
-  input:not(:placeholder-shown) + label,
-  input:focus + label {
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
     transform: translate(0, 0) scale(1);
     cursor: pointer;
-  }
-
-  /* FOOTER */
-.smartphone.col-md-12{
-  padding-left: 0;
-  padding-right:0;
 }
-.user_area{
-  position: relative;
-}
-.download_app{
-  position: absolute;
-  top: 32%;
-  left: 55%;
-}
-.download_app>h4{
-  font-family:"Lato-Light";
-  font-size: 18px;
-  color: #fff;
-}
-.download_app> h1{
-  color: #fff;
-  width: 54%;
-  text-align: left;
-}
-.download_app> h4{
-  width: 78%;
-  text-align: justify;
-}
-.download_app>img{
-  width: 26%;
-  margin: 10px;
-}
-.etiquette{
-  float: right;
-  margin-top: -6%;
-  margin-right: 1%;
-  width: 176px;
-  -webkit-transform: rotate(46deg);
-  transform: rotate(46deg);
-}
-.aboutUs{
-  margin: 5% 0;
-  }
-  .col-md-3{
-      float: left;
-  }
-  .col-md-3 img{
-      width: 100px;
-      height: 100px;
-      margin: 5px 18%;
-  }
-  .col-md-3 h4{
-      font-family: "Lato-Light";
-      font-size: 14px;
-      text-align: center;
-      width: 75%;
-  }
- 
-footer> .container>.col-md-12{  
-  margin: 8% 0 17% 0%;
-}
-footer{
-  margin-top: 16%;
-}
-.follow>img{    
-  width: 20px;
-}
-.youtube{
- width:  35px;
-}
-footer> .container> .col-md-12>.col-md-3, footer> .container> .col-md-12>.col-md-2, footer> .container> .col-md-12>.col-md-5 {
-  float: left;
-}
-.paid> img{    
-  width: 45px;
-  margin: 7%;
-  height: 35px;
-}
-.follow{
-  margin-left: -4%;
-}
-.follow>img{
-  margin: 10px;
-}
-.logo{
-  margin-top: -17%;
-}
-.logo>img{
-  width: 100%;
-  display: block;
-  margin: 25px 0px;
-}
-.footer1>h1, .footer1>h4, .footer2>h1, .footer2>h4, .follow>h1, .paid>h1{
-  color: rgb(132, 132, 132);
-  text-transform: uppercase;
-  font-family: "Lato-Regular";
-  font-size: 12px;
-  height: 30px;
-  text-align: initial;
-}
-.footer1>h4, .footer2>h4{
-  color: black;
-  font-size: 14px  
-}
-.paid> img.PayPal{
-  width: 100px;
-  margin-left: -1px;  
-  margin: 0;
-}
-
-

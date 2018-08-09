@@ -115,7 +115,7 @@ const appRoutes: Routes = [
     path: 'mesproduits',
     component: MesproduitsComponent
   },
-  { path: '**', component: Error404Component }
+  { path: '**', component: HomeComponent }
 ];
 
 

@@ -23,6 +23,10 @@
     }
 }
 
+.nav-menus {
+    margin-bottom: 3%;
+}
+
 .main-header {
     h1 {
         font-family: "AbrilFatface";
@@ -64,12 +68,13 @@ h4 {
     }
 }
 
+label {
+    color: #848484;
+}
+
 .col-md-3 {
-    h4 {
-        border-bottom: 1px solid #848484;
-    }
+    h4,
     h2 {
-        margin-top: 40%;
         border-bottom: 1px solid #848484;
     }
     h4>img {
@@ -82,4 +87,91 @@ h4 {
 .couleur>div>input {
     width: 20px;
     height: 20px;
+}
+
+.show-more {
+    -webkit-transition: max-height 1s;
+    -moz-transition: max-height 1s;
+    -ms-transition: max-height 1s;
+    -o-transition: max-height 1s;
+    transition: max-height 1s;
+    background: #e5feff;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.show-more.show {
+    max-height: 300px;
+}
+
+.row {
+    margin-top: 7%;
+}
+
+.body-header {
+    margin-left: 7%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline;
+        margin: 0 4%;
+        a {
+            font-size: 14px;
+            color: #848484;
+            font-family: "Lato-Regular"
+        }
+    }
+}
+
+.body-containt {
+    .col-md-3 {
+        float: left;
+        .product {
+            margin: 6% 0;
+            border: 1px solid #707070;
+            .favoris {
+                float: right;
+                width: 15px;
+                height: 15px;
+                position: relative;
+            }
+            img {
+                width: 165px;
+                height: 198px;
+            }
+            h4 {
+                color: #131313;
+                font-family: "Lato-Regular";
+                font-size: 16px;
+                border-bottom: none;
+                font-weight: 300;
+                padding-bottom: none;
+            }
+            h5 {
+                color: #848484;
+                font-family: "Lato-Regular";
+                font-size: 14px;
+            }
+            h6 {
+                color: #000000;
+                font-family: "Lato-Black";
+                font-size: 12px;
+            }
+            .the_Seller {
+                h2,
+                h4 {
+                    color: #000000;
+                    font-family: "Lato-Regular";
+                    font-size: 14px;
+                }
+                h4 {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }

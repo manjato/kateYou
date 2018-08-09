@@ -15,7 +15,7 @@
 
 .right {
     float: right;
-    padding-right: 30%;
+    padding-right: 20%;
 }
 
 .right>button {
@@ -26,8 +26,8 @@
     text-transform: uppercase;
     height: 40px;
     background-color: #ffff;
-    width: 160%;
-    margin: 50% 0px 0 -60%;
+    width: 158px;
+    margin: 50% 0px 0 -28%;
     cursor: pointer;
     margin-top: 30%;
 }
@@ -71,7 +71,7 @@
 
 .sign-right {
     float: right;
-    margin-top: -45%;
+    margin-top: -44.5%;
     margin-right: 5%;
 }
 
@@ -100,6 +100,11 @@
 h1 {
     font-family: "AbrilFatface";
     font-size: 40px;
+}
+
+.customer>h1,
+.seller>h1 {
+    font-size: 35px;
 }
 
 h4,
@@ -167,8 +172,9 @@ a {
 }
 
 .sign>button>img {
-    width: 50px;
+    width: 28px;
     margin-left: 0;
+    height: 28px;
 }
 
 .sign>h2 {
@@ -180,7 +186,7 @@ a {
     font-size: 13px;
     color: #ffff;
     text-transform: uppercase;
-    width: 180px;
+    width: 158px;
     height: 40px;
     margin: 0 3%;
 }
@@ -256,6 +262,9 @@ label.mat-radio-label {
 }
 
 .login {
+    .fiel {
+        margin-bottom: 2em;
+    }
     .field>input {
         width: 70%;
     }

@@ -208,7 +208,7 @@ button {
 }
 
 .myInfos {
-    padding-top: 13%;
+    padding-top: 7%;
     h4 {
         font-size: 14px;
         font-family: "Lato-Regular";
@@ -235,11 +235,12 @@ li:after {
 }
 
 li:hover:after {
-    transform: scaleX(0.75);
+    transform: scaleX(0.8);
 }
 
 .fromLeft:after {
-    transform-origin: 15% 0%;
+    margin-top: 4%;
+    transform-origin: 0% 0%;
 }
 
 .fromLeft.active:after {
@@ -397,7 +398,7 @@ select {
 
 .fa {
     top: -20px;
-    margin-left: 92%;
+    margin-left: 104%;
     position: relative;
 }
 
@@ -446,7 +447,7 @@ li.current:after {
 }
 
 .checkYou {
-    width: 180px;
+    width: 158px;
 }
 
 @media screen and (max-width: 575px) {

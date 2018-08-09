@@ -38,6 +38,12 @@
                         Confirmer le titulaire du compte
                       </label>
                     </div>
+                    <div class="checkYou">
+                        <div>
+                            <button class="{{homme}}" (click)="civilite()">Particulier</button>
+                            <button class="{{femme}}" (click)="civilite()" style="margin-left: -3%;">Professionel</button>
+                        </div>
+                    </div>
                     <div class="field">
                         <section class="example-section">
                             <input id="radio-1" class="radioBtn" name="radio" type="radio" checked>

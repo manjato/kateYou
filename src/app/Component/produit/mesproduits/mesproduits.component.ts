@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mesproduits.component.scss']
 })
 export class MesproduitsComponent implements OnInit {
-
+  logo = 'moins';
   constructor() { }
 
   ngOnInit() {

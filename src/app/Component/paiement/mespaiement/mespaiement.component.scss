@@ -225,11 +225,31 @@ li:after {
 }
 
 li:hover:after {
-    transform: scaleX(0.75);
+    transform: scaleX(0.8);
 }
 
 .fromLeft:after {
-    transform-origin: 15% 0%;
+    margin-top: 4%;
+    transform-origin: 0% 0%;
+}
+
+.checkYou {
+    button {
+        font-family: "Lato-Regular";
+        font-size: 13px;
+        text-transform: uppercase;
+        width: 158px;
+        height: 40px;
+    }
+    .noActive {
+        background-color: white;
+        border: 1px solid black;
+    }
+    .activ {
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+    }
 }
 
 .fromLeft.active:after {
@@ -469,10 +489,6 @@ li.current:after {
 
 .dateNaiss {
     width: 216px;
-}
-
-.checkYou {
-    width: 180px;
 }
 
 @media screen and (max-width: 575px) {
