@@ -1,0 +1,21 @@
+.top-header {
+    background-color: rgb(238, 238, 238);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 4%;
+}
+
+.header {
+    font-family: "Lato-light";
+    font-size: 18px;
+    p {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        cursor: pointer;
+    }
+    span {
+        margin-left: 7px;
+        margin-right: 7px;
+        text-decoration: underline;
+    }
+}

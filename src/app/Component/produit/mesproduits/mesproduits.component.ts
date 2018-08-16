@@ -45,30 +45,20 @@ export class MesproduitsComponent implements OnInit {
     color : 'grey',
     checked: false}
   ];
-  filtres = [];
   constructor() { }
 
   changeColor(i) {
      if (this.colors[i].color === 'grey') {
       this.colors[i].color = 'black';
-      this.filtres.push(this.colors[i]);
       this.colors[i].checked = true;
     } else if (this.colors[i].color === 'black') {
       this.colors[i].color = 'grey';
-      this.filtres.indexOf(i);
-      if  (i !== -1)   {
-        this.filtres.splice(i, 1);
-      }
+      this.colors[i].checked = false;
     }
-    console.log(this.filtres);
   }
   deleteColor(i) {
-    this.filtres[i].color = 'grey';
-    this.filtres[i].checked = !this.filtres[i].checked;
-    this.filtres.indexOf(i);
-    if  (i !== -1)   {
-      this.filtres.splice(i, 1);
-    }
+    this.colors[i].color = 'grey';
+    this.colors[i].checked = !this.colors[i].checked;
    }
   ngOnInit() {
   }

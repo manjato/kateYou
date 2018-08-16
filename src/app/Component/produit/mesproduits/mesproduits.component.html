@@ -16,9 +16,11 @@
             <div class="col-md-3">
                 <h2>Filtrer par</h2>
                 <div class="color">
-                    <h6 *ngIf="filtres.length>0">Couleur</h6>
-                    <div *ngFor="let f of filtres; index as i">
-                        <p>{{f.name}} <img src="assets\images\logo\croixcheckmark.png" (click)="deleteColor(i)" alt=""></p>
+                    <div></div>
+                    <h6>Couleur</h6>
+                    <div *ngFor="let f of colors; index as i">
+                        <p *ngIf="f.checked">{{f.name}} <img src="assets\images\logo\croixcheckmark.png" (click)="deleteColor(i)" alt=""></p>
+
                     </div>
                 </div>
                 <div class="filters">

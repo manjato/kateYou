@@ -68,7 +68,7 @@ import { DocumentComponent } from './Component/document/document.component';
 import { MesproduitsComponent } from './Component/produit/mesproduits/mesproduits.component';
 import { MespaiementComponent } from './Component/paiement/mespaiement/mespaiement.component';
 import { Error404Component } from './Component/error404/error404.component';
-import { DetailsProduitComponent } from './Component/produit/details-produit/details-produit.component';
+import { DetailproduitComponent } from './Component/produit/detailproduit/detailproduit.component';
 
 /* AUTHENTICATION */
 const config = new AuthServiceConfig([
@@ -117,8 +117,8 @@ const appRoutes: Routes = [
     component: MesproduitsComponent
   },
   {
-    path: 'details-produit',
-    component: DetailsProduitComponent
+    path: 'detail-produit',
+    component: DetailproduitComponent
   },
   { path: '**', component: HomeComponent }
 ];
@@ -142,7 +142,7 @@ const appRoutes: Routes = [
     MesproduitsComponent,
     MespaiementComponent,
     Error404Component,
-    DetailsProduitComponent,
+    DetailproduitComponent,
 
   ],
   imports: [
