@@ -395,3 +395,84 @@ select {
     font-size: 14px;
     margin-bottom: 0px;
 }
+
+
+/* CHECKBOX */
+
+.control-group {
+    width: 50%;
+}
+
+.control.control-checkbox:active {
+    label {
+        color: #131313;
+    }
+}
+
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 1px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+}
+
+.control-radio .control_indicator {
+    border-radius: none;
+}
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+    background: #ffffff;
+}
+
+.control input:checked~.control_indicator {
+    background: #000405;
+}
+
+.control input:checked:focus~.control_indicator {
+    background: #131313;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid #f5eded;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* FIN CHECKBOX */

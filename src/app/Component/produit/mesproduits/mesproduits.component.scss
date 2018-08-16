@@ -50,6 +50,10 @@ h4 {
     padding-bottom: 6px;
 }
 
+.col-md-9 {
+    margin-bottom: 5%;
+}
+
 .color {
     margin-left: 7%;
     margin-top: 10%;
@@ -71,10 +75,6 @@ h4 {
 
 .filters {
     padding-left: 7%;
-}
-
-label {
-    color: #848484;
 }
 
 .col-md-3 {
@@ -127,7 +127,10 @@ ul {
         a {
             font-size: 14px;
             color: #848484;
-            font-family: "Lato-Regular"
+            font-family: "Lato-Black";
+            .first {
+                font-family: "Lato-Regular";
+            }
         }
     }
 }
@@ -140,12 +143,13 @@ ul {
             border: 1px solid #707070;
             .favoris {
                 float: right;
-                width: 15px;
-                height: 15px;
+                width: 20px;
+                height: 20px;
                 position: relative;
+                top: -190px;
             }
             img {
-                width: 165px;
+                width: 160px;
                 height: 198px;
             }
             h4 {
@@ -154,27 +158,43 @@ ul {
                 font-size: 16px;
                 border-bottom: none;
                 font-weight: 300;
-                padding-bottom: none;
+                margin-bottom: 0;
             }
             h5 {
+                margin-top: -7px;
                 color: #848484;
                 font-family: "Lato-Regular";
                 font-size: 14px;
             }
             h6 {
-                color: #000000;
+                color: #131313;
                 font-family: "Lato-Black";
                 font-size: 12px;
             }
             .the_Seller {
-                h2,
-                h4 {
-                    color: #000000;
+                margin-bottom: 5%;
+                div>h2,
+                div>h4 {
+                    color: #131313;
                     font-family: "Lato-Regular";
                     font-size: 14px;
                 }
+                div>h2 {
+                    font-weight: 300;
+                    border: none;
+                    margin-bottom: 0;
+                    text-overflow: ellipsis;
+                    width: 55%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
                 h4 {
                     font-size: 12px;
+                }
+                img {
+                    width: 39px;
+                    height: 39px;
+                    float: left;
                 }
             }
         }
@@ -182,15 +202,29 @@ ul {
 }
 
 
+/* label {
+    color: #848484;
+} */
+
+
 /* CHECKBOX */
 
+.control-group {
+    width: 50%;
+}
+
+.control.control-checkbox:active {
+    label {
+        color: #131313;
+    }
+}
+
 .control {
-    font-family: arial;
+    font-family: "Lato-Light";
     display: block;
     position: relative;
-    padding-left: 28px;
-    margin-bottom: 5px;
-    padding-top: 3px;
+    padding-left: 30px;
+    margin-bottom: 12px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -205,10 +239,8 @@ ul {
     position: absolute;
     top: 2px;
     left: 0;
-    height: 20px;
-    width: 20px;
-    /*     background: #e6e6e6;
-    border: 0px solid #000000; */
+    height: 19px;
+    width: 19px;
     border: 1px solid #707070;
     background-color: #ffffff;
 }
@@ -227,7 +259,7 @@ ul {
 }
 
 .control input:checked:focus~.control_indicator {
-    background: #000000;
+    background: #131313;
 }
 
 .control_indicator:after {
@@ -242,10 +274,10 @@ ul {
 }
 
 .control-checkbox .control_indicator:after {
-    left: 8px;
-    top: 4px;
-    width: 3px;
-    height: 8px;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
     border: solid #f5eded;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
@@ -253,3 +285,11 @@ ul {
 
 
 /* FIN CHECKBOX */
+
+.grey {
+    color: #848484;
+}
+
+.black {
+    color: #131313;
+}
