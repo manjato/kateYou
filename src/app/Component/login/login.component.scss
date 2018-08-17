@@ -53,8 +53,8 @@
     position: absolute;
     text-decoration: underline;
     cursor: pointer;
-    margin-top: 21%;
-    margin-left: -22%;
+    margin-top: 13%;
+    margin-left: -18%;
 }
 
 .label-file {
@@ -67,6 +67,10 @@
 
 .creat {
     margin-left: 3%;
+    h4 {
+        margin-top: -7px;
+        margin-bottom: 14px;
+    }
 }
 
 .sign-right {
@@ -93,7 +97,7 @@
 }
 
 .creat>.avatar>img {
-    width: 150px;
+    width: 100px;
     margin-left: 55%;
 }
 
@@ -265,6 +269,7 @@ label.mat-radio-label {
 }
 
 .login {
+    margin-top: 13px;
     .fiel {
         margin-bottom: 2em;
     }

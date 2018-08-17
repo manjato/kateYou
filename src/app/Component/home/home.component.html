@@ -1,7 +1,7 @@
 <div class="top_menu_area">
     <div class="row">
         <div class="col-md-6">
-            <img src="assets/images/home/cover_girlhandbag.png" alt="" style="width: 100%">
+            <img src="assets/images/home/cover_girlhandbag.png" class="responsive" style="width: 100%">
             <div class="menu_font">
                 <h2>Fashion everywhere</h2>
                 <div class="label">
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <img src="assets/images/home/cover_handbag.png" alt="" style="width: 100%">
+            <img src="assets/images/home/cover_handbag.png" class="responsive" style="width: 100%">
             <div class="menu_font_slider">
                 <h2>100% neuf <br> 100% authentique
                 </h2>
@@ -28,14 +28,14 @@
                     <div class="list_Product">
                         <div class="col-md-2" *ngFor="let newProduct of ProductByNewer">
                             <div class="news_Product">
-                                <img src="{{newProduct.link_image_pple}}" alt="">
+                                <img src="{{newProduct.link_image_pple}}" class="responsive">
                                 <h2>{{newProduct.nom_marque}}</h2>
                                 <h3>{{newProduct.description}}</h3>
                                 <h4>{{newProduct.nom_produit}}</h4>
                                 <h6>{{newProduct.prix_unitaire * newProduct.taux_change | number : '1.2-2'}} {{newProduct.code_monnaie}}</h6>
                             </div>
                             <div class="the_Seller">
-                                <img src="{{newProduct.image_link_profile}}" alt="">
+                                <img src="{{newProduct.image_link_profile}}" class="responsive">
                                 <h2>{{newProduct.nom_profile}} {{newProduct.prenom_profile}}</h2>
                                 <h4>{{newProduct.nom_fr_fr}}</h4>
                             </div>
@@ -52,13 +52,13 @@
                     <div class="list_Product">
                         <div class="col-md-2" *ngFor="let BestProduct of BestProducts">
                             <div class="best_Product">
-                                <img src="{{BestProduct.link_image_pple}}" alt="">
+                                <img src="{{BestProduct.link_image_pple}}" class="responsive">
                                 <h2>{{BestProduct.nom_marque}}</h2>
                                 <h4>{{BestProduct.nom_produit}}</h4>
                                 <h6>{{BestProduct.prix_unitaire * BestProduct.taux_change | number : '1.2-2'}} {{BestProduct.code_monnaie}}</h6>
                             </div>
                             <div class="the_Seller">
-                                <img src="{{BestProduct.image_link_profile}}" alt="" class="bestSeller">
+                                <img src="{{BestProduct.image_link_profile}}" class="responsive" class="bestSeller">
                                 <h2>{{BestProduct.nom_profile}} {{BestProduct.prenom_profile}}</h2>
                                 <h4>{{BestProduct.nom_fr_fr}}</h4>
                             </div>
@@ -74,7 +74,7 @@
                 <div class="menu_shop col-md-6">
                     <div>
                         <div class="label_shop">
-                            <img src="assets/images/home/Ellipse.png" alt="">
+                            <img src="assets/images/home/Ellipse.png" class="responsive">
                             <div class="label_containt">
                                 <h2>Kate&You, <br> c’est la plateforme incontournable de mise en relation entre passionnées de mode!
                                 </h2>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/images/home/right.png" alt="" style="width: 100%;    height: 100%">
+                    <img src="assets/images/home/right.png" class="responsive" style="width: 100%;    height: 100%">
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                     <h4 class="text">Il viennent tout juste de nous rejoindre. <br> Si vous aussi souhaitez devenir vendeur chez Kate&You, rien de plus simple. <a>Devenir vendeur</a></h4>
                     <div class="col-md-2" *ngFor="let Seller of BestProducts">
                         <div class="Ours_Seller">
-                            <img src="{{Seller.image_link_profile}}" alt="">
+                            <img src="{{Seller.image_link_profile}}" class="responsive">
                             <h2>{{Seller.nom_profile}} {{Seller.prenom_profile}}</h2>
                             <h4>{{Seller.text_marketing_profile}}</h4>
                             <h4>{{Seller.nom_fr_fr}}</h4>
@@ -110,7 +110,7 @@
         <div class="Iam col-md-12">
             <div class="user_area">
                 <div class="container">
-                    <img src="assets/images/home/etiquette.png" class="etiquette" alt="">
+                    <img src="assets/images/home/etiquette.png" class="responsive etiquette">
                     <h1>Comment ça marche?</h1>
                     <h4>Que vous soyez vendeur ou acheteur, <br> Kate&You vous simplifie la vie.</h4>
                     <div class="btn">
@@ -125,7 +125,7 @@
                                 <h4>Je souhaite mettre mon article neuf en vente. Je prends des photos, décrit mon produit, le met en valeur et fixe son prix.
                                 </h4>
                             </div>
-                            <img src="assets/images/home/ccm_vendeur_1.png" alt="">
+                            <img src="assets/images/home/ccm_vendeur_1.png" class="responsive">
                         </div>
                         <div class="col-md-3">
                             <h1>2</h1>
@@ -133,7 +133,7 @@
                                 <h2>Je l'envoie</h2>
                                 <h4>Une fois vendu, je l’envoie à son destinataire dans les 72h. Je joins la facture d'achat et un mot de remerciement personnalisé.</h4>
                             </div>
-                            <img src="assets/images/home/ccm_vendeur_2.png" alt="">
+                            <img src="assets/images/home/ccm_vendeur_2.png" class="responsive">
                         </div>
                         <div class="Notification col-md-3">
                             <h1>3</h1>
@@ -141,7 +141,7 @@
                                 <h2>Je reçois le paiement</h2>
                                 <h4>La vente est finalisée ! Je reçois l’argent sur mon compte bancaire 48h après réception de l'article par l'acheteur.</h4>
                             </div>
-                            <img src="assets/images/home/ccm_vendeur_3.png" alt="">
+                            <img src="assets/images/home/ccm_vendeur_3.png" class="responsive">
                         </div>
                         <button class="btn_propos">En savoir plus</button>
                     </div>

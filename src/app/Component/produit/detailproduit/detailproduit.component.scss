@@ -1,5 +1,4 @@
 .top-header {
-    background-color: rgb(238, 238, 238);
     padding-top: 3%;
     padding-bottom: 3%;
     margin-bottom: 4%;
@@ -17,5 +16,22 @@
         margin-left: 7px;
         margin-right: 7px;
         text-decoration: underline;
+    }
+}
+
+.col-md-4 {
+    h1 {
+        font-family: "Abril Fatface";
+        font-size: 30px;
+    }
+    h4 {
+        font-family: "Lato-Light";
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    h6 {
+        font-family: "Lato-Black";
+        font-size: 25px;
+        font-weight: 900;
     }
 }
