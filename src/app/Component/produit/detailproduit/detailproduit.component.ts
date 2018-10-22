@@ -184,7 +184,6 @@ export class DetailproduitComponent implements OnInit {
     config: NgbRatingConfig,
   ) {
     config.max = 5;
-    config.readonly = true;
   }
 
   setClickedRow(taille) {

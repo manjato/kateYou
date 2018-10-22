@@ -3,6 +3,38 @@
     padding-bottom: 7%;
 }
 
+.header {
+    font-family: "Lato-Light";
+    font-size: 16px;
+    color: #b9b9b9;
+    .breadcrumb {
+        background-color: #ffffff;
+    }
+    ul.breadcrumb {
+        padding: 10px 7%;
+        list-style: none;
+    }
+    ul.breadcrumb li {
+        display: inline;
+    }
+    ul.breadcrumb li+li:before {
+        padding: 7px;
+        content: ">";
+    }
+    ul.breadcrumb li a {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        color: #b9b9b9;
+    }
+    ul.breadcrumb>li {
+        text-transform: none;
+        margin: 0;
+    }
+    ul.breadcrumb>li:after {
+        border-bottom: none;
+    }
+}
+
 hr {
     border-top: 1px solid #000;
 }
@@ -53,7 +85,6 @@ hr {
 }
 
 .list-group {
-    margin-left: -15%;
     list-style: none;
     li {
         cursor: pointer;
@@ -226,6 +257,18 @@ li:after {
 
 li:hover:after {
     transform: scaleX(0.8);
+}
+
+a {
+    color: #131313;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a>img {
+    padding-right: 10px;
 }
 
 .fromLeft:after {

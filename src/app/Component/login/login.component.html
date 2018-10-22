@@ -1,7 +1,10 @@
 <hr>
 <div class="container">
     <div class="header">
-        <p routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Accueil > <span>Créer un compte</span></p>
+        <ul class="breadcrumb">
+            <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+            <li>Créer un compte</li>
+        </ul>
     </div>
     <div class="main-header">
         <h1>S'identifier</h1>
@@ -46,10 +49,15 @@
                         <input id="file" class="input-file" type="file">
                     </div>
                     <div class="field" style="margin-bottom: 0;margin-top: -9%;
-                    ">
+                    " *ngIf="!spinner">
                         <select name="selectedPays" class="selectpicker" [(ngModel)]="selectedPays">
-                            <option class="pays" *ngFor="let pays of listPays" [ngValue]="pays">{{pays.nom_fr_fr}}</option>
+                            <option>Pays</option>
+                            <option class="pays"  *ngFor="let pays of listAllPays" [ngValue]="pays">{{pays.nom_fr_fr}}</option>
                         </select>
+                    </div>
+                    <div class="field" style="margin-bottom: 0;margin-top: -9%;
+                    " *ngIf="spinner">
+                        <mat-spinner></mat-spinner>
                     </div>
                     <div class="field">
                         <input type="text" name="nom" id="nom" placeholder=" ">

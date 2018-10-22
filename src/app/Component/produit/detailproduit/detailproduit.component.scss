@@ -5,17 +5,35 @@
 }
 
 .header {
-    font-family: "Lato-light";
-    font-size: 18px;
-    p {
+    font-family: "Lato-Light";
+    font-size: 16px;
+    color: #131313;
+    .breadcrumb {
+        background-color: #ffffff;
+    }
+    ul.breadcrumb {
+        padding: 10px 7%;
+        list-style: none;
+    }
+    ul.breadcrumb li {
+        display: inline;
+    }
+    ul.breadcrumb li+li:before {
+        padding: 7px;
+        content: ">";
+    }
+    ul.breadcrumb li a {
         font-family: "Lato-Light";
         font-size: 16px;
-        cursor: pointer;
+        color: #131313;
     }
-    span {
-        margin-left: 7px;
-        margin-right: 7px;
-        text-decoration: underline;
+    ul.breadcrumb>li {
+        padding: 0;
+        text-transform: none;
+        margin: 0;
+    }
+    ul.breadcrumb>li:after {
+        border-bottom: none;
     }
 }
 

@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   user: SocialUser;
   test: boolean;
   listAllPays: any;
+  spinner: boolean;
 
   constructor(
     private socialService: AuthService,
@@ -46,6 +47,7 @@ export class LoginComponent implements OnInit {
   getAllPays() {
    this.productService.listAllPays().subscribe(pays => {
       this.listAllPays = pays.data;
+      console.log(this.listAllPays, 'testtest');
     });
   }
   ngOnInit() {

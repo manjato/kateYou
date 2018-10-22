@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 import { AccordionConfig } from 'ngx-bootstrap/accordion';
 import { ProductsService } from '../../services/products.service';
 
@@ -16,7 +16,7 @@ export class ProfilComponent implements OnInit {
   fa = 'fa-eye';
   homme = 'activ';
   femme = 'noActive';
-  listPays = [];
+  listAllPays = [];
   constructor(
     private productService: ProductsService) {}
   showPass () {
@@ -39,10 +39,13 @@ export class ProfilComponent implements OnInit {
   }
   getAllPays() {
     this.productService.listAllPays().subscribe(data => {
-      this.listPays = data.data;
-      console.log('listPAys', this.listPays);
+      this.listAllPays = data.data;
+      console.log('listPAys', this.listAllPays);
     });
   }
-  ngOnInit() {  }
+  ngOnInit() {
+    console.log('test test');
+    this.getAllPays();
+   }
 
 }

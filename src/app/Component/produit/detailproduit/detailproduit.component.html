@@ -1,7 +1,11 @@
 <div class="top-header">
     <div class="container">
         <div class="header">
-            <p routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/"><span>Home</span> > <span>Femme</span>> <span style="text-decoration: none">Chaussure</span></p>
+            <ul class="breadcrumb">
+                <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+                <li><a href="#">Femme</a></li>
+                <li>Chaussure</li>
+            </ul>
         </div>
     </div>
 </div>
@@ -118,7 +122,7 @@
                                 </table>
                                 <table style="width:100%;" class="descript">
                                     <tr>
-                                        <th class="headDescript" style=" width: 60%;">Pays d'origine</th>
+                                        <th class="headDescript" style=" width:60%;">Pays d'origine</th>
                                         <th class="pays"> Italie</th>
                                     </tr>
                                 </table>
@@ -245,9 +249,8 @@
             </div>
         </div>
     </div>
-    <ngb-rating [(rate)]="currentRate"></ngb-rating>
     <hr>
-    <pre>Rate: <b>{{currentRate}}</b></pre>
+
     <footer>
         <app-newsletter></app-newsletter>
         <app-aboutus></app-aboutus>

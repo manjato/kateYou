@@ -1,23 +1,47 @@
 <hr>
 <div class="containt">
     <div class="container">
+        <div class="header">
+            <ul class="breadcrumb">
+                <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+                <li>Ajouter un article</li>
+            </ul>
+        </div>
         <div class="row">
-            <div class="infos col-md-3">
+            <div class="infos col-md-4">
                 <div>
                     <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
                     <h1>Donato Bello</h1>
                 </div>
                 <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+
                 <div class="list-group">
-                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil" style="width: 94%"> <img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</li>
-                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</li>
-                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement" style="width: 80%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</li>
-                    <li class="fromLeft"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</li>
-                    <li class="fromLeft active" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
-                    <li class="fromLeft"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</li>
-                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes" style="width: 87%;"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
-                    <li class="fromLeft"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</li>
-                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres" style="width: 86%;"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                    <li class="fromLeft " style="width: 74%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil"><img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</a>
+                    </li>
+                    <li class="fromLeft" style="width: 81%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"><img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</a>
+                    </li>
+                    <li class="fromLeft" style="width: 52%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</a>
+                    </li>
+                    <li class="fromLeft" style="width: 72%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes documents
+                        </a>
+                    </li>
+                    <li class="fromLeft active" style="width: 64%"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
+                    <li class="fromLeft" style="width: 63%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-listes-produits"><img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</a>
+                    </li>
+                    <li class="fromLeft" style="width: 71%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</a>
+                    </li>
+                    <li class="fromLeft" style="width: 60%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-messages"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</a>
+                    </li>
+                    <li class="fromLeft" style="width: 70%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</a>
+                    </li>
                 </div>
             </div>
             <div class="col-md-8">
@@ -28,9 +52,13 @@
                 <form class="myInfos">
                     <div class="row">
                         <button (click)="openModalSearch(templateSearch)">Chercher</button>
-                        <div class="field space">
+                        <div class="field space" *ngIf="!seeMark">
                             <input type="text" name="marques" id="marques" placeholder="   ">
                             <label for="marques">Marques</label>
+                        </div>
+                        <div class="marque" *ngIf="seeMark">
+                            <h6>Marques</h6>
+                            <h2>{{markSelected}}</h2>
                         </div>
                     </div>
                     <div class="row categor">
@@ -45,9 +73,7 @@
                             <div class="field">
                                 <select class="selectpicker">
                                     <option class="pays">Saison</option>
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
+                                    <option *ngFor="let s of saison" >{{s.name}}</option>
                                 </select>
                             </div>
                             <div class="field">
@@ -283,6 +309,7 @@
                     </span>
                     <div class="btn">
                         <button class="seeProduct">Voir le produit</button>
+                       <!--  <button class="seeProduct">Sauvegarder</button> -->
                         <button>Mettre en vente</button>
                     </div>
                 </form>
@@ -299,13 +326,17 @@
         </a>
     </div>
     <div class="modal-body">
-        <div class="row">
+        <div class="row modal-search">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <div class="field">
+                <div class="field" *ngIf="!marika">
                     <img class="img-fluid" src="assets/images/logo/search.png" alt="">
                     <input type="text" name="search" id="search" placeholder="   ">
                     <label for="search">Rechercher</label>
+                </div>
+                <div class="markSelect field" *ngIf="marika">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <h1>{{markSelected}}</h1>
                 </div>
             </div>
             <div class="col-md-4"></div>
@@ -339,7 +370,7 @@
             <h5 class="black col-xs-3"(click)="openModalZ(templateNestedZ)">Z</h5>
             <h5 class="pink col-xs-6 num"(click)="openModal123(templateNested123)">123</h5>        
          </span>
-        <button class="select">selectionner</button>
+        <button class="select" (click)="selectMark()">selectionner</button>
     </div>
 </ng-template>
 <!-- END OF MODAL RECHERCHE -->
@@ -353,7 +384,33 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL A<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="A" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt " *ngIf="spinner">
+            <span class="col-md-4"></span>
+            <span class="col-md-4">
+                    <mat-spinner></mat-spinner>
+            </span>
+            <span class="col-md-4"></span>
+
+        </div>
+        <div class="modal-containt row" *ngIf="!spinner">
+            <span class="col-md-3 listMark" *ngFor="let A of markA  |filter:A | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                <h4 (click)="selectMarkA(A)" >{{A.nom_marque}}</h4>
+            </span>
+            <span class="pagination">
+                <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+            </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL A -->
@@ -367,7 +424,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL B<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="B" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let B of markB  |filter:B | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                    <h4 (click)="selectMarkB(B)">{{B.nom_marque}}</h4>
+                </span>
+            <span class="pagination">
+                    <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL B -->
@@ -381,7 +456,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL C<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="C" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let C of markC  |filter:C | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkC(C)">{{C.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL C -->
@@ -394,7 +487,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL D<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="D" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let D of markD  |filter:D | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkD(D)">{{D.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL D -->
@@ -407,7 +518,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL E<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="E" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let E of markE  |filter:E | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkE(E)">{{E.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL E -->
@@ -420,7 +549,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL F<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="F" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let F of markF  |filter:F | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkF(F)">{{F.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL F -->
@@ -433,7 +580,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL G<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="G" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let G of markG  |filter:G | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkG(G)">{{G.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL G -->
@@ -446,7 +611,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL H<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="H" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let H of markH  |filter:H | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkH(H)">{{H.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL H -->
@@ -459,7 +642,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL I<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="I" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let I of markI  |filter:I | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkI(I)">{{I.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL I -->
@@ -472,7 +673,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL J<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="J" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let J of markJ  |filter:J | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkJ(J)">{{J.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL J -->
@@ -485,7 +704,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL K<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="K" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let K of markK  |filter:K | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkK(K)">{{K.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL K -->
@@ -498,7 +735,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL L<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="L" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let L of markL  |filter:L | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkL(L)">{{L.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL L -->
@@ -511,7 +766,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL M<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="M" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let M of markM  |filter:M | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkM(M)">{{M.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL M -->
@@ -524,7 +797,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL N<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="N" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let N of markN  |filter:N | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkN(N)">{{N.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL N -->
@@ -537,7 +828,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL O<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="O" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let O of markO  |filter:O | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkO(O)">{{O.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL O -->
@@ -550,7 +859,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL P<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="P" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let P of markP  |filter:P | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkP(P)">{{P.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL P -->
@@ -563,7 +890,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL Q<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="Q" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let Q of markQ  |filter:Q | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkQ(Q)">{{Q.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL Q -->
@@ -576,7 +921,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL R<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="R" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let R of markR  |filter:R | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkR(R)">{{R.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL R -->
@@ -589,7 +952,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL S<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="S" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let S of markS  |filter:S | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkS(S)">{{S.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL S -->
@@ -602,7 +983,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL T<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="T" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let T of markT  |filter:T | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkT(T)">{{T.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL T -->
@@ -615,7 +1014,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL U<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="U" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let U of markU  |filter:U | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkU(U)">{{U.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL U -->
@@ -628,7 +1045,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL V<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="V" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let V of markV  |filter:V | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkV(V)">{{V.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL V -->
@@ -641,7 +1076,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL W<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="W" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let W of markW  |filter:W | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkW(W)">{{W.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL W -->
@@ -654,7 +1107,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL X<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="X" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let X of markX  |filter:X | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkX(X)">{{X.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL X -->
@@ -667,7 +1138,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL Y<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="Y" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let Y of markY  |filter:Y | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkY(Y)">{{Y.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL Y -->
@@ -680,7 +1169,25 @@
         </a>
     </div>
     <div class="modal-body">
-        ITO DIA MODAL Z<br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="Z" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="modal-containt row">
+            <span class="col-md-3" *ngFor="let Z of markZ  |filter:B | paginate: { itemsPerPage: 100, currentPage: p }, ind as index">
+                        <h4 (click)="selectMarkZ(Z)">{{Z.nom_marque}}</h4>
+                    </span>
+            <span class="pagination">
+                        <pagination-controls class="modal-pagination" (pageChange)="p = $event" directionLinks="false" autoHide= "false" ></pagination-controls>
+                    </span>
+        </div>
     </div>
 </ng-template>
 <!-- END OF MODAL Z -->

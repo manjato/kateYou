@@ -2,11 +2,36 @@
     margin-bottom: 7%;
 }
 
-.header p {
+.header {
     font-family: "Lato-Light";
     font-size: 16px;
-    padding-left: 13%;
-    cursor: pointer;
+    color: #b9b9b9;
+    .breadcrumb {
+        background-color: #ffffff;
+    }
+    ul.breadcrumb {
+        padding: 10px 7%;
+        list-style: none;
+    }
+    ul.breadcrumb li {
+        display: inline;
+    }
+    ul.breadcrumb li+li:before {
+        padding: 7px;
+        content: ">";
+    }
+    ul.breadcrumb li a {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        color: #b9b9b9;
+    }
+    ul.breadcrumb>li {
+        text-transform: none;
+        margin: 0;
+    }
+    ul.breadcrumb>li:after {
+        border-bottom: none;
+    }
 }
 
 .col-md-6 {
@@ -486,4 +511,9 @@ select {
     display: inline-block;
     margin-left: 13%;
     margin-top: 7px;
+}
+
+::ng-deep.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: black;
 }

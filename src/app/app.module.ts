@@ -44,6 +44,7 @@ import {
 import { AccordionModule } from 'ngx-bootstrap';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
 /* SERVICES */
 
 import { HomeService } from './services/home.service';
@@ -81,6 +82,10 @@ import { MesparametresComponent } from './Component/Vendeurs/mesparametres/mespa
 import { ProductsService } from './services/products.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MescommandesComponent } from './Component/Vendeurs/mescommandes/mescommandes.component';
+import { MesmessagesComponent } from './Component/Vendeurs/mesmessages/mesmessages.component';
+import { DetailsMessagesComponent } from './Component/Vendeurs/mesmessages/details-messages/details-messages.component';
+import { MeslistesProduitsComponent } from './Component/Vendeurs/meslistes-produits/meslistes-produits.component';
+import { DetailVendeurComponent } from './Component/Vendeurs/nos-vendeurs/detail-vendeur/detail-vendeur.component';
 
 
 
@@ -142,9 +147,29 @@ const appRoutes: Routes = [
     path: 'nosVendeurs',
     component: NosVendeursComponent
   },
-    {
+  {
+    path: 'detail-vendeur',
+    component: DetailVendeurComponent
+  },
+  {
     path: 'ajout-produit',
     component: AjoutProduitComponent
+  },
+  {
+    path: 'mes-listes-produits',
+    component: MeslistesProduitsComponent
+  },
+  {
+    path: 'mes-commandes',
+    component: MescommandesComponent
+  },
+  {
+    path: 'mes-messages',
+    component: MesmessagesComponent
+  },
+  {
+    path: 'details-messages',
+    component: DetailsMessagesComponent
   },
   {
     path: 'etoil',
@@ -154,10 +179,7 @@ const appRoutes: Routes = [
     path: 'mes-parametres',
     component: MesparametresComponent
   },
-  {
-    path: 'mes-commandes',
-    component: MescommandesComponent
-  },
+
   { path: '**', component: HomeComponent }
 ];
 
@@ -189,6 +211,10 @@ const appRoutes: Routes = [
     ListComponent,
     MesparametresComponent,
     MescommandesComponent,
+    MesmessagesComponent,
+    DetailsMessagesComponent,
+    MeslistesProduitsComponent,
+    DetailVendeurComponent,
 
   ],
   imports: [
@@ -203,6 +229,7 @@ const appRoutes: Routes = [
     AccordionModule.forRoot(),
     ModalModule.forRoot(),
     NgbModule.forRoot(),
+    NgxPaginationModule,
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatButtonModule,

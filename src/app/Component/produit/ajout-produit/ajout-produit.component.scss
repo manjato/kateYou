@@ -3,6 +3,39 @@
     padding-bottom: 7%;
 }
 
+.header {
+    font-family: "Lato-Light";
+    font-size: 16px;
+    color: #b9b9b9;
+    .breadcrumb {
+        background-color: #ffffff;
+    }
+    ul.breadcrumb {
+        padding: 10px 7%;
+        list-style: none;
+    }
+    ul.breadcrumb li {
+        display: inline;
+    }
+    ul.breadcrumb li+li:before {
+        padding: 7px;
+        content: ">";
+    }
+    ul.breadcrumb li a {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        color: #b9b9b9;
+    }
+    ul.breadcrumb>li {
+        padding: 0;
+        text-transform: none;
+        margin: 0;
+    }
+    ul.breadcrumb>li:after {
+        border-bottom: none;
+    }
+}
+
 hr {
     border-top: 1px solid #000;
 }
@@ -35,7 +68,6 @@ hr {
 }
 
 .list-group {
-    margin-left: -15%;
     list-style: none;
     li {
         cursor: pointer;
@@ -638,7 +670,22 @@ span {
     }
 }
 
+a {
+    color: #131313;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a>img {
+    padding-right: 10px;
+}
+
 .modal-body {
+    .modal-containt.row {
+        padding-left: 0;
+    }
     margin-bottom: 5%;
     span h5 {
         font-size: 18px;
@@ -660,7 +707,7 @@ span {
 
 .select {
     float: right;
-    margin-top: 2%;
+    margin-top: 10%;
     margin-right: 12px;
 }
 
@@ -668,8 +715,18 @@ span {
     border-radius: 0;
 }
 
-.modal-content {
+::ng-deep.modal-content {
     border-radius: 0;
+}
+
+.modal-pagination /deep/ .ngx-pagination .current {
+    background: black;
+}
+
+.pagination {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
 
 button .close .pull-right {
@@ -757,4 +814,54 @@ ul {
         width: auto;
         margin: 5% 37%;
     }
+}
+
+.col-md-3>h4 {
+    font-size: 14px;
+    font-family: "Lato-Regular";
+    color: #131313;
+    text-align: left;
+}
+
+.modal-search {
+    margin-bottom: 2%;
+}
+
+.markSelect {
+    border-bottom: 1px solid;
+    margin-bottom: 21%;
+    h1 {
+        font-family: 'Lato-Regular';
+        font-size: 14px;
+        color: #131313;
+        margin-bottom: -18px;
+    }
+    .img-fluid {
+        margin: 0 88%;
+        top: -9px;
+    }
+}
+
+.marque {
+    width: 267px;
+    border-bottom: solid 0.2px #000000;
+    margin-left: 10%;
+    margin-top: -2%;
+    margin-bottom: 3%;
+    h2 {
+        font-size: 18px;
+        color: #131313;
+        font-family: 'Lato-Light';
+        text-transform: uppercase;
+    }
+    h6 {
+        font-size: 14px;
+        font-family: 'Lato-Regular';
+        color: #131313;
+    }
+}
+
+::ng-deep.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: black;
 }
