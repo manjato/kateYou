@@ -1,5 +1,5 @@
 .container {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 7%;
 }
 
@@ -60,7 +60,7 @@ hr {
         font-family: "Lato-Regular";
         font-size: 16px;
         text-transform: uppercase;
-        padding: 13px 0px;
+        padding: 10px 0px;
         color: #131313;
     }
     li>img {
@@ -196,7 +196,6 @@ input:focus+label {
         font-family: "Lato-Regular";
     }
     img {
-        margin: 8% 25% 8% 0%;
         width: 80px;
     }
     .identity {
@@ -441,6 +440,16 @@ li.current:after {
 
 .checkYou {
     width: 180px;
+}
+
+.label-file {
+    margin: 8% 25% 8% 0%;
+    cursor: pointer;
+}
+
+.input-file1,
+.input-file2 {
+    display: none;
 }
 
 @media screen and (max-width: 575px) {

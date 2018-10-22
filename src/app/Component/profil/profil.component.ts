@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccordionConfig } from 'ngx-bootstrap/accordion';
+import { ProductsService } from '../../services/products.service';
 
 export function getAccordionConfig(): AccordionConfig {
   return Object.assign(new AccordionConfig(), { closeOthers: true });
@@ -15,7 +16,9 @@ export class ProfilComponent implements OnInit {
   fa = 'fa-eye';
   homme = 'activ';
   femme = 'noActive';
-  constructor() { }
+  listPays = [];
+  constructor(
+    private productService: ProductsService) {}
   showPass () {
     if (this.sign === 'password' && this.fa === 'fa-eye') {
       this.sign = 'text';
@@ -34,7 +37,12 @@ export class ProfilComponent implements OnInit {
       this.femme = 'noActive';
     }
   }
-  ngOnInit() {
+  getAllPays() {
+    this.productService.listAllPays().subscribe(data => {
+      this.listPays = data.data;
+      console.log('listPAys', this.listPays);
+    });
   }
+  ngOnInit() {  }
 
 }

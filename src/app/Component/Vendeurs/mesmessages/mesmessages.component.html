@@ -1,0 +1,101 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="header">
+            <ul class="breadcrumb">
+                <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+                <li>Mes messages</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="infos col-md-4">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+
+                <div class="list-group">
+                    <dl>
+                        <dt class="fromLeft " style="width: 74%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil"><img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 81%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"><img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 52%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 72%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes documents
+                        </a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 80%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 63%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-listes-produits"><img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 71%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</a>
+                    </dt>
+                        <dt class="fromLeft active" style="width: 53%"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</dt>
+                        <dd>Reçus</dd>
+                        <dd>Envoyés</dd>
+                        <dt class="fromLeft" style="width: 60%;"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres">
+                        <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</a>
+                    </dt>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes messages</h1>
+                </div>
+                <div class="myInfos">
+                    <div class="row" style="padding-left: 0;">
+                        <div class="col-md-3 filter" style="cursor: default" (click)="filterMsg()">
+                            <h4>Filtrer</h4> <img src="assets/images/logo/filter.png" alt="">
+                        </div>
+                        <div class="col-md-3 filter" style="cursor: default" *ngIf="messageRecu">
+                            <span class="header-filter"><h4>Messages (2)</h4> <img (click)="seeMsg()"  class="delete" src="assets/images/others/Icon-delete.png" alt="" > </span>
+                        </div>
+                    </div>
+
+                    <div class="msg" *ngIf="filterMessage">
+                        <ul class="listMsg">
+                            <li (click)="seeMsg()">Messages (2) </li>
+                            <li>Commentaires (8) </li>
+                            <li>Feedback (10) </li>
+                        </ul>
+                    </div>
+                    <div class="row message-list">
+                        <div class="col-md-5">
+                            <div class="row message-profil" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/details-messages">
+                                <div class="col-md-4 the_Seller">
+                                    <img src="assets/images/others/pdp5.svg" alt="" class="bestSeller">
+                                </div>
+                                <div class="col-md-8">
+                                    <h6>Jeanne Cyrie</h6>
+                                    <h5>Message reçu</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6></h6><br>
+                            <h5>Le 12/10/2018 à 08:18</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="assets/images/others/Produit1.png" alt="">
+                            <span class="row">
+                                <h5 style="width:75%">Balanciaga</h5>
+                                <h4 style="width:25%">595 £</h4>
+                            </span>
+                            <h6>Sneakerr speed BLACK</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+import { ProductsService } from './../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angular4-social-login';
@@ -14,8 +15,11 @@ export class LoginComponent implements OnInit {
   femme = 'noActive';
   user: SocialUser;
   test: boolean;
+  listAllPays: any;
+
   constructor(
     private socialService: AuthService,
+    private productService: ProductsService,
   ) { }
   signInWithGoogle(): void {
     this.socialService.signIn(GoogleLoginProvider.PROVIDER_ID);
@@ -39,11 +43,16 @@ export class LoginComponent implements OnInit {
       this.femme = 'noActive';
     }
   }
+  getAllPays() {
+   this.productService.listAllPays().subscribe(pays => {
+      this.listAllPays = pays.data;
+    });
+  }
   ngOnInit() {
     this.socialService.authState.subscribe((user) => {
       this.user = user;
-      console.log(this.user);
     });
+    this.getAllPays();
   }
 
 }

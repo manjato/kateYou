@@ -1,18 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @font-face {
     font-family: 'Lato-Light';
     src: url('/assets/fonts/Lato-Light.ttf');
- }
- @font-face {
+}
+
+@font-face {
     font-family: 'EyeCatchingPro';
     src: url('/assets/fonts/Blue Vinyl Fonts - EyeCatchingPro.otf');
- }
- @font-face {
+}
+
+@font-face {
     font-family: 'Lato-Regular';
     src: url('/assets/fonts/Lato-Regular.ttf');
- }
- @font-face {
+}
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('/assets/fonts/Lato-Black.ttf');
+}
+
+@font-face {
     font-family: 'AbrilFatface';
     src: url('/assets/fonts/AbrilFatface.ttf');
- }
+}
+
+@font-face {
+    font-family: 'AbrilFatface-Regular';
+    src: url('/assets/fonts/AbrilFatface-Regular.ttf');
+}

@@ -13,21 +13,21 @@
                     <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</li>
                     <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement" style="width: 80%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</li>
                     <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents" style="width: 86%"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</li>
-                    <li class="fromLeft"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
                     <li class="fromLeft"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</li>
-                    <li class="fromLeft"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes" style="width: 87%;"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
                     <li class="fromLeft"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</li>
-                    <li class="fromLeft"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres" style="width: 86%;"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="main-header">
                     <h1>Mes informations</h1>
-                    <h3>Dans un texte de vente chaque mot à son importance et doit être choisi soigneusement. D’ailleurs de nombreux professionnels dans ce domaine affirment avec des tests à l’appui que quelques mots peuvent parfois multiplier le nombre par
+                    <h3>Dans un texte de vente chaque mot a son importance et doit être choisi soigneusement. D’ailleurs de nombreux professionnels dans ce domaine affirment avec des tests à l’appui que quelques mots peuvent parfois multiplier le nombre par
                         2 voir beaucoup plus. Un bon texte de vente peut donc se comparer à un bon vendeur qui sait trouver un mot juste pour être convaincant. Il sait également qu’il faut s’adresser au bonnes personnes et répondre à leur besoin.</h3>
                 </div>
                 <form class="myInfos">
-                    <h4>Champ obligatoire*</h4>
+                    <h4>Champs obligatoire*</h4>
                     <div class="checkYou">
                         <div>
                             <button class="{{homme}}" (click)="civilite()">Homme</button>
@@ -49,11 +49,9 @@
                         </div>
                         <div class="field">
                             <select class="selectpicker">
-                                        <option class="pays">Votre pays</option>
-                                        <option>Mustard</option>
-                                        <option>Ketchup</option>
-                                        <option>Relish</option>
-                                    </select>
+                                <option class="pays" *ngFor="let listPays of listAllPays" >{{listPays.nom_fr_fr}}</option>
+                                
+                            </select>
                         </div>
                         <div class="field">
                             <input type="text " name="adresse " id="adresse " placeholder=" ">
@@ -73,7 +71,7 @@
                             <label for="prenom ">Prenom*</label>
                         </div>
                         <div class="field" style="margin-bottom: 2px;">
-                            <span class="fa {{fa}}" (click)="showPass()"></span>
+                            <span class="fa" (click)="showPass()"><img src="assets\images\logo\{{fa}}.png" alt="" ></span>
                             <input type="{{sign}}" name="password " id="password " placeholder=" ">
                             <label for="password ">Mot de passe*</label>
                         </div>
@@ -183,11 +181,11 @@
                         </div>
                         <div class="field">
                             <select class="selectpicker">
-                                        <option class="ville">Ville*</option>
-                                        <option>Mustard</option>
-                                        <option>Ketchup</option>
-                                        <option>Relish</option>
-                                    </select>
+                                <option class="ville">Ville*</option>
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
                         </div>
                         <div class="field taille">
                             <input type="text " name="adresse2 " id="adresse2 " placeholder=" ">

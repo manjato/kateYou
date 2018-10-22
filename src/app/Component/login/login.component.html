@@ -6,7 +6,7 @@
     <div class="main-header">
         <h1>S'identifier</h1>
         <div class="sign">
-            <img src="assets/images/logo/facebook.png" alt="" (click)="signInWithFB()" style="    width: 3%;">
+            <img src="assets/images/logo/facebook.png" alt="" (click)="signInWithFB()" style="width: 3%;">
 
             <button class="google" (click)="signInWithGoogle()"> <img src="assets/images/logo/google.png" alt=""></button>
             <h2>Ou</h2>
@@ -25,14 +25,13 @@
                         <label for="password">Mot de passe*</label>
                     </div>
                     <div class="right">
-                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/resetPassword">Mot de passe oublié?</a>
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/resetPass">Mot de passe oublié?</a>
                         <button>Se connecter</button>
                     </div>
                 </form>
             </div>
             <div class="seller col-md-6">
                 <h1>Créer un compte</h1>
-
                 <form class="creat">
                     <h4> * Champ obligatoire</h4>
                     <div class="checkYou">
@@ -46,13 +45,10 @@
                         <label for="file" class="label-file">Ajouter votre photo</label>
                         <input id="file" class="input-file" type="file">
                     </div>
-                    <div class="field" style="    margin-bottom: 0;    margin-top: -9%;
+                    <div class="field" style="margin-bottom: 0;margin-top: -9%;
                     ">
-                        <select class="selectpicker">
-                            <option class="pays">Pays*</option>
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
+                        <select name="selectedPays" class="selectpicker" [(ngModel)]="selectedPays">
+                            <option class="pays" *ngFor="let pays of listPays" [ngValue]="pays">{{pays.nom_fr_fr}}</option>
                         </select>
                     </div>
                     <div class="field">
@@ -182,7 +178,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="beSeller">Devenir Vendeur</button>
+                    <!-- <button class="beSeller">Devenir Vendeur</button> -->
+                    <div class="checking">
+                        <label class="control control-checkbox "> Devenir Vendeur
+                            <input type="checkbox" id="1" name="filter"/>
+                        <div class="control_indicator" ></div>
+                        </label>
+                    </div>
                     <button class="yourAccount">Creer un Compte</button>
                 </form>
                 <h4 class="last">En cliquant sur Créer un compte, vous acceptez notre <span>politique de confidentialité</span></h4>

@@ -1,0 +1,127 @@
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+}
+
+h5 {
+    font-size: 12px;
+}
+
+h4 {
+    font-family: "Abril Fatface";
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.col-md-3 {
+    float: left;
+}
+
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+    padding: 0;
+}
+
+.theSeller {
+    margin-top: 4%;
+    div>h2,
+    div>h4,
+    th,
+    td {
+        color: #131313;
+        font-family: "Lato-Regular";
+        font-size: 12px;
+        text-transform: initial;
+    }
+    div>h2 {
+        font-weight: 300;
+        border: none;
+        margin-bottom: 0;
+    }
+    div>h4 {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Lato-Light";
+    }
+    img {
+        width: 50px;
+        height: 53px;
+        float: left;
+    }
+    button {
+        float: right;
+        height: 40px;
+        width: 100px;
+        background-color: #ffffff;
+        color: #131313;
+        border: 1px solid;
+    }
+    span>img {
+        margin-top: 6px;
+        float: right;
+        width: 15px;
+    }
+    .info {
+        h2 {
+            font-family: 'Lato Regular';
+            font-size: 12px;
+            margin-left: -2%;
+        }
+        h4 {
+            font-family: 'Lato-Light';
+            font-size: 10px;
+            color: #848484;
+        }
+    }
+}
+
+.imgProduct {
+    width: 200px;
+    height: 200px;
+}
+
+.price {
+    h1 {
+        font-size: 20px;
+        font-family: "Lato-Regular";
+        font-weight: bold;
+        margin: 0px;
+    }
+}
+
+button {
+    height: 50px;
+    width: 288px;
+    text-transform: uppercase;
+    font-size: 22px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+
+.col-md-10 {
+    p {
+        color: #848484;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+span {
+    p {
+        text-align: center;
+    }
+}

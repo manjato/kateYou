@@ -1,0 +1,412 @@
+.container {
+    padding-top: 2%;
+    padding-bottom: 7%;
+}
+
+.header {
+    font-family: "Lato-Light";
+    font-size: 16px;
+    color: #131313;
+    .breadcrumb {
+        background-color: #ffffff;
+    }
+    ul.breadcrumb {
+        padding: 10px 7%;
+        list-style: none;
+    }
+    ul.breadcrumb li {
+        display: inline;
+    }
+    ul.breadcrumb li+li:before {
+        padding: 7px;
+        content: ">";
+    }
+    ul.breadcrumb li a {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        color: #131313;
+    }
+    ul.breadcrumb>li {
+        padding: 0;
+        text-transform: none;
+        margin: 0;
+    }
+    ul.breadcrumb>li:after {
+        border-bottom: none;
+    }
+}
+
+hr {
+    border-top: 1px solid #000;
+}
+
+.infos {
+    .avatar {
+        width: 157px;
+        height: 157px;
+        border-radius: 50%;
+    }
+}
+
+.col-md-6 {
+    h1 {
+        font-size: 35px;
+        font-family: 'Lato-Light';
+        margin-bottom: -3px;
+    }
+    h4 {
+        font-size: 16px;
+        color: #848484;
+        font-weight: normal;
+        font-family: 'Lato-Light';
+    }
+    h5 {
+        font-size: 12px;
+        color: #131313;
+        font-weight: normal;
+        font-family: 'Lato-Light';
+    }
+}
+
+.avis {
+    font-size: 12px;
+    color: #848484;
+    font-family: 'Lato-Light';
+}
+
+::ng-deep.d-inline-flex {
+    font-size: 20px;
+}
+
+.spoken {
+    padding-left: 18px;
+    span>h5 {
+        color: #848484;
+        margin-top: 7px;
+        margin-right: 5px;
+    }
+    span>h3 {
+        display: inline;
+        text-transform: uppercase;
+        font-family: 'Lato-Regular';
+        display: inline-block;
+        font-size: 12px;
+    }
+}
+
+button {
+    font-family: "Lato-Regular";
+    font-size: 14px;
+    border: 1px solid #131313;
+    text-transform: uppercase;
+    width: 158px;
+    height: 40px;
+    background-color: white;
+    margin-top: 18%;
+}
+
+.body-list {
+    margin: 5% 0;
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 20px;
+        li {
+            display: inline;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-right: 7%;
+            font-family: 'Lato-Light';
+            cursor: default;
+        }
+    }
+}
+
+.activ {
+    border-bottom: 1px solid;
+    padding-bottom: 14px;
+}
+
+.noActiv {
+    border-bottom: 0px;
+    padding-bottom: 0;
+}
+
+.apropos {
+    .row {
+        padding-left: 10%;
+        h1 {
+            font-size: 35px;
+            font-family: 'Abril Fatface';
+            margin-bottom: 5%;
+        }
+        h4 {
+            font-size: 16px;
+            font-family: 'Lato-Light';
+            width: 94%;
+        }
+    }
+}
+
+.vueProduits {
+    h2,
+    h4 {
+        font-family: "Lato-Black";
+        font-size: 16px;
+        border-bottom: 1px solid black;
+        font-weight: 900;
+        padding-bottom: 6px;
+    }
+    .color {
+        margin-left: 7%;
+        margin-top: 10%;
+        h6 {
+            color: #848484;
+        }
+    }
+    .filters,
+    .color>div>p {
+        font-size: 14px;
+        font-family: 'Lato-bold';
+        font-weight: bold;
+        img {
+            width: 15px;
+            height: 15px;
+            float: right;
+        }
+    }
+    .filters {
+        padding-left: 7%;
+        margin-top: 40%;
+        h4 {
+            margin-top: 7%;
+        }
+    }
+    .col-md-3 {
+        .product {
+            margin: 6% 0;
+            .favoris {
+                float: right;
+                width: 20px;
+                height: 20px;
+                position: relative;
+                top: -220px;
+            }
+            img {
+                width: 190px;
+                height: 228px;
+            }
+            h4 {
+                color: #131313;
+                font-family: "Lato-Regular";
+                font-size: 16px;
+                border-bottom: none;
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+            h5 {
+                margin-top: -7px;
+                color: #848484;
+                font-family: "Lato-Regular";
+                font-size: 14px;
+            }
+            h6 {
+                color: #131313;
+                font-family: 'Lato-Black';
+                font-size: 12px;
+            }
+            .the_Seller {
+                margin-bottom: 5%;
+                div>h2,
+                div>h4 {
+                    color: #131313;
+                    font-family: "Lato-Regular";
+                    font-size: 14px;
+                }
+                div>h2 {
+                    font-weight: 300;
+                    border: none;
+                    margin-bottom: 0;
+                    text-overflow: ellipsis;
+                    width: 81%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                h4 {
+                    font-size: 12px;
+                }
+                img {
+                    width: 39px;
+                    height: 39px;
+                    float: left;
+                }
+            }
+        }
+    }
+    .body-containt {
+        margin-top: 5%;
+    }
+    .body-containt>.row>.col-md-3:hover {
+        padding: 0;
+        border: 1px solid #707070;
+    }
+    .nav-menus {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline;
+                margin: 0 4%;
+                a {
+                    font-size: 14px;
+                    color: #848484;
+                    font-family: 'Lato-Black';
+                }
+                a.first {
+                    font-family: "Lato-Regular" !important;
+                }
+            }
+        }
+    }
+}
+
+.body-header {
+    margin-left: 7%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline;
+        margin: 0 4%;
+        a {
+            font-size: 14px;
+            color: #848484;
+            font-family: 'Lato-Black';
+            .first {
+                font-family: "Lato-Regular";
+            }
+        }
+    }
+}
+
+.grey {
+    color: #848484;
+}
+
+.black {
+    color: #131313;
+}
+
+.vueActivite {
+    .col-md-6 {
+        padding-top: 2%;
+        h4 {
+            font-size: 18px;
+            font-family: 'Lato-Regular';
+            color: #131313;
+            span {
+                font-size: 16px;
+                font-family: 'Lato-Light';
+            }
+            .nbProduct {
+                font-size: 14px;
+                font-family: 'Lato-Black';
+            }
+        }
+        h6 {
+            font-size: 10px;
+            font-family: 'Lato-Light';
+        }
+    }
+    .notif {
+        float: right;
+    }
+    .imageProduct {
+        margin-top: -10%;
+    }
+    .col-md-10 {
+        .row {
+            margin-bottom: 7%;
+        }
+    }
+}
+
+
+/* CHECKBOX */
+
+.control.control-checkbox:active {
+    label {
+        color: #131313;
+    }
+}
+
+.control {
+    font-family: "Lato-Light";
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+}
+
+.control-radio .control_indicator {
+    border-radius: none;
+}
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+    background: #ffffff;
+}
+
+.control input:checked~.control_indicator {
+    background: #000405;
+}
+
+.control input:checked:focus~.control_indicator {
+    background: #131313;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid #f5eded;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* FIN CHECKBOX */

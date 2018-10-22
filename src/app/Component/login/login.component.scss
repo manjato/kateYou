@@ -53,7 +53,7 @@
     position: absolute;
     text-decoration: underline;
     cursor: pointer;
-    margin-top: 13%;
+    margin-top: 15%;
     margin-left: -18%;
 }
 
@@ -98,7 +98,8 @@
 
 .creat>.avatar>img {
     width: 100px;
-    margin-left: 55%;
+    margin-left: 60%;
+    margin-bottom: 5%;
 }
 
 h1 {
@@ -416,7 +417,6 @@ select {
 
 .control {
     font-family: arial;
-    display: block;
     position: relative;
     padding-left: 30px;
     margin-bottom: 5px;
@@ -481,3 +481,9 @@ select {
 
 
 /* FIN CHECKBOX */
+
+.checking {
+    display: inline-block;
+    margin-left: 13%;
+    margin-top: 7px;
+}

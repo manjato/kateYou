@@ -1,3 +1,4 @@
+import { HomeService } from './../../services/home.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
@@ -18,12 +19,17 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
 })
 export class HeaderComponent implements OnInit {
   state = 'default';
-
+  allCodeMoney: any;
   rotation() {
       this.state = (this.state === 'default' ? 'rotated' : 'default');
   }
-  constructor() { }
-
+  constructor(
+    private homeService: HomeService,  ) { }
+  codeMoney () {
+    this.homeService.listPaysandCode().subscribe(listMoney => {
+      this.allCodeMoney = listMoney.data;
+    });
+  }
   ngOnInit() {
   }
 

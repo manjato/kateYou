@@ -19,19 +19,593 @@
     }
 }
 
-.col-md-4 {
+.description {
+    margin-top: 8%;
+}
+
+.exped,
+.description {
+    font-size: 18px;
+    font-family: "AbrilFatface-Regular";
+}
+
+.headDescript {
+    font-weight: normal;
+    font-family: "Lato-bold";
+    font-size: 14px;
+}
+
+.descript {
+    margin-left: 4%;
+    margin-bottom: 8%;
+    tr td,
+    .pays {
+        font-family: "Lato-Light";
+        font-size: 14px;
+    }
+    td {
+        padding-bottom: 10px;
+    }
+}
+
+.details {
+    margin-left: -5%;
     h1 {
-        font-family: "Abril Fatface";
+        font-family: "AbrilFatface-Regular";
         font-size: 30px;
     }
     h4 {
         font-family: "Lato-Light";
         font-size: 18px;
-        text-decoration: underline;
     }
     h6 {
-        font-family: "Lato-Black";
+        font-family: "Lato-Light";
         font-size: 25px;
-        font-weight: 900;
+        font-weight: bold;
+        margin: 12% 0;
     }
+}
+
+button {
+    font-family: "Lato-Regular";
+    font-size: 15px;
+    color: #ffff;
+    border: 1px solid #131313;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    background-color: #131313;
+    border-radius: 0;
+}
+
+.btn {
+    background-color: #f0cad0;
+    text-align: center;
+    border: 1px solid #f3f3ff;
+    color: #131313;
+    height: 40px;
+    width: 133px;
+    padding: 0;
+    border-radius: 0;
+    label {
+        font-family: "Lato-Regular";
+        font-size: 13px;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    img {
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        margin-left: -23px;
+    }
+}
+
+.theSeller {
+    margin: 7% 0;
+    .row>div>div>h2,
+    .row>div>div>h4 {
+        color: #131313;
+        font-family: "Lato-Regular";
+        font-size: 14px;
+    }
+    .row>div>div>h2 {
+        font-weight: 300;
+        border: none;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+    .row>div>div>h4 {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Lato-Light";
+    }
+    .row>div>img {
+        width: 64px;
+        height: 67px;
+        float: left;
+        margin-right: 13px;
+    }
+    button {
+        float: right;
+        height: 40px;
+        width: 100px;
+        background-color: #ffffff;
+        color: #131313;
+    }
+    span>img {
+        margin-top: 6px;
+        float: right;
+        width: 15px;
+    }
+    .info {
+        h2 {
+            font-family: 'Lato Regular';
+            font-size: 12px;
+            margin-left: -2%;
+        }
+        h4 {
+            font-family: 'Lato-Light';
+            font-size: 10px;
+            color: #848484;
+        }
+    }
+}
+
+.coment {
+    h5,
+    h4 {
+        font-size: 16px;
+        font-family: 'Lato-Light';
+        margin-left: -24%;
+    }
+    h4 {
+        font-size: 12px;
+        color: #848484;
+    }
+    .reply {
+        height: 20px;
+        margin-top: -9px;
+        margin-left: 18px;
+        width: 30px;
+    }
+    .imgComent {
+        margin-right: 17%;
+        float: right;
+        span {
+            font-size: 20px;
+            font-family: 'Lato-Light';
+            color: #848484;
+            img {
+                margin-top: 0;
+                width: 35px;
+            }
+        }
+    }
+}
+
+.commentaire {
+    font-size: 16px;
+    font-family: 'Lato-Light';
+    color: #131313;
+    a {
+        color: #848484;
+        cursor: pointer;
+    }
+    .row .col-md-2 .theSeller {
+        img {
+            width: 64px;
+        }
+    }
+}
+
+.bestSeller {
+    width: 64px;
+}
+
+.theReply {
+    margin-top: 11%;
+    margin-left: -30%;
+    .theSeller {
+        margin: 0;
+        .info {
+            h4 {
+                margin-top: -11%;
+                margin-left: 0;
+            }
+        }
+    }
+    .coment {
+        h4,
+        h5 {
+            margin-left: -13%;
+        }
+    }
+}
+
+.contact {
+    margin-left: -13%;
+}
+
+.addPanier {
+    margin-left: 9%;
+}
+
+.select-style {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.color {
+    margin-bottom: 18%;
+    margin-left: -15px;
+    img {
+        margin-left: 0;
+        width: 25px;
+    }
+    span {
+        float: left;
+        font-size: 14px;
+        font-family: 'Lato-Regular';
+        font-weight: bold;
+        margin-right: 5%;
+        p {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.arrow {
+    margin-left: 45%
+}
+
+.star {
+    width: 13px;
+    float: left;
+    margin-top: 2%;
+}
+
+hr {
+    margin-top: 0.7rem;
+}
+
+.col-md-12 {
+    h1 {
+        font-size: 35px;
+        font-family: 'AbrilFatface-Regular';
+        a {
+            font-size: 18px;
+            font-family: 'Lato-Regular';
+            color: #848484;
+            text-decoration: underline;
+            font-weight: bold;
+            margin-left: 3%;
+        }
+    }
+    span {
+        img {
+            margin-top: -8%;
+            width: 23px;
+        }
+    }
+}
+
+.arrow {
+    margin-left: 43%;
+}
+
+.body-containt {
+    margin: 3% 0;
+    .col-md-2 {
+        float: left;
+        padding-left: 0;
+        margin-bottom: 7%;
+        .product {
+            border: 1px solid #707070;
+            .favoris {
+                float: right;
+                width: 20px;
+                height: 20px;
+                position: relative;
+                top: -194px;
+                margin-right: 4px;
+            }
+            img {
+                width: 168px;
+                height: 198px;
+            }
+            h4 {
+                color: #131313;
+                font-family: "Lato-Regular";
+                font-size: 16px;
+                border-bottom: none;
+                font-weight: 300;
+                margin-bottom: 5px;
+            }
+            h5 {
+                margin-top: -7px;
+                color: #848484;
+                font-family: "Lato-Regular";
+                font-size: 14px;
+            }
+            h6 {
+                color: #131313;
+                font-family: 'Lato-Black';
+                font-size: 12px;
+            }
+            .theSeller {
+                margin-bottom: 5%;
+                div>h2,
+                div>h4 {
+                    color: #131313;
+                    font-family: "Lato-Regular";
+                    font-size: 14px;
+                }
+                div>h2 {
+                    font-weight: 300;
+                    border: none;
+                    margin-bottom: 0;
+                    text-overflow: ellipsis;
+                    width: 90%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                h4 {
+                    font-size: 12px;
+                }
+                img {
+                    width: 39px;
+                    height: 39px;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+.expedition {
+    font-size: 14px;
+    font-family: 'Lato-Light';
+    margin-left: 9%;
+    margin-top: 5%;
+    ul {
+        margin-left: 10%;
+    }
+    label {
+        width: 98%;
+    }
+}
+
+
+/* SELECT CSS */
+
+body {
+    background: red;
+}
+
+.center-on-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Reset Select */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+}
+
+
+/* Custom Select */
+
+.selectSize,
+.selectedSize {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 3em;
+    line-height: 3;
+    overflow: hidden;
+    border: 1px solid #B9B9B9;
+    font-size: 14px;
+    font-family: "Lato-bold";
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: #848484;
+    cursor: pointer;
+    img {
+        margin-top: 12px;
+        float: right;
+        width: 22px;
+        margin-right: 5%;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select::after {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+
+/* END OF SELECT CSS */
+
+
+/* FLOATING LABEL */
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+    width: 50%;
+    label {
+        width: 84%;
+    }
+}
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+    margin-top: 10px;
+}
+
+.date {
+    border-bottom: none;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+input:placeholder-shown+label {
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.2);
+    color: #848484;
+}
+
+
+/**
+  * By default, the placeholder should be transparent. Also, it should 
+  * inherit the transition.
+  */
+
+ ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+
+/**
+  * Show the placeholder when the input is focused.
+  */
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+
+/**
+  * When the element is focused, remove the label transform.
+  * Also, do this when the placeholder is _not_ shown, i.e. when 
+  * there's something in the input at all.
+  */
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+
+/* END of FLOATING LABEL */
+
+form {
+    button {
+        font-size: 15px;
+        color: #131313;
+        border: 1px solid #131313;
+        background-color: white;
+    }
+}
+
+.addComent {
+    margin: 3% 0 10%;
+}
+
+.sizeProduct {
+    cursor: pointer;
+    th {
+        font-family: 'Lato-Light';
+        font-size: 16px;
+        color: #848484;
+        text-align: center;
+        padding-top: 5%;
+    }
+    td {
+        font-family: 'Lato-Regular';
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+        padding-top: 3%;
+    }
+    .stock,
+    td:first-child {
+        font-size: 14px;
+        font-family: "Lato-Light";
+        color: #707070;
+    }
+    .stock:hover {
+        background-color: white !important;
+    }
+}
+
+.guide {
+    font-size: 14px;
+    font-family: "Lato-Light";
+    color: #707070;
+    margin-bottom: 10%;
+    text-decoration: underline;
+}
+
+.descriSize {
+    border: 1px solid #B9B9B9;
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    width: 92.3%;
+    border-top: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.table tr.active td {
+    background-color: #848484 !important;
+    color: white;
+}
+
+.selectedSize {
+    color: #131313;
 }

@@ -1,0 +1,79 @@
+<div class="top-header">
+    <div class="container">
+        <div class="main-header">
+            <h1>Mon Panier</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="col-md-12" *ngFor="let produit of produits; index as i">
+                <div class="col-md-3">
+                    <img src="{{produit.imgProduct}}" alt="" class="imgProduct">
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>{{produit.name}}</h4>
+                            <h5>{{produit.info}}</h5>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="{{produit.colorProduct}}" alt="" style="    width: 15px;">
+                            <p>{{produit.color}}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>{{produit.priceProduct}} $</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theSeller col-md-11">
+                    <div class="row">
+                        <img src="{{produit.imgSeller}}" alt="" class="bestSeller">
+                        <div class="col-md-5">
+                            <h2>{{produit.nameSeller}}</h2>
+                            <h4>{{produit.pays}}</h4>
+                            <h5>Expédié depuis:</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <table style="width:100%">
+                                <tr>
+                                    <th style="    width: 85px;">Taille Originale/</th>
+                                    <th>Conversion</th>
+                                </tr>
+                                <tr>
+                                    <td>{{produit.paysOriginal}} {{produit.conversion}}</td>
+                                    <td>{{produit.paysConversion}} {{produit.conversion}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10" style="text-align: right">
+                    <p (click)="deletePanier(produit, i)">Supprimer</p>
+                </div>
+
+                <hr class="col-md-11">
+            </div>
+        </div>
+        <div class="col-md-3 price">
+            <h1>SOMMAIRE</h1>
+            <hr style="    margin-top: 7px;">
+            <div class="row" style="margin-left:0;">
+                <div class="col-md-6">
+                    TOTAL
+                </div>
+                <div class="col-md-6">
+                    <p style="margin: 0;">{{total}} $</p>
+                    <p style="color: #848484;font-size: 11px;">Livraison incluse</p>
+                </div>
+                <button>Proceder au paiement</button>
+                <span>                
+                    <p>La livraison se fera sous 72 heures.</p>
+                    <p style="width: 95%;line-height: 16px;">Nous vous remercions de votre confiance et espérons vous revoir bientôt.</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

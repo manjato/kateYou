@@ -1,0 +1,507 @@
+.container {
+    padding-top: 2%;
+    padding-bottom: 7%;
+}
+
+hr {
+    border-top: 1px solid #000;
+}
+
+.row {
+    padding-left: 13%;
+}
+
+a {
+    color: #131313;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a>img {
+    padding-right: 10px;
+}
+
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        text-align: center;
+        margin-top: -2%;
+        margin-right: 18%;
+    }
+    h3 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        padding-top: 6%;
+        width: 87%;
+        text-align: justify;
+        padding-left: 4%;
+    }
+}
+
+.infos {
+    .avatar {
+        border-radius: 50%;
+        border: 2px solid #909396;
+    }
+    h3 {
+        margin-right: 7%;
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: #131313;
+        padding: 6%;
+    }
+    h4,
+    p {
+        font-family: "Lato-Light";
+        font-size: 17px;
+    }
+    p>img {
+        padding-bottom: 9px;
+        padding-left: 5px;
+    }
+}
+
+.list-group {
+    list-style: none;
+    li {
+        cursor: pointer;
+        font-family: "Lato-Regular";
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 13px 0px;
+        color: #131313;
+    }
+    li>img {
+        padding-right: 5%;
+    }
+}
+
+
+/* FLOATING LABEL */
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+    width: 215px;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+input:placeholder-shown+label {
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.2);
+    color: #b9b9b9;
+    font-size: 14px;
+    font-family: "Lato-Light";
+}
+
+
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+
+/**
+* Show the placeholder when the input is focused.
+*/
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+
+/* END of FLOATING LABEL */
+
+#langue,
+.choixLangue {
+    width: 365px;
+}
+
+#description,
+#descri {
+    width: 585px;
+}
+
+.addlangue {
+    h3 {
+        -webkit-transition: max-height 1s;
+        -moz-transition: max-height 1s;
+        -ms-transition: max-height 1s;
+        -o-transition: max-height 1s;
+        transition: max-height 1s;
+        font-family: "Lato-Light";
+        font-size: 17.5px;
+        color: #131313;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.addlangue {
+    padding-top: 5%;
+}
+
+.valid {
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    color: #ffff;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #21253d;
+    background-color: #21253d;
+    margin-right: 16%;
+    float: right;
+    margin-top: 5%;
+}
+
+.myInfos {
+    padding-top: 29%;
+    h4 {
+        font-size: 16px;
+        font-family: "Lato-Regular";
+    }
+    img {
+        width: 80px;
+    }
+    .identity {
+        width: 174px;
+        height: 120px;
+        margin: 8% 0 8% 0;
+    }
+}
+
+form {
+    padding-left: 9%;
+}
+
+.choixLangue {
+    padding-top: 5%;
+}
+
+
+/* Animation Border-Bottom */
+
+li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #131313;
+    transform: scaleX(0);
+    transition: transform 2000ms ease-in-out;
+}
+
+li:hover:after {
+    transform: scaleX(0.8);
+}
+
+.fromLeft:after {
+    margin-top: 4%;
+    transform-origin: 0% 0%;
+}
+
+.fromLeft.active:after {
+    -webkit-transform-origin: none;
+    transform-origin: none;
+    content: none;
+    transform: none;
+    transition: none;
+}
+
+.fromLeft.active {
+    width: 67%;
+    border-bottom: 1px solid black;
+    transform: translate(1px);
+}
+
+
+/*END OF Animation Border-Bottom */
+
+.col-md-4 {
+    float: left;
+    padding-left: 0px;
+}
+
+.right {
+    margin-right: 14%;
+}
+
+form {
+    padding-left: 4%
+}
+
+.left {
+    margin-left: 5%;
+}
+
+.myCheckbox input {
+    position: relative;
+    z-index: -9999;
+}
+
+.myCheckbox span {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.civilite {
+    font-size: 14px;
+    margin-right: 5%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* RADIO BUTTON */
+
+$color1: #f4f4f4;
+$color2: rgb(15, 15, 15);
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    +.radio-label {
+        &:before {
+            content: '';
+            background: $color1;
+            border-radius: 100%;
+            border: 1px solid darken($color1, 25%);
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: 2px;
+            margin-top: 10px;
+            margin-right: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 250ms ease;
+        }
+    }
+    &:checked {
+        +.radio-label {
+            &:before {
+                background-color: $color2;
+                box-shadow: inset 0 0 0 4px $color1;
+            }
+        }
+    }
+    &:focus {
+        +.radio-label {
+            &:before {
+                outline: none;
+                border-color: $color2;
+            }
+        }
+    }
+    &:disabled {
+        +.radio-label {
+            &:before {
+                box-shadow: inset 0 0 0 4px $color1;
+                border-color: darken($color1, 25%);
+                background: darken($color1, 25%);
+            }
+        }
+    }
+    +.radio-label {
+        &:empty {
+            &:before {
+                margin-right: 0;
+            }
+        }
+    }
+    .radioBtn {
+        padding: 5px;
+    }
+}
+
+.example-section>input {
+    border-bottom: none;
+}
+
+
+/*  END OF RADIO BUTTON */
+
+@media screen and (max-width: 575px) {
+    .img-fluid {
+        margin: 0 27%;
+    }
+    label {
+        width: 88%;
+    }
+    .containt {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+    .myInfos {
+        h4 {
+            padding-left: 16px;
+        }
+    }
+    .col-sm-5 {
+        float: left;
+    }
+    .fa {
+        margin-left: 62%;
+    }
+    .valid {
+        margin-bottom: 5%;
+        margin-right: 0;
+        float: left;
+    }
+    select {
+        background-color: white;
+    }
+    .containt {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .row {
+        padding-left: 0;
+    }
+    .col-md-3 {
+        max-width: 29%;
+    }
+    .main-header>h3 {
+        width: 100%;
+    }
+    .main-header>h1 {
+        margin-right: 10%;
+    }
+    .right {
+        margin-right: 18%;
+    }
+    .dateNaiss {
+        margin-top: -5px;
+    }
+    .fa {
+        margin-left: 150%;
+    }
+    .taille {
+        width: 215px;
+    }
+    .valid {
+        margin-right: -6%;
+    }
+    .responsive {
+        display: none;
+    }
+}
+
+.checkYou {
+    button {
+        font-family: "Lato-Regular";
+        font-size: 13px;
+        width: 58px;
+        height: 29px;
+        color: #131313;
+    }
+    .noActive {
+        background-color: white;
+        border: 1px solid #21253d;
+    }
+    .activ {
+        background-color: #21253d;
+        border: 1px solid #21253d;
+        color: white;
+    }
+}
+
+.my_title h4 {
+    font-family: "Abril Fatface";
+    font-size: 24px;
+    color: #131313;
+}
+
+.content .left-text {
+    font-family: "Lato";
+    font-size: 18px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.content {
+    padding-left: 4%;
+}
+
+.marge {
+    padding-top: 29.9%;
+}
+
+select {
+    border: 0;
+    border-bottom: none;
+    font-family: "Lato";
+    border-radius: 0;
+    padding: 0;
+    width: 90px;
+    color: #131313;
+    cursor: pointer;
+}
+
+.first-element {
+    margin-top: 30px;
+}
+
+.marge-gauche {
+    margin-left: 16%;
+}

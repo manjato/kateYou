@@ -1,0 +1,760 @@
+.container {
+    padding-top: 2%;
+    padding-bottom: 7%;
+}
+
+hr {
+    border-top: 1px solid #000;
+}
+
+.row {
+    padding-left: 13%;
+    h5 {
+        font-size: 14px;
+        font-family: "Lato-Light";
+        color: #131313;
+    }
+}
+
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        text-align: center;
+        margin-top: -2%;
+        margin-right: 18%;
+    }
+    h3 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        padding-top: 6%;
+        width: 87%;
+        text-align: justify;
+        padding-left: 4%;
+    }
+}
+
+.list-group {
+    margin-left: -15%;
+    list-style: none;
+    li {
+        cursor: pointer;
+        font-family: "Lato-Regular";
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 10px 0px;
+        color: #131313;
+    }
+    li>img {
+        padding-right: 5%;
+    }
+}
+
+
+/* FLOATING LABEL */
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    border: 0;
+    border-bottom: 0.2px solid black;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+    width: 215px;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+input:placeholder-shown+label {
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.2);
+    color: #b9b9b9;
+    font-size: 14px;
+    font-family: "Lato-Regular";
+}
+
+
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+
+/**
+* Show the placeholder when the input is focused.
+*/
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+
+/* END of FLOATING LABEL */
+
+#langue,
+.choixLangue {
+    width: 365px;
+}
+
+#description,
+#note,
+#ajoutCouleur {
+    width: 480px;
+}
+
+.addlangue {
+    h3 {
+        -webkit-transition: max-height 1s;
+        -moz-transition: max-height 1s;
+        -ms-transition: max-height 1s;
+        -o-transition: max-height 1s;
+        transition: max-height 1s;
+        font-family: "Lato-Light";
+        font-size: 17.5px;
+        color: #131313;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.addlangue {
+    padding-top: 5%;
+}
+
+.valid {
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    color: #ffff;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #21253d;
+    background-color: #21253d;
+    margin-right: 16%;
+    float: right;
+    margin-top: 5%;
+}
+
+.myInfos {
+    padding-top: 24%;
+    .row {
+        padding-left: 0;
+    }
+    .space {
+        margin-left: 10%;
+        margin-top: -2%;
+        input {
+            width: 267px;
+        }
+    }
+    .height {
+        margin-bottom: 21px;
+    }
+    h4 {
+        font-size: 16px;
+        font-family: "Lato-Regular";
+        margin: 4% 0;
+        width: 80%;
+        text-align: justify;
+    }
+    img {
+        width: 80px;
+    }
+    .identity {
+        width: 174px;
+        height: 120px;
+        margin: 8% 0 8% 0;
+    }
+}
+
+.btn {
+    float: right;
+}
+
+form {
+    padding-left: 9%;
+}
+
+.choixLangue {
+    padding-top: 5%;
+}
+
+
+/* Animation Border-Bottom */
+
+li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #131313;
+    transform: scaleX(0);
+    transition: transform 2000ms ease-in-out;
+}
+
+li:hover:after {
+    transform: scaleX(0.8);
+}
+
+.fromLeft:after {
+    margin-top: 4%;
+    transform-origin: 0% 0%;
+}
+
+.fromLeft.active:after {
+    -webkit-transform-origin: none;
+    transform-origin: none;
+    content: none;
+    transform: none;
+    transition: none;
+}
+
+.fromLeft.active {
+    width: 79%;
+    border-bottom: 1px solid black;
+    transform: translate(1px);
+}
+
+
+/*END OF Animation Border-Bottom */
+
+.col-md-4 {
+    float: left;
+    padding-left: 0px;
+}
+
+.right {
+    margin-right: 14%;
+}
+
+.left {
+    margin-left: -4%;
+}
+
+.myCheckbox input {
+    position: relative;
+    z-index: -9999;
+}
+
+.myCheckbox span {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* RADIO BUTTON */
+
+$color1: #f4f4f4;
+$color2: rgb(15, 15, 15);
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    +.radio-label {
+        &:before {
+            content: '';
+            background: $color1;
+            border-radius: 100%;
+            border: 1px solid darken($color1, 25%);
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: 2px;
+            margin-top: 10px;
+            margin-right: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 250ms ease;
+        }
+    }
+    &:checked {
+        +.radio-label {
+            &:before {
+                background-color: $color2;
+                box-shadow: inset 0 0 0 4px $color1;
+            }
+        }
+    }
+    &:focus {
+        +.radio-label {
+            &:before {
+                outline: none;
+                border-color: $color2;
+            }
+        }
+    }
+    &:disabled {
+        +.radio-label {
+            &:before {
+                box-shadow: inset 0 0 0 4px $color1;
+                border-color: darken($color1, 25%);
+                background: darken($color1, 25%);
+            }
+        }
+    }
+    +.radio-label {
+        &:empty {
+            &:before {
+                margin-right: 0;
+            }
+        }
+    }
+    .radioBtn {
+        padding: 5px;
+    }
+}
+
+.example-section>input {
+    border-bottom: none;
+}
+
+
+/*  END OF RADIO BUTTON */
+
+.checkYou {
+    margin-bottom: 2px;
+}
+
+
+/* SELECT OPTION */
+
+select {
+    border: 0;
+    border-bottom: 0.2px solid black;
+    font-family: inherit;
+    border-radius: 0;
+    padding: 0;
+    height: 34px;
+    width: 215px;
+    color: black;
+    cursor: pointer;
+    margin-top: 9px;
+}
+
+
+/* END OF SELECT OPTION */
+
+.pays,
+.ville {
+    color: #b9b9b9;
+}
+
+.fa {
+    top: -20px;
+    margin-left: 92%;
+    position: relative;
+}
+
+.date {
+    width: 44px;
+}
+
+.datenaissance {
+    width: 60px;
+}
+
+.selectpicker {
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+.daty {
+    font-family: "Lato-Regular";
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+span {
+    cursor: pointer;
+}
+
+
+/* CURRENT BUTTON */
+
+.current {
+    content: none;
+    border-bottom: 1px solid black;
+    width: 193px;
+}
+
+li.current:after {
+    display: block;
+    content: '';
+}
+
+
+/* END OF CURRENT BUTTON */
+
+
+/* CHECKBOX */
+
+.control-group {
+    width: 50%;
+}
+
+.control.control-checkbox:active {
+    label {
+        color: #131313;
+    }
+}
+
+.control {
+    font-family: "Lato-Light";
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 1px;
+    color: #131313;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+}
+
+.control-radio .control_indicator {
+    border-radius: none;
+}
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+    background: #ffffff;
+}
+
+.control input:checked~.control_indicator {
+    background: #000405;
+}
+
+.control input:checked:focus~.control_indicator {
+    background: #131313;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 2px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid #f5eded;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* FIN CHECKBOX */
+
+.infos {
+    .avatar {
+        border-radius: 50%;
+        border: 2px solid #909396;
+    }
+    h1 {
+        margin-right: 7%;
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: #131313;
+        padding: 6%;
+    }
+    h4,
+    p {
+        font-family: "Lato-Light";
+        font-size: 17px;
+    }
+    p>img {
+        padding-bottom: 9px;
+        padding-left: 5px;
+    }
+}
+
+.col-md-4 {
+    float: left;
+    padding-left: 0px;
+    .left {
+        margin-left: 5%;
+        margin-top: -3%;
+    }
+    .right {
+        margin-right: 14%;
+        margin-top: 4%;
+    }
+    h5 {
+        margin: 10% 0;
+        font-family: "Lato-Regular";
+    }
+}
+
+button {
+    width: 158px;
+    height: 40px;
+    background-color: #21253d;
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: solid 0.2px #000000;
+}
+
+span {
+    cursor: default;
+    text-align: center;
+    h3 {
+        font-size: 16px;
+        font-family: 'Lato-Light';
+        color: #131313;
+        line-height: 41px;
+        margin-left: -22%;
+        a {
+            font-family: 'Lato-Light';
+            font-size: 18px;
+            text-decoration: underline;
+        }
+    }
+    .price {
+        font-size: 26px;
+        font-family: 'Lato-Black';
+        color: #131313;
+        font-weight: 900;
+    }
+}
+
+.btn {
+    margin-top: 9%;
+}
+
+.seeProduct {
+    margin-right: 21px;
+}
+
+.categor {
+    margin-top: 10px;
+}
+
+.addPhotos,
+.addColor {
+    label {
+        font-size: 14px;
+        font-family: 'Lato-Light';
+        text-decoration: underline;
+        margin-bottom: 3%;
+        line-height: 41px;
+        margin-left: 30%;
+        cursor: pointer;
+    }
+    #addImages {
+        display: none;
+    }
+}
+
+.checking {
+    margin-left: -2%;
+    h5 {
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+}
+
+.modal-title {
+    font-size: 13px;
+    font-family: 'Lato-Regular';
+    color: #131313;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+}
+
+.row {
+    h5.black {
+        color: #ffffff;
+        background-color: #131313;
+    }
+    h5.pink {
+        color: #000000;
+        background-color: #fff3f5;
+    }
+}
+
+.modal-body {
+    margin-bottom: 5%;
+    span h5 {
+        font-size: 18px;
+        float: left;
+        font-family: 'Lato-Regular';
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        margin: 4px;
+    }
+    span h5.num {
+        width: 90px;
+    }
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.select {
+    float: right;
+    margin-top: 2%;
+    margin-right: 12px;
+}
+
+.modal-lg {
+    border-radius: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+button .close .pull-right {
+    color: initial;
+    width: initial;
+    height: initial;
+    background-color: initial;
+    color: initial;
+    text-transform: initial;
+    font-size: initial;
+}
+
+.img-fluid {
+    width: 24px;
+    top: -29px;
+    margin: 0 102%;
+    position: relative;
+}
+
+input {
+    width: 248px;
+}
+
+#codeproduit,
+#modele {
+    width: 216px;
+}
+
+ul {
+    list-style-type: none;
+    li {
+        padding: 0 15px 0 0px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: "Lato-Regular";
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+.category {
+    .col-md-3 {
+        padding: 0;
+    }
+    h6 {
+        margin: 6% 0 18%;
+    }
+    h6,
+    h5 {
+        font-size: 13px;
+        font-family: "Lato-Regular";
+        text-transform: uppercase;
+        color: #131313;
+    }
+    h5 {
+        text-transform: inherit;
+    }
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+}
+
+.modalColor {
+    background-color: white !important;
+}
+
+.colors {
+    margin-left: 10%;
+    border-bottom: 1px solid #131313;
+    padding-top: 2%;
+    padding-right: 0;
+    padding-left: 0;
+    h4.colorChoose {
+        margin: 0;
+        width: auto;
+        cursor: default;
+    }
+}
+
+.addPhotos {
+    img {
+        display: block;
+        width: auto;
+        margin: 5% 37%;
+    }
+}

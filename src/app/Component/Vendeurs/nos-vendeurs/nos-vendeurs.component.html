@@ -1,0 +1,104 @@
+<div class="top-header">
+    <div class="container">
+
+        <div class="main-header">
+            <h1>Nos vendeurs</h1>
+        </div>
+    </div>
+</div>
+<div class="body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Filtrer par</h2>
+                <div class="color">
+                    <h6>Pays</h6>
+                    <div *ngFor="let f of countries; index as i">
+                        <p *ngIf="f.checked">{{f.name}} <img src="assets\images\logo\croixcheckmark.png" (click)="deleteCountrie(i)" alt=""></p>
+                    </div>
+                </div>
+                <div class="color">
+                    <h6>Langues parlés</h6>
+                    <div *ngFor="let l of spoken; index as i">
+                        <p *ngIf="l.checked">{{l.name}} <img src="assets\images\logo\croixcheckmark.png" (click)="deleteSpoke(i)" alt=""></p>
+                    </div>
+                </div>
+                <div class="filters">
+                    <div class="couleur">
+                        <h4 style="margin-bottom: 13%;">Pays<img src="assets\images\logo\{{logo}}.png" alt="" (click)="voirPays()"></h4>
+                        <div class="control-group" *ngIf="countrie">
+                            <div *ngFor="let countrie of countries; index as i">
+                                <label class="control control-checkbox {{countrie.color}}"> {{countrie.name}}
+                                  <input type="checkbox" id="countrie{{countrie.value}}" name="pays" [checked]="countrie.checked"[ngModel]="pays"  (change)="seeCountries(i)"/>
+                              <div class="control_indicator"></div>
+                          </label>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Note <img src="assets\images\logo\ajout.png" alt=""></h4>
+                    <h4>Catégorie <img src="assets\images\logo\ajout.png" alt=""></h4>
+                    <h4>Marque <img src="assets\images\logo\ajout.png" alt=""></h4>
+                    <div class="couleur">
+                        <h4 style="margin-bottom: 13%;">Langue parlée<img src="assets\images\logo\{{logo1}}.png" alt="" (click)="langueParle()"></h4>
+                        <div class="control-group" *ngIf="parle">
+                            <div *ngFor="let s of spoken; index as i">
+                                <label class="control control-checkbox {{s.color}}"> {{s.name}}
+                                      <input type="checkbox" id="s{{s.value}}" name="spoke" [checked]="s.checked"[ngModel]="spoke"  (change)="spokenLang(i)"/>
+                                  <div class="control_indicator"></div>
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-9">
+                <div class="body-header row" style="margin-top: 0;">
+                    <div class="nav-menus">
+                        <ul class="nav-menu">
+                            <li>
+                                <a class="first">Trier par:</a>
+                            </li>
+                            <li>
+                                <a>Ancienneté</a>
+                            </li>
+                            <li>
+                                <a>Note</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="body-containt row" style="margin-top: 0;">
+                        <div class="col-md-3" *ngFor="let seller of sellers, index as ind">
+                            <div class="product">
+                                <div>
+                                    <img src="{{seller.img}}" alt="">
+                                </div>
+                                <div style="padding-left: 6px;">
+                                    <h4>{{seller.name}}</h4>
+                                    <ngb-rating [(rate)]="seller.starRating"></ngb-rating>
+
+                                    <h6>{{seller.pays}}</h6>
+                                    <h5>{{seller.nbProduit}} articles en vente</h5>
+                                </div>
+                                <div class="language">
+                                    <h5>Langues parlés:</h5>
+                                    <div class="listLanguage">
+                                        <h3 *ngFor="let langue of seller.spoken">
+                                            {{langue.langue}}</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <app-newsletter></app-newsletter>
+    <app-aboutus></app-aboutus>
+</footer>

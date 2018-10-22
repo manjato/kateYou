@@ -1,0 +1,194 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-4">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+
+                <div class="list-group">
+                    <li class="fromLeft " style="width: 74%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil"><img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</a>
+                    </li>
+                    <li class="fromLeft" style="width: 81%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"><img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</a>
+                    </li>
+                    <li class="fromLeft" style="width: 52%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</a>
+                    </li>
+                    <li class="fromLeft" style="width: 72%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes documents
+                        </a>
+                    </li>
+                    <li class="fromLeft" style="width: 80%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</a>
+                    </li>
+                    <li class="fromLeft" style="width: 63%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-listes-produits"><img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</a>
+                    </li>
+                    <li class="fromLeft" style="width: 71%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</a>
+                    </li>
+                    <li class="fromLeft" style="width: 60%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-messages"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</a>
+                    </li>
+                    <li class="fromLeft active" style="width: 55%;"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes paramètres</h1>
+                </div>
+                <div class="marge">
+                    <form class="my_title">
+                        <div>
+                            <h4>Etre informé sur</h4>
+                        </div>
+                    </form>
+                    <!-- les ventes -->
+                    <div class="content first-element row">
+                        <div class="left-text col-md-8">
+                            <h6>Les ventes</h6>
+                        </div>
+                        <div class="right-button col-md-4">
+                            <div class="checkYou">
+                                <div>
+                                    <button class="{{ventesoui}}" (click)="ventes()">Oui</button>
+                                    <button class="{{ventesnon}}" (click)="ventes()" style="margin-left: -3%;">Non</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Les messages -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Les messages</h6>
+                        </div>
+                        <div class="right-button col-md-4">
+                            <div class="checkYou">
+                                <div>
+                                    <button class="{{msgoui}}" (click)="msg()">Oui</button>
+                                    <button class="{{msgnon}}" (click)="msg()" style="margin-left: -3%;">Non</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Les commentaires -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Les commentaires</h6>
+                        </div>
+                        <div class="right-button col-md-4">
+                            <div class="checkYou">
+                                <div>
+                                    <button class="{{comsoui}}" (click)="coms()">Oui</button>
+                                    <button class="{{comsnon}}" (click)="coms()" style="margin-left: -3%;">Non</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Les feedbacks -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Les feedbacks</h6>
+                        </div>
+                        <div class="right-button col-md-4">
+                            <div class="checkYou">
+                                <div>
+                                    <button class="{{fboui}}" (click)="fb()">Oui</button>
+                                    <button class="{{fbnon}}" (click)="fb()" style="margin-left: -3%;">Non</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Suivie de commande -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Le suivie de la commandes</h6>
+                        </div>
+                        <div class="right-button col-md-4">
+                            <div class="checkYou">
+                                <div>
+                                    <button class="{{suiviecomoui}}" (click)="suiviecom()">Oui</button>
+                                    <button class="{{suiviecomnon}}" (click)="suiviecom()" style="margin-left: -3%;">Non</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Les loves -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Les loves</h6>
+                        </div>
+                        <div class="right-button col-md-4">
+                            <div class="checkYou">
+                                <div>
+                                    <button class="{{lovesoui}}" (click)="loves()">Oui</button>
+                                    <button class="{{lovesnon}}" (click)="loves()" style="margin-left: -3%;">Non</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="my_title">
+                        <div>
+                            <h4>Mes préferénces internationales</h4>
+                        </div>
+                    </form>
+                    <!-- Langues -->
+                    <div class="content first-element row">
+                        <div class="left-text col-md-8">
+                            <h6>Langues</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="marge-gauche">
+                                <option >Français</option>
+                                <option>Anglais</option>
+                                <option>Espagnol</option>
+                                <option>Italien</option>
+                             </select>
+                        </div>
+                    </div>
+                    <!-- Devise -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Devise</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="marge-gauche">
+                                <option >EUR</option>
+                                <option>FMG</option>
+                                <option>YEN</option>
+                                <option>DOLLARS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Pays -->
+                    <div class="content row">
+                        <div class="left-text col-md-8">
+                            <h6>Mon pays</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="marge-gauche">
+                                    <option >France</option>
+                                    <option>Madagascar</option>
+                                    <option>Italie</option>
+                                    <option>Chine</option>
+                                 </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MOBIL RESPONSIVE -->
+
+<!-- END OF RESPONSIVE  -->
+<footer>
+    <app-download></app-download>
+    <hr class="menu">
+    <app-aboutus></app-aboutus>
+</footer>

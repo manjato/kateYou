@@ -1,0 +1,101 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-4">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                <div class="list-group">
+                    <dl>
+                        <dt class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil" style="width: 77%"> <img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</dt>
+                        <dt class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur" style="width: 81%"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</dt>
+                        <dt class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement" style="width: 70%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</dt>
+                        <dt class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents" style="width: 68%"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</dt>
+                        <dt class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit" style="width: 80%"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</dt>
+                        <dt class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-listes-produits" style="width: 63%"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</dt>
+                        <dt class="fromLeft" style="width: 71%;" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</dt>
+                        <dt class="fromLeft active" style="width: 53%"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</dt>
+                        <dd>Reçus</dd>
+                        <dd>Envoyés</dd>
+                        <dt class="fromLeft" style="width: 74%;" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</dt>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes messages</h1>
+                </div>
+                <div class="myInfos">
+                    <div class="filter" style="cursor: default">
+                        <h4>Filtrer</h4> <img src="assets/images/logo/filter.png" alt="">
+                    </div>
+                    <div class="retour">
+                        <span (click)="back()"><img src="assets/images/others/lessthan.png" alt=""> Retour</span>
+                    </div>
+                    <div class="message-list">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="row message-profil">
+                                    <div class="col-md-8 infos">
+                                        <h6>Jeanne Cyrie</h6>
+                                        <h5>Message reçu</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 dateTime">
+                                <h6></h6><br>
+                                <h5>Le 12/10/2018 à 08:18</h5>
+                            </div>
+                            <div class="col-md-3 product">
+                                <img src="assets/images/others/Produit1.png" alt="">
+                                <span class="row">
+                                            <h5 style="width:75%">Balanciaga</h5>
+                                            <h4 style="width:25%">595 £</h4>
+                                        </span>
+                                <h6>Sneakerr speed BLACK</h6>
+                            </div>
+                        </div>
+                        <div class="detailsMessage">
+                            <div class="MyMessage">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="assets/images/others/pdp5.svg" alt="" class="bestSeller">
+                                    </div>
+                                    <div class="col-md-9 message">
+                                        <h4>Jeanne Cyrie</h4>
+                                        <h5>omnon pnasonsdpnakldnsakldmasdklmsalkdansdlsandakjòsdhkdljlkasjdsladjasldjsakldjaslkdjaskldsakfnklamfòlasf </h5>
+                                        <h6>Le 12/10/2018 à 08:18</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="YourMessage">
+                                <div class="row">
+                                    <div class="col-md-9 message">
+                                        <h4>Jeanne Cyrie</h4>
+                                        <h5>omnon pnasonsdpnakldnsakldmasdklmsalkdansdlsandakjòsdhkdljlkasjdsladjasldjsakldjaslkdjaskldsakfnklamfòlasf </h5>
+                                        <h6>Le 12/10/2018 à 08:18</h6>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="assets/images/others/pdp5.svg" alt="" class="bestSeller">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="row input-msg">
+                            <div class="field col-md-8" >
+                                <textarea type="text" name="votreMessage" id="votreMessage" placeholder=" "></textarea>
+                                <label for="votreMessage">Votre message</label>
+                            </div>
+                            <div  class="col-md-3">
+                                <button>Envoyer</button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

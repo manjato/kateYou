@@ -8,23 +8,247 @@
 <div class="body">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div>
                     <img src="" alt="">
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 details">
                 <h1>JIMMY CHOO</h1>
                 <h4>Red romy 85 crystal pumps</h4>
                 <h6>1500 €</h6>
+                <div class="color col-md-12">
+                    <span>
+                        <img src="assets\images\colors\vert.png" alt="">
+                        <p >Vert</p>
+                    </span>
+                    <span>
+                        <img src="assets\images\colors\rouge.png" alt="">
+                        <p >Rouge</p>
+                    </span>
+                    <span>
+                        <img src="assets\images\colors\bleu.png" alt="">
+                        <p >Bleu</p>
+                    </span>
+                </div>
+                <div class="select">
+                </div>
+                <span class="col-md-12 selectedSize" (click)="selectSize()" *ngIf="seeReplySize">{{paysOriginale}} {{originale}} - {{paysConversion}} {{conversion}} <img src="assets/images/logo/{{arrowSize}}.png" alt=""></span>
+                <span class="col-md-12 selectSize" (click)="selectSize()" *ngIf="!seeReplySize">Selectionner la taille <img src="assets/images/logo/{{arrowSize}}.png" alt=""  ></span>
+                <div class="col-md-12 descriSize" *ngIf="seeSize">
+                    <table class=" table-hover sizeProduct" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Taille originale</th>
+                                <th>Conversion</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>ITALY</td>
+                                <td>FRANCE</td>
 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let taille of tailles" (click)="setClickedRow(taille)" [class.active]="i == selectedRow">
+                                <td>{{taille.text}}</td>
+                                <td>{{taille.originale}}</td>
+                                <td>{{taille.conversion}}</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td class="stock" style="text-decoration: underline; cursor: pointer">Guide de taille</td>
+                        </tr>
+                    </table>
+
+                </div>
+                <h5 class="guide">Guide de taille</h5>
                 <div>
-                    <div>
+                    <span class="btn"><img src="assets/images/logo/cœur.svg" alt=""> <label>love</label></span>
+                    <button class="addPanier" (click)="addPanier()">ajouter au panier</button>
+                    <div class="theSeller">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <img src="assets/images/others/pdp1.svg" alt="" class="bestSeller">
+                                <div>
+                                    <h2>Nom du Vendeur</h2>
+                                    <span *ngFor="let star of stars">
+                                            <a *ngFor="let item of star.empty;  index as i " (click)="setStarTable(star,i)">
+                                                <i class="fa" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+                                            </a>
+                                        </span>
+                                    <h4>France</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="contact">contacter</button>
+                            </div>
+                            <span class="col-md-12 description">Description <img src="assets/images/logo/{{arrow}}.png" alt="" (click)="descri()"></span>
+                            <div class="col-md-12" *ngIf="description">
+                                <hr>
+                                <table style="width:100%;" class="descript">
+                                    <tr>
+                                        <th class="headDescript">Dimensions</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Hauteur:</td>
+                                        <td>5 cm</td>
 
+                                    </tr>
+                                    <tr>
+                                        <td>Talon:</td>
+                                        <td>6.5 cm</td>
+                                    </tr>
+                                </table>
+                                <table style="width:100%" class="descript">
+                                    <tr>
+                                        <th class="headDescript">Composition</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Matière principale:</td>
+                                        <td>cristal et daim</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Semelle:</td>
+                                        <td>cuir</td>
+                                    </tr>
+                                </table>
+                                <table style="width:100%;" class="descript">
+                                    <tr>
+                                        <th class="headDescript" style=" width: 60%;">Pays d'origine</th>
+                                        <th class="pays"> Italie</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-12">
+                                <hr>
+                            </div>
+                            <span class="col-md-12 exped">Expédition <img src="assets/images/logo/{{arrow1}}.png" alt="" (click)="exped()"></span>
+                            <div class="col-md-12" *ngIf="expedition" class="expedition">
+                                <label> Atklen vous offre un mode de livraison rapide et sécurisée:</label>
+                                <ul>
+                                    <li>Livraison standard offerte</li>
+                                    <li>Expédition sous 2 à 6 jours</li>
+                                    <li>Retour sous 30 jours offert</li>
+                                </ul>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th class="headDescript">Pays:</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Achat</td>
+                                        <td>France</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Expédition:</td>
+                                        <td>France</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--  COMMENTAIRE -->
+            <div class="col-md-12">
+                <span>
+                    <h1>Commentaire</h1>
+                    <img src="assets/images/logo/{{arrow2}}.png" alt="" class="arrow" (click)="coment()" >
+                </span>
+                <div class="commentaire" *ngIf="seeComent">
+                    <div class="row" *ngFor="let coment of coments, index as ind">
+                        <div class="col-md-2">
+                            <div class="theSeller">
+                                <img src="{{coment.avatar}}" alt="" class="bestSeller">
+                                <div class="info">
+                                    <h2>{{coment.name}}</h2>
+                                    <h4>{{coment.pays}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 coment">
+                            <h5>{{coment.coment}} </h5>
+                            <h4>Il y a {{coment.time}} heures</h4>
+                            <div class="imgComent">
+                                <span><img src="assets\images\logo\cœur.svg" alt="" (click)="favoris(ind)" >{{coment.favoris}} </span>
+                                <img src="assets\images\logo\partager.png" alt="" class="reply">
+                            </div>
+                            <br>
+                            <div class="theReply row" *ngFor="let response of coment.responses">
+                                <div class="col-md-3 theSeller">
+                                    <img src="{{response.avatarImg}}" alt="" class="bestSeller">
+                                    <div class="info">
+                                        <h2>{{response.name}}</h2>
+                                        <h4>{{response.pays}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 coment">
+                                    <h5>{{response.response}}</h5>
+                                    <h4>Il y a {{response.time}} heures</h4>
+                                    <div class="imgComent">
+                                        <span><img src="assets\images\logo\cœur.svg" alt="" (click)="favReponse(response)" >{{response.favoris}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+
+                    <div class="addComent">
+                        <span>{{coments.length}} d'autres commenataires <a>(voir tout)</a> </span>
+                        <form>
+                            <div class="field">
+                                <input type="text" name="comentaire" [(ngModel)]="comentaire" id="comentaire" placeholder="  ">
+                                <label for="comentaire">Votre commentaire</label>
+                            </div>
+                            <button type="submit">commenter</button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-2"></div> -->
+            <div class="col-md-12">
+                <span>
+                    <h1>Vous aller aimer <a>(Voir tout)</a></h1> 
+                </span>
+                <div class="body-containt">
+                    <div class="col-md-2" *ngFor="let product of products">
+                        <div class="product" (click)="detailProduct(product)">
+                            <div>
+                                <img [src]="product.img" alt="">
+                                <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
+                            </div>
+                            <div style="padding-left: 6px; margin-top: 5%;">
+                                <h4>{{product.name}}</h4>
+                                <h5>{{product.description}}</h5>
+                                <h6 style="font-weight: 900;">{{product.prix}}</h6>
+                                <hr>
+                                <div class="theSeller">
+                                    <img [src]="product.avatarVendeur" alt="" class="bestSeller">
+                                    <div style="margin-left: 32%;">
+                                        <h2>{{product.nomVendeur}}</h2>
+                                        <h4>{{product.pays}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+    <footer>
+        <app-newsletter></app-newsletter>
+        <app-aboutus></app-aboutus>
+    </footer>

@@ -1,0 +1,152 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-4">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+
+                <div class="list-group">
+                    <dl>
+                        <dt class="fromLeft " style="width: 74%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil"><img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 81%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"><img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 52%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 72%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes documents
+                        </a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 80%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</a>
+                    </dt>
+                        <dt class="fromLeft active" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-listes-produits" style="width: 47%"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</dt>
+                        <dd (click)="btnCtgry()">Mes catégories <img src="\assets\images\logo\{{category}}.png" alt="" class="category"></dd>
+                        <dl class="list-category" *ngIf="vueCtg">
+                            <dt (click)="btnFemme()" class="list">Femme (35)  <img src="\assets\images\logo\{{imgfemme}}.png" alt="" class="sousCategory"></dt>
+                            <div *ngIf="vueFemme">
+                                <dd (click)="vueVtm()">Vetements(17)<img src="\assets\images\logo\{{imgvtm}}.png" alt="" class="category"></dd>
+                                <dd (click)="btnChass()">Chaussure(7) <img src="\assets\images\logo\{{imgchs}}.png" alt="" class="category"></dd>
+                                <dl class="list-sousCategory" *ngIf="vueSousCategory">
+                                    <dt>Ballerine (1)</dt>
+                                    <dt>Bottes & Bottines (1) </dt>
+                                    <dt>Escarpins (3)</dt>
+                                    <dt>Autres (2)</dt>
+                                </dl>
+                                <dd>Sac(1) </dd>
+                            </div>
+                            <dt class="list">Homme (22) <img src="\assets\images\logo\{{imghomme}}.png" alt="" class="sousCategory"></dt>
+                            <dt class="list">Enfants (10) <img src="\assets\images\logo\{{imghomme}}.png" alt="" class="sousCategory"></dt>
+                        </dl>
+                        <dd (click)="btnMark()">Mes marques <img src="\assets\images\logo\{{marque}}.png" alt="" class="category"></dd>
+                        <dl class="list-mark" *ngIf="vueMark">
+                            <dt>Chanel (5)</dt>
+                            <dt>DIOR (2)</dt>
+                            <dt>Adidas (1)</dt>
+                        </dl>
+                        <dd (click)="btnCtgry()">Mes couleur <img src="\assets\images\logo\{{imgcolor}}.png" alt="" class="category"></dd>
+                        <dd (click)="btnCtgry()">Mes tailles <img src="\assets\images\logo\{{imgsize}}.png" alt="" class="category"></dd>
+                        <dt class="fromLeft" style="width: 57%;"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes"><img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</a> </dt>
+                        <dt class="fromLeft " style="width: 53%"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-messages"><img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</a> </dt>
+                        <dt class="fromLeft" style="width: 60%;"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres">
+                        <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</a>
+                    </dt>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes produits</h1>
+                </div>
+                <div class="myInfos">
+                    <div class="row" style="padding-left: 0;">
+                        <div class="col-md-3 filter" style="cursor: default" (click)="btnFilter()">
+                            <h4>Filtrer</h4> <img src="assets/images/logo/filter.png" alt="">
+                        </div>
+                        <div class="col-md-4 filter" style="cursor: default" *ngIf="productSal">
+                            <span class="header-filter"><h4>Produit en vente ({{produits.length}})</h4>
+                                 <img (click)="deleteFilter()"  class="delete" src="assets/images/others/Icon-delete.png" alt="" > </span>
+                        </div>
+                        <div class="col-md-4 filter" style="cursor: default" *ngIf="seeFilterArchiv">
+                            <span class="header-filter"><h4>Produits en archivés ({{prodArchiver.length}})</h4> <img (click)="seeMsg()"  class="delete" src="assets/images/others/Icon-delete.png" alt="" > </span>
+                        </div>
+                    </div>
+                    <div class="msg" *ngIf="filterProduct">
+                        <ul class="listProduct">
+                            <li (click)="filterProductSale()">Produit en vente</li>
+                            <li (click)="filterArchive()">Produit archivé</li>
+                            <li>Brouillon</li>
+                        </ul>
+                    </div>
+                    <div class="btn row" *ngIf="!Archiver">
+                        <button class="{{classArchiv}}" (click)="btnArchiver()">Archiver</button>
+                        <button class="{{modif}}" (click)="btnEdit()">Modifier</button>
+                        <button class="{{dupli}}">Dupliquer</button>
+                    </div>
+                    <div class="btn row" *ngIf="Archiver">
+                        <button class="{{classdelete}}" (click)="deleteProductArchiver(prodArch)">Supprimer</button>
+                        <button class="{{classhandSale}}">Remmetre en vente</button>
+                        <button class="{{classEdit}}">Modifier</button>
+                    </div>
+                    <ng-container *ngIf="!Archiver">
+                        <div class="row" style="padding-left: 0;">
+                            <div class="col-md-4 product" *ngFor="let produit of produits, index as ind">
+                                <span>
+                                    <label class="control control-checkbox">
+                                    <input type="checkbox" id="color" name="color"[(ngModel)]="produit.checked" (ngModelChange)="selectProduct(produit)"/>
+                                    <div class="control_indicator"></div>
+                                    </label>
+                                    <img src="{{produit.img}}" alt="">                                   
+                                </span>
+                                <span class="row">
+                                    <h3>{{produit.marque}} </h3>
+                                    <h4>{{produit.prix}} {{produit.symbole}}</h4>
+                                </span>
+                                <h5>{{produit.description}}</h5>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+                <ng-container *ngIf="Archiver">
+                    <div class="row" style="padding-left: 0;">
+                        <div class="col-md-4 product" *ngFor="let prodArch of prodArchiver, index as ind">
+                            <span>
+                                <label class="control control-checkbox">
+                                <input type="checkbox" id="color" name="color"[(ngModel)]="prodArch.checked" (ngModelChange)="selectProductArchiver(prodArch)"/>
+                                    <div class="control_indicator"></div>
+                                </label>
+                                <div class="floating">
+                                    <img src="assets/images/others/Archive.png" alt="">
+                                    <h5>Archive</h5>
+                                </div>
+                                <img src="{{prodArch.img}}" alt="" >                                   
+                            </span>
+                            <span class="row">
+                                <h3>{{prodArch.marque}} </h3>
+                                <h4>{{prodArch.prix}} {{prodArch.symbole}}</h4>
+                            </span>
+                            <h5>{{prodArch.description}}</h5>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MOBIL RESPONSIVE -->
+
+<!-- END OF RESPONSIVE  -->
+<footer>
+    <app-download></app-download>
+    <hr class="menu">
+    <app-aboutus></app-aboutus>
+</footer>

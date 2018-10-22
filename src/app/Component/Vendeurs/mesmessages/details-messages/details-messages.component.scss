@@ -1,0 +1,396 @@
+.container {
+    padding-top: 2%;
+    padding-bottom: 7%;
+}
+
+hr {
+    border-top: 1px solid #000;
+}
+
+.row {
+    padding-left: 13%;
+}
+
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        text-align: center;
+        margin-top: -2%;
+        margin-right: 18%;
+    }
+    h3 {
+        font-family: "Lato-Light";
+        font-size: 14px;
+        padding-top: 6%;
+        width: 87%;
+        text-align: justify;
+        padding-left: 4%;
+    }
+}
+
+.infos {
+    .avatar {
+        border-radius: 50%;
+        border: 2px solid #909396;
+    }
+    h3 {
+        margin-right: 7%;
+        font-family: "Lato-Light";
+        font-size: 14px;
+        color: #131313;
+        padding: 6%;
+    }
+    h4,
+    p {
+        font-family: "Lato-Light";
+        font-size: 17px;
+    }
+    p>img {
+        padding-bottom: 9px;
+        padding-left: 5px;
+    }
+}
+
+.list-group {
+    list-style: none;
+    dl {
+        dt {
+            cursor: pointer;
+            font-family: "Lato-Regular";
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 10px 0px;
+            color: #131313;
+            font-weight: normal;
+            img {
+                padding-right: 5%;
+            }
+        }
+    }
+}
+
+dd {
+    margin: 5% 0;
+    margin-left: 9%;
+    cursor: default;
+}
+
+
+/* Animation Border-Bottom */
+
+dt:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #131313;
+    transform: scaleX(0);
+    transition: transform 2000ms ease-in-out;
+}
+
+dt:hover:after {
+    transform: scaleX(0.8);
+}
+
+.fromLeft:after {
+    margin-top: 4%;
+    transform-origin: 0% 0%;
+}
+
+.fromLeft.active:after {
+    -webkit-transform-origin: none;
+    transform-origin: none;
+    content: none;
+    transform: none;
+    transition: none;
+}
+
+.fromLeft.active {
+    width: 59%;
+    border-bottom: 1px solid black;
+    transform: translate(1px);
+}
+
+
+/*END OF Animation Border-Bottom */
+
+.main-header {
+    h1 {
+        font-family: "AbrilFatface";
+        font-size: 35px;
+        text-align: center;
+        margin-top: -2%;
+        margin-right: 18%;
+    }
+}
+
+.myInfos {
+    padding-top: 22%;
+    h4 {
+        font-size: 16px;
+        color: #131313;
+        font-family: 'Lato-Regular';
+        text-transform: uppercase;
+    }
+    img {
+        width: 120px;
+        height: 100px;
+    }
+}
+
+.filter {
+    margin-top: 6%;
+    h4 {
+        display: inline-block;
+    }
+    img {
+        width: 18px;
+        height: 12px;
+        margin-left: 8px;
+        margin-top: -3px;
+    }
+}
+
+.the_Seller {
+    div>h2,
+    div>h4 {
+        color: #131313;
+        font-family: "Lato-Regular";
+        font-size: 14px;
+    }
+    div>h2 {
+        font-weight: 300;
+        border: none;
+        margin-bottom: 0;
+        text-overflow: ellipsis;
+        width: 81%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    h4 {
+        font-size: 12px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+        float: left;
+        border-radius: 50%;
+    }
+}
+
+.YourMessage>.row,
+.MyMessage>.row,
+.row.message-profil,
+.message-list>.row {
+    padding-left: 0;
+}
+
+span.row {
+    padding-left: 11%;
+}
+
+.detailsMessage {
+    border-top: 1px solid #848484;
+}
+
+.message-list {
+    .col-md-8.infos {
+        h6 {
+            font-family: 'Lato-Light';
+            font-size: 16px;
+            color: #131313;
+            margin-bottom: 8%;
+        }
+        h5 {
+            font-size: 18px;
+            font-family: 'Lato-Regular';
+            color: #131313;
+        }
+    }
+    .dateTime {
+        h5 {
+            font-family: 'Lato-Light';
+            font-size: 14px;
+            color: #131313;
+        }
+    }
+    .product {
+        padding-left: 0;
+        h6 {
+            color: #b9b9b9;
+            font-family: 'Lato-Light';
+            font-size: 10px;
+        }
+        h5 {
+            font-family: 'Lato-Regular';
+            color: #131313;
+            font-size: 11px;
+        }
+        h4 {
+            font-family: 'Lato-Bold';
+            color: #131313;
+            font-size: 13px
+        }
+    }
+}
+
+.MyMessage,
+.YourMessage {
+    margin-top: 8%;
+}
+
+.message {
+    padding: 5% 5% 0;
+    background-color: #fff3f5;
+    h4 {
+        font-family: 'Lato-Light';
+        font-size: 16px;
+        color: #131313;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+    }
+    h5 {
+        margin-bottom: 7%;
+        font-size: 16px;
+        font-family: 'Lato-Regular';
+        color: #131313;
+        word-wrap: break-word;
+    }
+    h6 {
+        font-family: 'Lato-Light';
+        font-size: 14px;
+        color: #131313;
+    }
+}
+
+.YourMessage {
+    .row>.message {
+        background-color: #21253d;
+    }
+    h4,
+    h5,
+    h6 {
+        color: #ffff;
+    }
+}
+
+
+/* FLOATING TEXTAREA LABEL */
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+label,
+textarea {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+textarea {
+    border: 0;
+    border-bottom: 1px solid #b9b9b9;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+}
+
+textarea:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+p {
+    font-size: 13px;
+    color: #b9b9b9;
+    margin-top: -12px;
+    margin-bottom: 1rem;
+}
+
+textarea:placeholder-shown+label {
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 3.125rem) scale(1.2);
+    color: #b9b9b9;
+    font-size: 14px;
+    font-family: "Lato-Light";
+}
+
+
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+
+::-webkit-textarea-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+
+/**
+* Show the placeholder when the input is focused.
+*/
+
+textarea:focus::-webkit-textarea-placeholder {
+    opacity: 1;
+}
+
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+
+textarea:not(:placeholder-shown)+label,
+textarea:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+
+/* END of FLOATING TEXTAREA LABEL */
+
+.input-msg {
+    margin-top: 9%;
+}
+
+button {
+    font-family: "Lato-Regular";
+    font-size: 13px;
+    text-transform: uppercase;
+    width: 158px;
+    height: 40px;
+    border: 1px solid #21253d;
+    background-color: #21253d;
+    color: #fff;
+    margin-top: 25%;
+}
+
+.field.col-md-8 {
+    padding-left: 0;
+}
+
+.retour {
+    margin-bottom: 4%;
+    margin-left: -19px;
+    margin-top: -10px;
+    span {
+        cursor: default;
+    }
+    span>img {
+        width: 80px;
+        height: 67px;
+    }
+}

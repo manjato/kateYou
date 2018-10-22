@@ -42,6 +42,8 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { AccordionModule } from 'ngx-bootstrap';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 /* SERVICES */
 
 import { HomeService } from './services/home.service';
@@ -69,6 +71,18 @@ import { MesproduitsComponent } from './Component/produit/mesproduits/mesproduit
 import { MespaiementComponent } from './Component/paiement/mespaiement/mespaiement.component';
 import { Error404Component } from './Component/error404/error404.component';
 import { DetailproduitComponent } from './Component/produit/detailproduit/detailproduit.component';
+import { PanierComponent } from './Component/panier/panier.component';
+import { NosVendeursComponent } from './Component/Vendeurs/nos-vendeurs/nos-vendeurs.component';
+import { ParametreComponent } from './Component/profil/parametre/parametre.component';
+import { AjoutProduitComponent } from './Component/produit/ajout-produit/ajout-produit.component';
+import { RatingComponent } from './Component/rating/rating.component';
+import { ListComponent } from './Component/list/list.component';
+import { MesparametresComponent } from './Component/Vendeurs/mesparametres/mesparametres.component';
+import { ProductsService } from './services/products.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MescommandesComponent } from './Component/Vendeurs/mescommandes/mescommandes.component';
+
+
 
 /* AUTHENTICATION */
 const config = new AuthServiceConfig([
@@ -93,7 +107,7 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'resetPassword',
+    path: 'resetPass',
     component: ResetComponent
   },
   {
@@ -120,6 +134,30 @@ const appRoutes: Routes = [
     path: 'detail-produit',
     component: DetailproduitComponent
   },
+  {
+    path: 'mon-panier',
+    component: PanierComponent
+  },
+  {
+    path: 'nosVendeurs',
+    component: NosVendeursComponent
+  },
+    {
+    path: 'ajout-produit',
+    component: AjoutProduitComponent
+  },
+  {
+    path: 'etoil',
+    component: ListComponent
+  },
+  {
+    path: 'mes-parametres',
+    component: MesparametresComponent
+  },
+  {
+    path: 'mes-commandes',
+    component: MescommandesComponent
+  },
   { path: '**', component: HomeComponent }
 ];
 
@@ -143,6 +181,14 @@ const appRoutes: Routes = [
     MespaiementComponent,
     Error404Component,
     DetailproduitComponent,
+    PanierComponent,
+    NosVendeursComponent,
+    ParametreComponent,
+    AjoutProduitComponent,
+    RatingComponent,
+    ListComponent,
+    MesparametresComponent,
+    MescommandesComponent,
 
   ],
   imports: [
@@ -155,6 +201,8 @@ const appRoutes: Routes = [
     SocialLoginModule.initialize(config),
     BsDropdownModule.forRoot(),
     AccordionModule.forRoot(),
+    ModalModule.forRoot(),
+    NgbModule.forRoot(),
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatButtonModule,
@@ -189,8 +237,9 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatTooltipModule,
     AngularFontAwesomeModule,
+    Ng2SearchPipeModule,
   ],
-  providers: [HomeService],
+  providers: [HomeService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

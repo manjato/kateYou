@@ -16,4 +16,8 @@ export class HomeService {
   return this.http.get('http://www.otwoo.pw/kateandyouws/index.php/CommandeController/listcommande_envoyeProfile')
   .map(res => res.json());
   }
+  listPaysandCode () {
+    return this.http.get ('http://www.otwoo.pw/kateandyouws/index.php/PaysController/list_pays')
+    .map(res => res.json ());
+  }
 }

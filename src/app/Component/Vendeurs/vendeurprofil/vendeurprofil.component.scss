@@ -1,6 +1,39 @@
 .container {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 7%;
+}
+
+.header {
+    font-family: "Lato-Light";
+    font-size: 16px;
+    color: #b9b9b9;
+    .breadcrumb {
+        background-color: #ffffff;
+    }
+    ul.breadcrumb {
+        padding: 10px 7%;
+        list-style: none;
+    }
+    ul.breadcrumb li {
+        display: inline;
+    }
+    ul.breadcrumb li+li:before {
+        padding: 7px;
+        content: ">";
+    }
+    ul.breadcrumb li a {
+        font-family: "Lato-Light";
+        font-size: 16px;
+        color: #b9b9b9;
+    }
+    ul.breadcrumb>li {
+        padding: 0;
+        text-transform: none;
+        margin: 0;
+    }
+    ul.breadcrumb>li:after {
+        border-bottom: none;
+    }
 }
 
 hr {
@@ -9,6 +42,18 @@ hr {
 
 .row {
     padding-left: 13%;
+}
+
+a {
+    color: #131313;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a>img {
+    padding-right: 10px;
 }
 
 .main-header {
@@ -50,13 +95,12 @@ hr {
 }
 
 .list-group {
-    margin-left: -15%;
     list-style: none;
     li {
         font-family: "Lato-Regular";
         font-size: 16px;
         text-transform: uppercase;
-        padding: 13px 0px;
+        padding: 10px 0px;
         color: #131313;
         cursor: pointer;
     }
@@ -69,18 +113,26 @@ hr {
 /* FLOATING LABEL */
 
 .field {
+    .label {
+        width: 50%;
+    }
+}
+
+.field {
     display: flex;
     flex-flow: column-reverse;
     margin-bottom: 1em;
 }
 
 label,
-input {
+input,
+textarea {
     transition: all 0.2s;
     touch-action: manipulation;
 }
 
-input {
+input,
+textarea {
     border: 0;
     border-bottom: 1px solid black;
     font-family: inherit;
@@ -93,7 +145,8 @@ input {
     cursor: text;
 }
 
-input:placeholder-shown+label {
+input:placeholder-shown+label,
+textarea:placeholder-shown+label {
     cursor: text;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -103,7 +156,8 @@ input:placeholder-shown+label {
     font-size: 14px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: 0;
     border-bottom: 1px solid #666;
 }

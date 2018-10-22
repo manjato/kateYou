@@ -33,7 +33,7 @@
                             <div *ngFor="let color of colors; index as i">
                                 <label class="control control-checkbox {{color.color}}"> {{color.name}}
                                         <input type="checkbox" id="color{{color.value}}" name="filter" [checked]="color.checked"[ngModel]="filter"  (change)="changeColor(i)"/>
-                                    <div class="control_indicator" ></div>
+                                    <div class="control_indicator"></div>
                                 </label>
                             </div>
                         </div>
@@ -59,270 +59,29 @@
                         </ul>
                     </div>
                     <div class="body-containt">
-                        <div class="col-md-3">
-                            <div class="product">
+                        <div class="col-md-3" *ngFor="let product of products, index as ind">
+                            <div class="product" (click)="seeProduct(product, ind)" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                                 <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
+                                    <img src="{{product.img}}" alt="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/detail-produit">
                                     <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
                                 </div>
                                 <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
+                                    <h4>{{product.name}}</h4>
+                                    <h5>{{product.decsription}}</h5>
+                                    <h6 style="font-weight: 900;">{{product.prix}}</h6>
                                     <hr>
                                     <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
+                                        <img src="{{product.avatarVendeur}}" alt="" class="bestSeller">
                                         <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
+                                            <h2>{{product.nomVendeur}}</h2>
+                                            <h4>{{product.pays}}</h4>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="product">
-                                <div>
-                                    <img src="assets/images/others/Calque.png" alt="">
-                                    <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
-                                </div>
-                                <div style="padding-left: 6px;">
-                                    <h4>Guiseppe zanotti</h4>
-                                    <h5>Cruel candalo</h5>
-                                    <h6 style="font-weight: 900;">1900 €</h6>
-                                    <hr>
-                                    <div class="the_Seller">
-                                        <img src="assets/images/others/profil.png" alt="" class="bestSeller">
-                                        <div style="margin-left: 32%;">
-                                            <h2>Nom du Vendeur</h2>
-                                            <h4>Pays</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@
                 <div class="search_area">
                     <form action="#">
                         <div class="field">
-                            <img class="img-fluid" src="assets/images/logo/loupe.svg" alt="">
+                            <img class="img-fluid" src="assets/images/logo/search.png" alt="">
                             <input type="text" name="rechercher" id="rechercher" placeholder="   ">
                             <label for="rechercher">Rechercher</label>
                         </div>
@@ -21,11 +21,11 @@
             </div>
             <div class="col-md-3">
                 <div class="logo_headers">
-                    <a><img src="assets/images/logo/cœur.svg" alt="">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-produits"><img src="assets/images/logo/cœur.svg" alt="">
                         <span class="badge badge-danger"></span></a>
                     <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/login"><img src="assets/images/logo/profile.svg" alt="">
                         <span class="badge badge-danger"></span></a>
-                    <a><img src="assets/images/logo/panier.svg" alt="">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil"><img src="assets/images/logo/panier.svg" alt="">
                         <span class="badge badge-danger"></span></a>
                 </div>
             </div>
@@ -40,10 +40,10 @@
                 <div class="nav-menus">
                     <ul class="nav-menu">
                         <li class="fromLeft">
-                            <a>Femmes</a>
+                            <a>femme</a>
                         </li>
                         <li class="fromLeft">
-                            <a>Hommes</a>
+                            <a>homme</a>
                         </li>
                         <li class="fromLeft">
                             <a>Enfant</a>
@@ -61,10 +61,10 @@
                             <a>Magazine</a>
                         </li>
                         <li class="fromLeft">
-                            <a>A propos</a>
+                            <a>à propos</a>
                         </li>
-                        <li class="fromRight" hidden="true">
-                            <a class="plus" (click)="rotation()"><img [@rotatedState]='state' src="assets/images/logo/plus.png" alt=""> Ajouter un article</a>
+                        <li class="fromRight">
+                            <a class="plus" (click)="rotation()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"><img [@rotatedState]='state' src="assets/images/logo/plus.png" alt=""> Ajouter un article</a>
                         </li>
                     </ul>
                 </div>
@@ -82,10 +82,10 @@
 
         <ul id="menu">
             <a>
-                <li>Femmes</li>
+                <li>femme</li>
             </a>
             <a>
-                <li>Hommes</li>
+                <li>homme</li>
             </a>
             <a>
                 <li>Enfant</li>

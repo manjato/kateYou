@@ -1,0 +1,804 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="row">
+            <div class="infos col-md-3">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h1>Donato Bello</h1>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+                <div class="list-group">
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil" style="width: 94%"> <img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"> <img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement" style="width: 80%"> <img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-doc.png" alt=""> Mes documents</li>
+                    <li class="fromLeft active" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-commandes" style="width: 87%;"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</li>
+                    <li class="fromLeft"> <img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</li>
+                    <li class="fromLeft" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres" style="width: 86%;"> <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</li>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Ajouter un article</h1>
+                    <p>informations sur le produit</p>
+                </div>
+                <form class="myInfos">
+                    <div class="row">
+                        <button (click)="openModalSearch(templateSearch)">Chercher</button>
+                        <div class="field space">
+                            <input type="text" name="marques" id="marques" placeholder="   ">
+                            <label for="marques">Marques</label>
+                        </div>
+                    </div>
+                    <div class="row categor">
+                        <button (click)="openModalCategory(templateCategory)">Chercher</button>
+                        <div class="field space">
+                            <input type="text" name="categorie" id="categorie" placeholder="   ">
+                            <label for="categorie">Catégorie</label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 2%;">
+                        <div class="col-md-4 right">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="pays">Saison</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="codeproduit" id="codeproduit" placeholder="   ">
+                                <label for="codeproduit">Code produit</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 left ">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="ville">Année</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="modele" id="modele" placeholder="   ">
+                                <label for="modele">Modèle</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field">
+                            <input type="text" name="description" id="description" placeholder="   ">
+                            <label for="description">Description</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="note" id="note" placeholder="   ">
+                            <label for="note">Note</label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 6%;">
+                        <button (click)="openModalMatiere(templateMatiere)">Chercher</button>
+                        <div class="field space">
+                            <input type="text" name="matiere" id="matiere" placeholder="   ">
+                            <label for="matiere">Matière principale</label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 4%; ">
+                        <div class="col-md-4 right">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="pays">Longeur en cm</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 left ">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="ville">Largeur en cm</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 2%;">
+                        <button (click)="openModalColor(templateColor)">Chercher</button>
+                        <div class="field space" *ngIf="colorsChoose.length < 1">
+                            <input type="text" name="couleur" id="couleur" placeholder="   ">
+                            <label for="couleur">Couleur</label>
+                        </div>
+                        <div class="col-md-5 colors" *ngIf="colorsChoose.length >= 1">
+                            <h4 class="colorChoose" for="colorChoose" *ngFor="let c of colorsChoose, ind as index">{{c}} </h4>
+                        </div>
+                    </div>
+                    <!-- ETIQUETTE -->
+                    <div class="row">
+                        <h4>Merci d'insérer la taille que vous avez sur l'étiquette. Sélectionner d'abord le Pays/Région et ensuite la taille.</h4>
+                        <div class="col-md-4 right">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="pays">Séléctionner une région</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 left ">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="ville">Séléctionner une taille</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                     <div class="row" style="margin-top: 2%;">
+                        <div class="field">
+                            <input type="text" name="ajoutCouleur" id="ajoutCouleur" placeholder="   ">
+                            <label for="ajoutCouleur">couleur</label>
+                        </div>
+                    </div> -->
+                    <span class="addPhotos">
+                        <img src="assets/images/logo/apn.png" alt="">
+                        <label  for="addImages">Ajouter des photos</label>
+                        <input id="addImages" class="input-file" type="file">
+                    </span>
+                    <div class="addColor" *ngIf="!anotherColor">
+                        <label for="addColor" (click)="addColor()">Ajouter une couleur</label>
+                    </div>
+                    <!--  ADD ANOTHER COLOR -->
+                    <div *ngIf="anotherColor">
+                        <div class="row" style="margin-top: 2%;">
+                            <button (click)="openModalColor(templateColor)">Chercher</button>
+                            <div class="field space" *ngIf="colorsChoose.length < 1">
+                                <input type="text" name="couleur" id="couleur" placeholder="   ">
+                                <label for="couleur">Couleur</label>
+                            </div>
+                            <div class="col-md-5 colors" *ngIf="colorsChoose.length >= 1">
+                                <h4 class="colorChoose" for="colorChoose" *ngFor="let c of colorsChoose, ind as index">{{c}} </h4>
+                            </div>
+                        </div>
+                        <!-- ETIQUETTE -->
+                        <div class="row">
+                            <h4>Merci d'insérer la taille que vous avez sur l'étiquette. Sélectionner d'abord le Pays/Région et ensuite la taille.</h4>
+                            <div class="col-md-4 right">
+                                <div class="field">
+                                    <select class="selectpicker">
+                                                <option class="pays">Séléctionner une région</option>
+                                                <option>Mustard</option>
+                                                <option>Ketchup</option>
+                                                <option>Relish</option>
+                                            </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 left ">
+                                <div class="field">
+                                    <select class="selectpicker">
+                                                <option class="ville">Séléctionner une taille</option>
+                                                <option>Mustard</option>
+                                                <option>Ketchup</option>
+                                                <option>Relish</option>
+                                            </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                     <div class="row" style="margin-top: 2%;">
+                                    <div class="field">
+                                        <input type="text" name="ajoutCouleur" id="ajoutCouleur" placeholder="   ">
+                                        <label for="ajoutCouleur">couleur</label>
+                                    </div>
+                                </div> -->
+                        <span class="addPhotos">
+                                    <img src="assets/images/logo/apn.png" alt="">
+                                    <label  for="addImages">Ajouter des photos</label>
+                                    <input id="addImages" class="input-file" type="file">
+                                </span>
+                    </div>
+
+                    <!-- END OF ANOTHER COLOR -->
+                    <div class="row">
+                        <div class="col-md-4 right">
+                            <div class="field height">
+                                <select class="selectpicker">
+                                    <option class="pays">Acheté à</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="field height">
+                                <select class="selectpicker">
+                                    <option class="pays">Expédié en</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 left ">
+                            <div class="field height">
+                                <select class="selectpicker">
+                                    <option class="ville">Expédié depuis</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="field height">
+                                <select class="selectpicker">
+                                    <option class="pays">Livré sous</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checking">
+                        <label class="control control-checkbox "> Enregistrer pour les prochaines ventes
+                                <input type="checkbox" id="1" name="saveSell"/>
+                                <div class="control_indicator" ></div>
+                            </label>
+                        <h5>A quel prix souhaiter vous vendre votre article?</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 right">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="pays">Montant</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 left ">
+                            <div class="field">
+                                <select class="selectpicker">
+                                    <option class="ville">Monnaie</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        <h3>Pour vous</h3>
+                        <h3 class="price"> 45 $</h3>
+                        <h3>Compris les frais de livraison</h3>
+                        <h3>Notre commission est seulement de 10% </h3>
+                        <h3>Pour les frais de livraison, <a>en savoir plus</a></h3>
+                    </span>
+                    <div class="btn">
+                        <button class="seeProduct">Voir le produit</button>
+                        <button>Mettre en vente</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL RECHERCHE-->
+<ng-template #templateSearch>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalSearch.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="search" placeholder="   ">
+                    <label for="search">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <span class="row">
+            <h5 class="black col-xs-3"(click)="openModalA(templateNestedA)">A</h5>
+            <h5 class="pink col-xs-3"(click)="openModalB(templateNestedB)">B</h5>
+            <h5 class="black col-xs-3"(click)="openModalC(templateNestedC)">C</h5>
+            <h5 class="pink col-xs-3"(click)="openModalD(templateNestedD)">D</h5>
+            <h5 class="black col-xs-3"(click)="openModalE(templateNestedE)">E</h5>
+            <h5 class="pink col-xs-3"(click)="openModalF(templateNestedF)">F</h5>
+            <h5 class="black col-xs-3"(click)="openModalG(templateNestedG)">G</h5>
+            <h5 class="pink col-xs-3"(click)="openModalH(templateNestedH)">H</h5>
+            <h5 class="black col-xs-3"(click)="openModalI(templateNestedI)">I</h5>
+            <h5 class="pink col-xs-3"(click)="openModalJ(templateNestedJ)">J</h5>
+            <h5 class="black col-xs-3"(click)="openModalK(templateNestedK)">K</h5>
+            <h5 class="pink col-xs-3"(click)="openModalL(templateNestedL)">L</h5>
+            <h5 class="black col-xs-3"(click)="openModalM(templateNestedM)">M</h5>
+            <h5 class="pink col-xs-3"(click)="openModalN(templateNestedN)">N</h5>
+            <h5 class="pink col-xs-3"(click)="openModalO(templateNestedO)">O</h5>
+            <h5 class="black col-xs-3"(click)="openModalP(templateNestedP)">P</h5>
+            <h5 class="pink col-xs-3"(click)="openModalQ(templateNestedQ)">Q</h5>
+            <h5 class="black col-xs-3"(click)="openModalR(templateNestedR)">R</h5>
+            <h5 class="pink col-xs-3"(click)="openModalS(templateNestedS)">S</h5>
+            <h5 class="black col-xs-3"(click)="openModalT(templateNestedT)">T</h5>
+            <h5 class="pink col-xs-3"(click)="openModalU(templateNestedU)">U</h5>
+            <h5 class="black col-xs-3"(click)="openModalV(templateNestedV)">V</h5>
+            <h5 class="pink col-xs-3"(click)="openModalW(templateNestedW)">W</h5>
+            <h5 class="black col-xs-3"(click)="openModalX(templateNestedX)">X</h5>
+            <h5 class="pink col-xs-3"(click)="openModalY(templateNestedY)">Y</h5>
+            <h5 class="black col-xs-3"(click)="openModalZ(templateNestedZ)">Z</h5>
+            <h5 class="pink col-xs-6 num"(click)="openModal123(templateNested123)">123</h5>        
+         </span>
+        <button class="select">selectionner</button>
+    </div>
+</ng-template>
+<!-- END OF MODAL RECHERCHE -->
+
+<!-- MODAL A -->
+<ng-template #templateNestedA>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalA.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL A<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL A -->
+
+<!-- MODAL B -->
+<ng-template #templateNestedB>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalB.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL B<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL B -->
+
+<!-- MODAL C -->
+<ng-template #templateNestedC>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalC.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL C<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL C -->
+<!-- MODAL D -->
+<ng-template #templateNestedD>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalD.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL D<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL D -->
+<!-- MODAL E -->
+<ng-template #templateNestedE>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalE.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL E<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL E -->
+<!-- MODAL F -->
+<ng-template #templateNestedF>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalF.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL F<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL F -->
+<!-- MODAL G -->
+<ng-template #templateNestedG>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalG.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL G<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL G -->
+<!-- MODAL H -->
+<ng-template #templateNestedH>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalH.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL H<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL H -->
+<!-- MODAL I -->
+<ng-template #templateNestedI>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalI.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL I<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL I -->
+<!-- MODAL J -->
+<ng-template #templateNestedJ>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalJ.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL J<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL J -->
+<!-- MODAL K -->
+<ng-template #templateNestedK>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalK.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL K<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL K -->
+<!-- MODAL L -->
+<ng-template #templateNestedL>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalL.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL L<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL L -->
+<!-- MODAL M -->
+<ng-template #templateNestedM>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalM.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL M<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL M -->
+<!-- MODAL N -->
+<ng-template #templateNestedN>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalN.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL N<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL N -->
+<!-- MODAL O -->
+<ng-template #templateNestedO>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalO.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL O<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL O -->
+<!-- MODAL P -->
+<ng-template #templateNestedP>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalP.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL P<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL P -->
+<!-- MODAL Q -->
+<ng-template #templateNestedQ>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalQ.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL Q<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL Q -->
+<!-- MODAL R -->
+<ng-template #templateNestedR>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalR.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL R<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL R -->
+<!-- MODAL S -->
+<ng-template #templateNestedS>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalS.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL S<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL S -->
+<!-- MODAL T -->
+<ng-template #templateNestedT>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalT.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL T<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL T -->
+<!-- MODAL U -->
+<ng-template #templateNestedU>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalU.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL U<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL U -->
+<!-- MODAL V -->
+<ng-template #templateNestedV>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalV.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL V<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL V -->
+<!-- MODAL W -->
+<ng-template #templateNestedW>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalW.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL W<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL W -->
+<!-- MODAL X -->
+<ng-template #templateNestedX>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalX.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL X<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL X -->
+<!-- MODAL Y -->
+<ng-template #templateNestedY>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalY.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL Y<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL Y -->
+<!-- MODAL Z -->
+<ng-template #templateNestedZ>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalZ.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL Z<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL Z -->
+<!-- MODAL 123 -->
+<ng-template #templateNested123>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la marque</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modal123.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        ITO DIA MODAL 123<br>
+    </div>
+</ng-template>
+<!-- END OF MODAL 123 -->
+<!-- MODAL CATEGORIE -->
+<ng-template #templateCategory>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la catégorie</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalCategory.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" [(ngModel)]="f" name="search" id="searchCategory" placeholder="   ">
+                    <label for="searchCategory">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <ul class="row">
+            <li>Femme</li>
+            <li>Homme</li>
+            <li>Enfant</li>
+        </ul>
+        <div class="row category">
+            <div class="col-md-3" *ngFor="let femme of femmes, index as i">
+                <h6 (click)="type(i, femme)">{{femme.type}}</h6>
+                <h5 *ngFor="let f of femme.categories| filter:f, index as i" (click)="cat(i, f)">{{f.nom}}</h5>
+            </div>
+        </div>
+        <button class="select">selectionner</button>
+    </div>
+</ng-template>
+<!-- END OF MODAL CATEGORIE -->
+
+<!-- MODAL MATIERE -->
+
+<ng-template #templateMatiere>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la matière</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalMatiere.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" [(ngModel)]="m" name="search" id="searchMatiere" placeholder="   ">
+                    <label for="searchMatiere">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4" *ngFor="let matiere of matieres">
+                <h5>{{matiere.type}}</h5>
+                <h5 *ngFor="let m of matiere.categories|filter:m, ind as index"> {{m.nom}}</h5>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-- END OF MODAL MATIERE -->
+<!-- MODAL COULEUR -->
+<ng-template #templateColor>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sélection de la couleur</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalColor.hide()">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="field">
+                    <img class="img-fluid" src="assets/images/logo/search.png" alt="">
+                    <input type="text" name="search" id="searchColor" [(ngModel)]="color" placeholder="   ">
+                    <label for="searchColor">Rechercher</label>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4" *ngFor="let color of colors|filter:color, ind as index ">
+                <div class="row" (click)="getColor(color)">
+                    <div class="col-md-3">
+                        <div class="border" [ngStyle]="{'background-color': color.code_hexa, 'border':gedBorder(code_hexa)}" style="width: 40px; height:40px;margin-bottom: 8px">
+                        </div>
+                    </div>
+                    <label class="col-md-9" style="padding-top: 7px;"> {{color.nom_couleur}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-- END OF MODAL COULEUR -->
+
+
+<!-- FOOTER -->
+<footer>
+    <app-download></app-download>
+    <hr class="menu">
+    <app-aboutus></app-aboutus>
+</footer>
+<!-- END OF FOOTER -->

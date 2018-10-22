@@ -1,3 +1,4 @@
+import { ProductsService } from './../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { HomeService } from './../../services/home.service';
@@ -10,9 +11,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   ProductByNewer: any;
   BestProducts: any;
+  colors: any;
   constructor(
     private router: Router,
     private homeService: HomeService,
+    private productService: ProductsService,
   ) { }
 
   getAllProduct() {
@@ -27,8 +30,10 @@ export class HomeComponent implements OnInit {
       console.log(this.BestProducts, 'meilleur vente');
   });
   }
+
   ngOnInit() {
     this.getAllProduct();
     this.getAllBestProduct();
+
   }
 }

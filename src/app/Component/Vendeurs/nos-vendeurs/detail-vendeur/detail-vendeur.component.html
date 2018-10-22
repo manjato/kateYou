@@ -1,0 +1,165 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="header">
+            <ul class="breadcrumb">
+                <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Accueil</a></li>
+                <li>Vendeur</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="infos col-md-2">
+                <img src="assets/images/others/pdp2.svg" alt="" class="avatar">
+            </div>
+            <div class="col-md-6">
+                <h1>Atklen buedwoski</h1>
+                <div class="star">
+                    <span><ngb-rating [(rate)]="currentRate"></ngb-rating></span>
+                    <span class="avis">(30 Avis)</span>
+                </div>
+                <h4>France</h4>
+                <h5>250 articles en vente</h5>
+                <div class="spoken row">
+                    <span>
+                  <h5>Langues parlés:</h5>
+                </span>
+                    <span>
+                  <h3>Francais</h3>
+                  <h3>Anglais</h3>
+                  <h3>Allemand</h3>
+                </span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button>Contacter</button>
+            </div>
+        </div>
+        <div class="body-list">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-6">
+                    <ul>
+                        <li class="{{classeApropos}}" (click)="btnApropos()">à propos</li>
+                        <li class="{{classeProduit}}" (click)="btnProduit()">produits</li>
+                        <li class="{{classeActivite}}" (click)="btnActivite()">activites recentes</li>
+                    </ul>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="apropos" *ngIf="apropos">
+            <div class="row">
+                <h1>Shop</h1>
+                <h4>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des
+                    morceaux de texte pour réaliser un livre spécimen de polices de texte. Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie
+                    depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. </h4>
+            </div>
+        </div>
+        <div class="vueProduits" *ngIf="vueProduits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Filtrer par</h2>
+                        <div class="color">
+                            <div></div>
+                            <h6>Couleur</h6>
+                            <div *ngFor="let f of colors; index as i">
+                                <p *ngIf="f.checked">{{f.name}} <img src="assets\images\logo\croixcheckmark.png" (click)="deleteColor(i)" alt=""></p>
+                            </div>
+                        </div>
+                        <div class="filters">
+                            <h4>Categorie <img src="assets\images\logo\ajout.png" alt=""></h4>
+                            <h4>Marque <img src="assets\images\logo\ajout.png" alt=""></h4>
+                            <h4>Taille <img src="assets\images\logo\ajout.png" alt=""></h4>
+                            <div class="couleur">
+                                <h4 style="margin-bottom: 13%;">Couleur <img src="assets\images\logo\{{logo}}.png" alt=""></h4>
+                                <div class="control-group">
+                                    <div *ngFor="let color of colors; index as i">
+                                        <label class="control control-checkbox {{color.color}}"> {{color.name}}
+                                                <input type="checkbox" id="color{{color.value}}" name="filter" [checked]="color.checked"[ngModel]="filter"  (change)="changeColor(i)"/>
+                                            <div class="control_indicator"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="body-header">
+                            <div class="nav-menus">
+                                <ul class="nav-menu">
+                                    <li>
+                                        <a class="first">Trier par:</a>
+                                    </li>
+                                    <li>
+                                        <a>Nouveautés</a>
+                                    </li>
+                                    <li>
+                                        <a>Prix décroissant</a>
+                                    </li>
+                                    <li>
+                                        <a>Prix croissant</a>
+                                </ul>
+                            </div>
+                            <div class="body-containt">
+                                <div class="row">
+                                    <div class="col-md-3" *ngFor="let product of products, index as ind">
+                                        <div class="product" (click)="seeProduct(product, ind)">
+                                            <div>
+                                                <img src="{{product.img}}" alt="">
+                                                <img src="assets/images/logo/cœur.svg" alt="" class="favoris">
+                                            </div>
+                                            <div style="padding-left: 6px;">
+                                                <h4>{{product.name}}</h4>
+                                                <h5>{{product.decsription}}</h5>
+                                                <h6 style="font-weight: 900;">{{product.prix}}</h6>
+
+                                                <div class="the_Seller">
+                                                    <img src="{{product.avatarVendeur}}" alt="" class="bestSeller">
+                                                    <div style="margin-left: 32%;">
+                                                        <h2>{{product.nomVendeur}}</h2>
+                                                        <h4>{{product.pays}}</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vueActivite" *ngIf="vueActivite">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <div class="row" *ngFor="let activity of activities">
+                            <div class="col-md-2">
+                                <img src="{{activity.imgnotif}}" alt="" class="notif">
+                            </div>
+                            <div class="col-md-6">
+                                <h4>{{activity.name}}, <span>vient de vendre </span> <span class="nbProduct">{{activity.notifNumber}} {{activity.nameNotif}}</span></h4>
+                                <h6>le 14 mars 2018</h6>
+                            </div>
+                            <div class="col-md-2">
+                                <img src="{{activity.imgProduct}}" alt="" class="imageProduct">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <app-newsletter></app-newsletter>
+    <app-aboutus></app-aboutus>
+</footer>

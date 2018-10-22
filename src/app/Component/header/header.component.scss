@@ -1,5 +1,5 @@
 img {
-    margin: 0px 5px;
+    margin: 0px 9px;
 }
 
 .navigation75 {
@@ -41,7 +41,7 @@ h4 {
 }
 
 .main_header_area {
-    margin-top: 90px;
+    margin-top: 5%;
 }
 
 .logo_area>a>img {
@@ -60,16 +60,16 @@ h4 {
 }
 
 .img-fluid {
-    float: right;
-    width: 40px;
-    margin: 0%;
-    top: -36px;
-    margin: 0 57%;
+    width: 24px;
+    top: -29px;
+    margin: 0 86%;
     position: relative;
 }
 
 .search_area {
+    float: right;
     margin-top: -8%;
+    margin-right: -5%;
 }
 
 input#search.form-control {
@@ -86,8 +86,8 @@ input#search.form-control:focus {
 }
 
 .logo_headers>a>img {
-    width: 29px;
-    height: 29px;
+    width: 40px;
+    height: 38px;
 }
 
 .logo_headers {
@@ -95,8 +95,8 @@ input#search.form-control:focus {
 }
 
 .nav-menu li {
-    display: inline-block;
     padding: 0px 8px;
+    display: inline-block;
     text-transform: uppercase;
     font-family: "Lato-Regular";
     font-size: 14px;
@@ -171,15 +171,22 @@ input {
     touch-action: manipulation;
 }
 
+label {
+    font-size: 14px;
+    color: #b9b9b9;
+    margin-bottom: 16px;
+}
+
 input {
     border: 0;
     border-bottom: 1px solid black;
-    font-family: inherit;
+    font-family: "Lato-Light";
     -webkit-appearance: none;
     border-radius: 0;
     padding: 0;
     cursor: text;
     width: 180px;
+    font-size: 18px;
 }
 
 .date {
@@ -249,10 +256,6 @@ a {
     text-decoration: none;
     color: #232323;
     transition: color 0.3s ease;
-}
-
-a:hover {
-    color: tomato;
 }
 
 #menuToggle {
@@ -328,6 +331,10 @@ a:hover {
         font-size: 22px;
         text-align: center;
     }
+}
+
+.logo_area {
+    text-align: left;
 }
 
 

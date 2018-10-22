@@ -1,0 +1,153 @@
+<hr>
+<div class="containt">
+    <div class="container">
+        <div class="header">
+            <ul class="breadcrumb">
+                <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+                <li>Mes commandes</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="infos col-md-4">
+                <div>
+                    <img src="assets/images/others/Image-profil.png" alt="" class="avatar">
+                    <h3>Donato Bello</h3>
+                </div>
+                <p> Pays: France <img src="assets/images/others/drapeau.png" alt="" align="absmiddle"></p>
+
+                <div class="list-group">
+                    <dl>
+                        <dt class="fromLeft " style="width: 74%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-profil"><img src="assets/images/logo/Icon-information.png" alt=""> Mes informations</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 81%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/profil-Vendeur"><img src="assets/images/logo/Icon-profil.png" alt=""> Mon profil vendeur</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 52%;">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mon-paiement"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes paiements</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 72%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-documents"><img src="assets/images/logo/Icon-paimenets.png" alt=""> Mes documents
+                        </a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 80%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/ajout-produit"> <img src="assets/images/logo/Icon-ajout.png" alt=""> Ajouter un article</a>
+                    </dt>
+                        <dt class="fromLeft" style="width: 63%">
+                        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-listes-produits"><img src="assets/images/logo/Icon-produits.png" alt=""> Mes produits</a>
+                    </dt>
+                        <dt class="fromLeft active" style="width: 57%;"> <img src="assets/images/logo/Icon-commande.png" alt=""> Mes commandes</dt>
+                        <dd (click)="gotoPurchase()">Mes Achats</dd>
+                        <dd (click)="gotoSales()">Mes Ventes</dd>
+                        <dt class="fromLeft " style="width: 53%"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-messages"><img src="assets/images/logo/Icon-message.png" alt=""> Mes messages</a> </dt>
+                        <dt class="fromLeft" style="width: 60%;"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/mes-parametres">
+                        <img src="assets/images/logo/Icon-parametre.png" alt=""> Mes parametres</a>
+                    </dt>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="main-header">
+                    <h1>Mes commandes</h1>
+                </div>
+                <div class="myInfos">
+                    <div class="checkYou">
+                        <div>
+                            <button class="{{achat}}" (click)="BtnAchat()" style="margin-right: -6px;">Mes achats</button>
+                            <button class="{{vente}}" (click)="BtnAchat()" style="margin-left: -12%;">Mes Ventes</button>
+                        </div>
+                    </div>
+                    <div *ngIf="mesVentes">
+                        <div class="filter" (click)="filterSale()" style="cursor: default">
+                            <h4>Filtrer</h4> <img src="assets/images/logo/filter.png" alt="">
+                        </div>
+                        <div class="myComand" *ngIf="myCommandSale">
+                            <ul class="listComand">
+                                <li>Commandes non encore acceptés (2) </li>
+                                <li>Commandes acceptées (8) </li>
+                                <li>Commandes avec un tracking (10) </li>
+                                <li>Commandes livrés (2) </li>
+                                <li>Commandes que Kte&You à payées au vendeur (6) </li>
+                                <li>Commandes déclinées (8)</li>
+                            </ul>
+                        </div>
+                        <table style="width:100%;margin-top: 5%;">
+                            <thead>
+                                <tr class="head">
+                                    <th>Commandes</th>
+                                    <th>Produits</th>
+                                    <th>Etats</th>
+                                    <th class="prix">Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let myOrder of myOrders">
+                                    <td>
+                                        <h5>{{myOrder.numero}}</h5>
+                                        <h5 class="titre">{{myOrder.name}}</h5>
+                                        <h6>{{myOrder.titre}}</h6>
+                                    </td>
+                                    <td>
+                                        <img src="{{myOrder.img}}" alt="">
+                                    </td>
+                                    <td>
+                                        <h6>{{myOrder.status}}</h6>
+                                    </td>
+                                    <td class="price">{{myOrder.price}} {{myOrder.code_money}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div *ngIf="!mesVentes">
+                        <div class="filter" (click)="filterBuy()" style="cursor: default">
+                            <h4>Filtrer</h4> <img src="assets/images/logo/filter.png" alt="">
+                        </div>
+                        <div class="myComand" *ngIf="myCommandBuy">
+                            <ul class="listComand">
+                                <li>Commandes non encore acceptés par les vendeurs (2) </li>
+                                <li>Commandes acceptées par les vendeurs (8) </li>
+                                <li>Commandes expediés par les vendeurs (10) </li>
+                                <li>Commandes livrés par les vendeurs (2) </li>
+                                <li>Commandes annullées par l'acheteur ou par Kate&You (6) </li>
+                                <li>Payement refusé (8)</li>
+                            </ul>
+                        </div>
+                        <table style="width:100%;margin-top: 5%;">
+                            <thead>
+                                <tr class="head">
+                                    <th>Commandes</th>
+                                    <th>Produits</th>
+                                    <th>Etats</th>
+                                    <th class="prix">Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let myPurchase of myPurchases">
+                                    <td>
+                                        <h5>{{myPurchase.numero}}</h5>
+                                        <h5 class="titre">{{myPurchase.name}}</h5>
+                                        <h6>{{myPurchase.titre}}</h6>
+                                    </td>
+                                    <td>
+                                        <img src="{{myPurchase.img}}" alt="">
+                                    </td>
+                                    <td>
+                                        <h6>{{myPurchase.status}}</h6>
+                                    </td>
+                                    <td class="price">{{myPurchase.price}} {{myPurchase.code_money}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <app-download></app-download>
+    <hr class="menu">
+    <app-aboutus></app-aboutus>
+</footer>
